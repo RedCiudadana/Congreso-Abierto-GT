@@ -9,7 +9,7 @@ class PeopleController < ApplicationController
 
   
   def index
-    @page_title = "Senators and Representatives"
+    @page_title = "Diputados y Representantes"
 
   end
 
@@ -45,13 +45,13 @@ class PeopleController < ApplicationController
 
     @sort_by = case @sort
       when :name
-        'lastname asc'
+        'apellido asc'
       when :popular
         'view_count desc'
       when :approval
         'person_approval_average desc'
       else
-        'state, lastname'
+        'state, apellido'
       end
 
     if @sort == :popular || @sort == :approval

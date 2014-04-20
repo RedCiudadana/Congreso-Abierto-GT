@@ -1,0 +1,17 @@
+class RemoveColumsPeople < ActiveRecord::Migration
+  def self.up
+#A continuacion modificamos la tabla 
+    change_table :people do |a|
+      #A continuación se eliminan campos innecesarios 
+      a.remove :middlename, :nickname, :birthday, :gender, :religion, :url, :party, :osid, :bioguideid, 
+               :title, :district, :name, :fti_names, :user_approval, :biography, :unaccented_name, 
+               :metavid_id, :youtube_id, :website, :congress_office, :fax, :contact_webform, :sunlight_nickname, 
+               :watchdog_id, :page_views_count, :news_article_count, :blog_article_count, :total_session_votes, 
+               :votes_democratic_position, :votes_republican_position
+   end
+   end    
+           
+
+  def self.down
+  end
+end
