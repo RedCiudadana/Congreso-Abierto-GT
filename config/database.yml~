@@ -12,9 +12,9 @@
 
 common: &common
   adapter: postgresql
-  username: mynordx
+  username: postgres
   host: localhost
-  password: JBL135kbh
+  password: 623JSOmdavid1990
 
 development: &dev
   <<: *common

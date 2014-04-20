@@ -189,31 +189,21 @@ class Person < ActiveRecord::Base
     def_count_days = Settings.default_count_time.to_i / 24 / 60 / 60
     lim = limit.nil? ? "" : "LIMIT #{limit}"
 
-    Person.find_by_sql(["SELECT people.*, 
-       COALESCE(person_approvals.person_approval_avg, 0) as person_approval_average,
-       COALESCE(bills_sponsored.sponsored_bills_count, 0) as sponsored_bills_count,
-       COALESCE(people.total_session_votes, 0) as total_roll_call_votes,
-       CASE WHEN people.party = 'Democrat' THEN COALESCE(people.votes_democratic_position, 0)
-            WHEN people.party = 'Republican' THEN COALESCE(people.votes_republican_position, 0)
-            ELSE 0
-       END as party_roll_call_votes,
-       COALESCE(aggregates.view_count, 0) as view_count,
-       COALESCE(aggregates.blog_count, 0) as blog_count,
-       COALESCE(aggregates.news_count, 0) as news_count
-    FROM people
-    LEFT OUTER JOIN roles on roles.person_id=people.id    
+    Person.find_by_sql(["SELECT diputado.*       
+      FROM diputado
+    LEFT OUTER JOIN roles on roles.person_id=diputado.id    
     LEFT OUTER JOIN (select person_approvals.person_id as person_approval_id, 
                      count(person_approvals.id) as person_approval_count, 
                      avg(person_approvals.rating) as person_approval_avg 
                     FROM person_approvals
                     GROUP BY person_approval_id) person_approvals
-      ON person_approval_id = people.id
+      ON person_approval_id = diputado.id
       
     LEFT OUTER JOIN (select sponsor_id, count(id) as sponsored_bills_count
                     FROM bills
                     WHERE bills.session = #{congress}
                     GROUP BY sponsor_id) bills_sponsored
-      ON bills_sponsored.sponsor_id = people.id
+      ON bills_sponsored.sponsor_id = diputado.id
      LEFT OUTER JOIN (SELECT object_aggregates.aggregatable_id,
                                     sum(object_aggregates.page_views_count) as view_count, 
                                     sum(object_aggregates.blog_articles_count) as blog_count,
@@ -223,7 +213,7 @@ class Person < ActiveRecord::Base
                                    object_aggregates.aggregatable_type = 'Person'
                              GROUP BY object_aggregates.aggregatable_id
                              ORDER BY view_count DESC) aggregates
-                            ON people.id=aggregates.aggregatable_id                                                               			       
+                            ON diputado.id=aggregates.aggregatable_id                                                               			       
     WHERE roles.role_type = ? AND ((roles.startdate <= ? AND roles.enddate >= ?) OR roles.startdate = ?) ORDER BY #{order} #{lim};", chamber, Date.today, Date.today, OpenCongress::Application::CONGRESS_START_DATES[Settings.default_congress]])
     #WHERE roles.role_type = ? AND roles.startdate <= ? AND roles.enddate >= ? ORDER BY #{order} #{lim};", chamber, Date.today, Date.today])
   end
