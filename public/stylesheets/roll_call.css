@@ -33,8 +33,6 @@ height: 557px;
 float: right;
 margin: 0;
 paddding: 0;
-background: url(../images/zip_arrow.png) 0 -70px no-repeat;
-   _background: url(../images/zip_arrow.gif) 0 -70px no-repeat;
 overflow: auto;
 }
 
@@ -63,8 +61,8 @@ background: url(../images/sen-sort.png) left top repeat-x;
 
 
 ul.rolls_list li:first-child {
-margin: 0 3px 0 0px;             
-padding: 17px 0 17px 36px;  
+margin: 0 3px 0 0px;
+padding: 17px 0 17px 36px;
 border-bottom: 1px solid #e8def8;
 }
 
@@ -130,13 +128,13 @@ background:url(../images/star.gif) no-repeat 0 -32px
 
 #timeframe_select.popular {
   margin-left:240px;
-}                        
+}
 #timeframe_select.approval {
   margin-left:168px;
 }
 #timeframe_select.news {
   margin-left:331px;
-} 
+}
 #timeframe_select.blog {
   margin-left:440px;
 }
@@ -196,10 +194,19 @@ width: 415px;
 #zipcode_lookup{
 margin-top: 0px;
 height: 180px;
-padding: 0;	
+padding: 0;
 background-position: -2px 84px;
 }
-
+#zipcode_lookup:after{
+  content: "";
+  position: absolute;
+  top: 96px;
+  left: 384px;
+  height: 427px;
+  width: 28px;
+  background: url('../images/zip_arrow.png');
+}
+.logged-in #zipcode_lookup:after { top: 126px; }
 .jcarousel-skin-tango{
 clear: both;
 padding-top: 0px !important;
@@ -256,7 +263,7 @@ background: url(../images/map_buttons.png) left -210px no-repeat;
    _background: url(../images/map_buttons.gif) left -210px no-repeat;
 }
 
-	
+
 #sort_nav{
 height: 83px;
 width: 617px;
@@ -269,10 +276,7 @@ float: left;
 width: 586px;
 height: 22px;
 margin: 0 0 0 0px;
-padding-left: 30px;/*
-background: url(../images/zip_arrow.png) 0 -64px no-repeat;
-   _background: url(../images/zip_arrow.gif) 0 -64px no-repeat;
-*/
+padding-left: 30px;
 }
 
 .inner{
@@ -313,6 +317,10 @@ span.ayes{
 padding-left: 20px !important;
 }
 
+span.no_icon {
+  padding-left: 20px !important;
+}
+
 
 #head_button{
 display: block;
@@ -348,4 +356,20 @@ display: block;
 margin: 19px 0 0 27px;
 }
 
+span.vote_count {
+  display: inline-block;
+  width: 80px;
+  text-align: right;
+  margin: 0 0.5em 0 0;
+}
 
+em.roll {
+  display: inline-block;
+  width: 80px;
+  text-align: left;
+  margin: 0 0 0 0;
+}
+
+span.party_count {
+  color: #888888;
+}

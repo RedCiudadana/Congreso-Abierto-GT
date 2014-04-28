@@ -1,88 +1,56 @@
-
-    	<div id="footer-wrapper">
-				<div class="left">
-					<div class="right">
-      		<div id="footer" class="clearfix">
-					<h5><b>Find Your Way:</b></h5>
-        		<div class="footlist first">
-        			<b>OpenCongress</b>
-        				<ul>
-          				<li><a href="/search">Search</a></li>
-			            <li><%= link_to 'Acerca de Congreso Abierto', { :controller => 'about' }, 
-                                      { :title => "Find out more about who and what is Open Congress" } %></li>
-                  <li><%= link_to 'Ayuda FAQ', { :controller => 'about'}, 
-                                      { :title => "" } %></li>
-									<li><%= link_to 'RSS Feeds', :controller => 'about', :action => 'rss' %></li>
-									<li><%= link_to 'Widgets', widgets_path %>																			
-  								<li><%= link_to 'Developers/API', :controller => 'about', :action => 'code' %></li>
-									<li><%= link_to 'Our Staff', :controller => 'about', :action => 'staff' %></li>																			
-
-									<li><a href="/contact/">Contact Us</a></li>
-        				</ul>
-        		</div>
-      			<div class="footlist">
-      				<b>Go to</b>
-      					<ul>
-							 		<li><%= link_to 'Proyectos de Ley', :controller => 'bill', :action => :all  %></li>
-									<li><%= link_to 'Senadores', :controller => 'people', :action => :senators  %></li>
-									<li><%= link_to 'Representantes', :controller => 'people', :action => :representatives  %></li>
-									<li><%= link_to 'Votos', :controller => 'roll_call' %></li>		
-									<li><%= link_to 'Issues', :controller => 'issue' %></li>
-									<li><%= link_to 'El Rastro de Dinero', :controller => 'money_trail' %></li>
-      					</ul>
-      			</div>
-      			<div class="footlist">
-      				<b>Go to</b>
-      				<ul>
-
-								<li><%= link_to 'Wiki', '/wiki' %></li>		
-								<li><%= link_to 'Blog', :controller => 'blog' %></li>
-								<li><%= link_to 'Video', :controller => 'video' %></li>
-								<li><%= link_to 'Recursos', :controller => 'resources' %></li>
-								<!-- ><li><%= link_to 'Battle Royale', :controller => 'battle_royale' %></li> -->
-					</ul>
-      			</div>		
-      			
-      			<div class="footlist last">
-      				<b>My OpenCongress</b>
-      					<ul>
-
-									<% if logged_in? %>
-									<li><%= link_to "Tracked Items", :controller => 'profile', :action => 'items_tracked', :login => current_user.login %></li>
-									<li><%= link_to "Actions", :controller => 'profile', :action => 'actions', :login => current_user.login %></li>
-									<li><%= link_to "Friends", friends_path(current_user.login)%></li>
-									<li><%= link_to "My Political Notebook", political_notebook_path(current_user.login) %></li>
-									<li><%= link_to "My Profile", user_profile_path(:login => current_user.login) %></li>
-									<li><%= link_to "Logout", logout_path %></li>
-									<% else %>
-									<li><%= link_to "Ingresar", login_path %></li>
-									<% end %>
-						</ul>
-					</div>
-					</div>
-				 	</div>
-      </div> <!-- // footer  -->
-    </div>	<!-- // footer-wrapper -->
-
-
-    	<div id="subfoot">
-			 <% if @stats_object %>
-	     <%= render :partial => 'shared/stats_box', :object => @stats_object %>
-			<% else %> 
-			<% end %>
-			<p>
-			OpenCongress is a free and open-source project of the <a target="_blank" href="http://participatorypolitics.org/">Participatory Politics Foundation</a>, a 501(c)3 non-profit organization with a mission to increase civic engagement. The non-profit <a target="_blank" href="http://www.sunlightfoundation.com/">Sunlight Foundation</a> is the Founding and Primary Supporter of OpenCongress.
-			</p>
+<div class="footer-wrapper-old">
 	
-		</div> <!-- // end subfoot -->
-
-
-			
-	<ul id="badges">
-		<li class="cc"><a href="http://creativecommons.org/licenses/by-sa/3.0/us/">Creative Commons</a></li>
-		<li class="opensecrets"><a href="http://www.theopenhouseproject.com/">The Open House Project</a></li>
-		<li class="govtrack"><a href="http://www.govtrack.us">GovTrack</a></li>
-		<li class="contact_us"><a href="/contact">Questions? Comments? Contact Us</a></li>
-	</ul>
-
-
+		<div id="footer_izquierda">
+                   		<h3>
+                            <a id="oc-logo-small" class="hide-text" href="/">OpenCongress</a>
+                        </h3>
+                        <p>OpenCongress allows anyone to follow legislation in Congress, from bill introduction to floor vote. Learn more about issues you care about and connect with others who share similar views.
+                           OpenCongress was founded by the Participatory Politics Foundation in 2007 and operated as a joint project with the Sunlight Foundation until May 2013.
+                        </p>
+                       <div class="container-fluid">
+                            <table id="tabla_info_op">
+                            	<tr>
+                            		<td>
+                            			<%= link_to 'About OpenCongress', { :controller => 'about' },
+                                            { :title => "Find out more about who and what is Open Congress" } %>
+                            		</td>
+                            		<td><a href="/howtouse">User's Guide</a></td>
+                            		<td><a href="/terms">Terms &amp; Privacy</a></td>
+                            	</tr>
+                            	
+                            	<tr>
+                            		<td><a href="/search">Search</a></td>
+                            		<td><%= link_to 'Wiki', "#{Settings.wiki_base_url}/Wiki_Home" %></td>
+                            		<td><a href="/contact/">Contact Us</a></td>
+                            	</tr>
+                            	
+                            	<tr>
+                            		<td><%= link_to 'RSS', '/about/rss' %></td>                            		
+                            		<td><%= link_to 'Developers/API', :controller => 'about', :action => 'code' %></td>                            		
+                            		<td><%= link_to 'Resources', :controller => 'resources' %></td>
+                            	</tr>
+                            	
+                            </table>
+                        </div>
+                        
+                   </div>
+                   
+                   <div id="footer_derecha"><!-- Inicia codigo para informacion derecha -->
+                   		<h3>
+                            <a id="sf-logo-small" class="hide-text" href="http://www.sunlightfoundation.com">Sunlight Foundation</a>
+                        </h3>
+                        <p>Founded in 2006, the Sunlight Foundation is a nonpartisan nonprofit that advocates for open government globally and uses technology to make government more accountable to all. Visit <a href="http://sunlightfoundation.com">SunlightFoundation.com</a> to learn more.</p>
+                        <div class="sign_up">
+                        <h4>Like this project and want to discover others like it?</h4>
+                        <span class="tip">Join the Sunlight Foundation's open government community to learn more.</span>
+                        <form action="/subscribe.json" method="post" id="sfapp-subscribe-form" class="form-inline">
+                            <div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='8LsIjevc2XbY7Grk4KlrYkIlXz72J7nV' /></div>
+                            <input type="hidden" name="response" value="json">
+                            <input class="signUpEmail" type="text" name="email" placeholder="Email Address">
+                            <input class="signUpZip" type="text" name="zipcode" placeholder="Zip Code">
+                            <button type="submit" class="btn btn-sunlight">Sign Up</button>
+                        </form>
+                    </div>	
+                   </div><!-- Termina codigo para informacion derecha -->
+	
+</div>

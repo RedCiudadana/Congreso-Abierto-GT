@@ -139,6 +139,8 @@ background: url(../images/action.png) 12px 12px no-repeat;
 _background: url(../images/action.gif) 12px 12px no-repeat;
 font-weight: bold;
 padding: 0px 20px 0 40px;
+width: 100px;
+vertical-align: middle;
 }
 table#votes span.date {
 background: url(../images/action.png) left center no-repeat;
@@ -316,7 +318,7 @@ width: 100%;
 clear: both !important;
 }
 
-#bill h2.icon {
+#bill h2.bill-cat-title {
 padding: 4px 0 4px 0;
 font-size: 14px;
 border-bottom: 1px solid #ddd;
@@ -325,17 +327,17 @@ font-family: Helvetica, sans-serif;
 clear: both;
 }
 
-#bill h2.icon .dbox_trigger {
+#bill h2.bill-cat-title .dbox_trigger {
 margin-right: 0;
 }
 
-#bill h2.icon span {
+#bill h2.bill-cat-title span {
 font-size: 11px;
 font-weight: normal;
 padding-left: 15px;
 }
 
-#bill h2.icon div {
+#bill h2.bill-cat-title div {
 float: left;
 }
 
@@ -445,10 +447,6 @@ padding: 30px 35px 65px 40px;
 width: 291px;
 float: left;
 padding: 30px 42px 65px 40px;
-}
-
-#money_trail_summary .col2 {
-padding-right: 5px !important;
 }
 
 #content-main .col1 {
@@ -1251,7 +1249,7 @@ div.single {
 padding: 0 35px;
 }
 
-#bill.show .inner, #bill.actions_votes .inner, #bill.comments .inner, #bill.text .inner,  #bill.letters .inner, #bill.news_blogs .inner,  #bill.blogs .inner, #bill.news .inner,  #bill.videos .inner, #bill.money .inner, #bill.votes .inner, #bill.actions .inner, #bill.amendments .inner {
+#bill.show .inner, #bill.actions_votes .inner, #bill.comments .inner, #bill.text .inner,  #bill.letters .inner, #bill.news_blogs .inner,  #bill.blogs .inner, #bill.news .inner,  #bill.videos .inner, #bill.votes .inner, #bill.actions .inner, #bill.amendments .inner {
 float: left;
 width: 100%;
 padding-bottom: 10px;
@@ -1935,52 +1933,6 @@ height: 45px;
 padding-top: 20px;
 }
 
-#money_trail {
-padding-top: 30px;
-clear: both;
-}
-
-#money_trail th {
-text-align: left;
-}
-
-#money_trail .floatleft {
-width: 630px;
-}
-
-#money_trail table {
-width: 600px;
-margin-top: 10px;
-}
-
-#money_trail ul {
-padding-bottom: 10px;
-float: left;
-padding-left: 0 !important;
-margin-left: 15px;
-}
-
-#money_trail ul li {
-margin-left: 0 !important;
-list-style: circle;
-padding-left: 0 !important;
-}
-
-#money_trail ul li a {
-padding-left: 0 !important;
-}
-
-#money_trail h3 {
-padding-top: 30px;
-clear: both;
-}
-
-#money_trail td {
-text-align: left;
-padding-right: 10px;
-}
-
-
 div.news_blogs .col1 #news_list, div.news_blogs .col2 #blogs_list {
 padding: 0;
 }
@@ -1994,15 +1946,6 @@ padding: 35px;
   padding-bottom: 5px !important;
   margin-bottom: 20px;
 } 
-
-#money_trail_summary {
-  padding-left: 10px;
-}
-.money_trail_summary_more {
-  padding: 0 50px;
-  margin-top: 5px;
-  clear: left;
-}
 
   
 /*///////////////////////////////////////////
@@ -2039,8 +1982,12 @@ padding: 0px;
 
 
 #heading p {
-padding-top: 0px;
-margin-top: 10px;
+float: left;
+font-size: 11px;
+text-align: left;
+padding: 7px 25px 0 20px ;
+font-style: italic;
+color: #999;
 }
 
 .explain_box {
@@ -2064,7 +2011,6 @@ width: 490px;
 
 
 #bill.hot #heading h2 {
-width: 320px;
 overflow: hidden;
 margin: 5px 0 0 10px;
 height: 0;
@@ -2474,16 +2420,29 @@ font-size: 11px;
   margin-top: 20px;
 }
 
+form#filter-major-bills {
+    display: inline-block;
+    position: relative;
+    top: -20px;
+}
 
+hr {
+    margin: -10px 0 15px 0;
+}
 
+ul.bill-category-list {
+    color: #444;
+    display: block;
+    float: right;
+}
 
+ul.bill-category-list li.bill-category {
+    display: inline-block;
+    margin: 5px 0 0 3px;
+    font-weight: bold;
+}
 
-
-
-
-
-
-
-
-       
-
+body#bill.bill_positions .col1, body#bill.bill_positions .col2 {
+    width: 452px;
+    float: left;
+}
