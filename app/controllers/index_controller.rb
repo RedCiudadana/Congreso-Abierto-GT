@@ -1,24 +1,12 @@
 class IndexController < ApplicationController
   layout "frontpage"
 
+
   caches_page :pipa
   
   def index
     unless read_fragment("frontpage_rightside")
-      @index_tabs = [
-              # {:title => 'Bills in the News',
-              # :partial => 'bill',
-              # :collection => Bill.find_by_most_commentary('news', 5, 7.days, Settings.default_congress),
-              # :id => 'bns',
-              # :link => 'bill/most/news?types=all',
-              # :count_type => 'news_articles'},
-              # {:title => 'Bills on Blogs',
-              # :partial => 'bill',
-              # :collection => Bill.find_by_most_commentary('blog', 5, 7.days, Settings.default_congress),
-              # :id => 'bbg',
-              # :link => 'bill/most/blog?types=all',
-              # :style => 'display: none;',
-              # :count_type => 'blog_articles'},              
+      @index_tabs = [            
               {:title => 'Most-Viewed Bills',
               :partial => 'bill',
               :collection => ObjectAggregate.popular('Bill', Settings.default_count_time, 5),

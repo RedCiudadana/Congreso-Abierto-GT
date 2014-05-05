@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  
   <head>
     <%= render :partial => 'shared/analytics_head' %>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -10,7 +11,7 @@
       <meta name="keywords" content="<%= @meta_keywords %>" />
     <% end %>
 
-    <title>Congreso Abierto - <%= Settings.default_congress %>th Congress - Track bills, votes, senators, and representatives in the U.S. Congress</title>
+    <title>Congreso Abierto</title>
   	<link rel="shortcut icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <%= bookmarking_image.html_safe %>
@@ -54,13 +55,18 @@
 
     </div>
     <!-- // wrapper -->
-    <div class="clear">&nbsp;</div>
+    
     </div> <!-- // top bar -->
   
-      <% cache("layout_footer", :expires_in => 3.hours) do %>
-        <%= render :partial => 'layouts/footer' %>
-      <% end %>
+  <div id="pie_pagina">
+  	
+  	<% cache("layout_footer", :expires_in => 3.hours) do %>
+    <%= render :partial => 'layouts/footer' %>
+    <% end %>
+    
+  </div>
+      
 
-      <%= render :partial => 'shared/analytics_foot' %>
+
   </body>
 </html>

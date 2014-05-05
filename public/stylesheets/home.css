@@ -1,14 +1,12 @@
 .just_for_a_border, .just_for_a_border *{
-zoom:1;
+	zoom:1;
 }
-
 
 #blog{
-width: 383px;
-float: left;
-margin-top: 13px;
+	width: 975px;
+	float: left;
+	margin-top: 13px;
 }
-
 
 #heading{
 padding: 15px;
@@ -17,17 +15,12 @@ _background: url('../images/bill_heading_blue.gif') repeat left top;
 height: 45px !important; 
 border-bottom: 1px solid #abd1e2;
 overflow: hidden;
+background: url('../images/bill_heading_blue.png') left top;
+_background: url('../images/bill_heading_blue.gif') repeat left top;
 }
 
 #heading p{
 font-size: 12px !important;
-}
-
-
-.rightside{
-padding-top: 1px;
-float: right;
-width: 431px;
 }
 
 #bill_tabs{
@@ -41,7 +34,6 @@ top: -23px;
 right: 10px;
 color: #777;
 }
-
 
 .full_article{
 float: right;
@@ -71,7 +63,6 @@ margin: 1px 0 0 0;
 background: url('/images/new_social.png') left 0px no-repeat;
 }
 
-
 .tweet_us{
 padding-top: 50px;
 overflow: hidden;
@@ -86,7 +77,6 @@ background: url('/images/new_social.png') right 0px no-repeat;
 background: url('/images/new_social.png') right 0px no-repeat;
 }
 
-
 .medium_bill_list{
 padding: 0;
 margin: 0;
@@ -94,13 +84,11 @@ float: left;
 
 }
 
-
 .medium_bill_list li{
 width: 431px;
 float: left;
 
 }
-
 
 .medium_bill_list li a{
 text-decoration: none;
@@ -111,12 +99,9 @@ width: 371px;
 }
 
 
-.medium_bill_list li.bill {
-
-}
 
 .bill {
-background: url('/images/small_bill.png') 15px 15px no-repeat;
+	background: url('/images/small_bill.png') 15px 15px no-repeat;
 }
 
 
@@ -134,14 +119,14 @@ background:  url('/images/people_small_list.png') 0 bottom repeat-x;
 
 .medium_bill_list li.people:hover {
 
-background: #fffef8 url('/images/people_small_list.png') 0 bottom repeat-x !important;
+	background: #fffef8 url('/images/people_small_list.png') 0 bottom repeat-x !important;
 }
 
 
 .medium_bill_list li.issue {
-border-top: 1px solid #bfe2e3;
-border-bottom: 1px solid #ebffff;
-background:  url('/images/issue_small_list.png') 0 bottom repeat-x;
+	border-top: 1px solid #bfe2e3;
+	border-bottom: 1px solid #ebffff;
+	background:  url('/images/issue_small_list.png') 0 bottom repeat-x;
 }
 
 .medium_bill_list li.issue a{
@@ -239,15 +224,11 @@ cursor: pointer;
 }
 
 
-
 .healthcare_bills div span{
 font-weight: normal;
 display: block;
 color: #999;
 }
-
-
-
 
 .congress_status{
 background: url('/images/today.png') left bottom repeat-x;
@@ -352,6 +333,7 @@ background: none;
 padding-right: 20px; 
 background: url(../images/arrows.png) right -12px no-repeat;
 }
+
 .small_heading a span{
 background-image: none;
 }
@@ -388,8 +370,6 @@ left: -10px;
 }
 
 
-
-
 #bnslink a{
 -moz-border-radius-topleft: 4px;
 -moz-border-radius-topright: 4px;
@@ -398,14 +378,12 @@ left: -10px;
 }
 
 
-
 #pislink a{
 -moz-border-radius-bottomleft: 4px;
 -moz-border-radius-bottomright: 4px;
 -webkit-border-bottom-left-radius: 4px;
 -webkit-border-bottom-right-radius: 4px;
 }
-
 
 
 .small_heading ul.tabs li{
@@ -429,16 +407,16 @@ text-decoration: none;
 
 
 .small_heading ul.tabs li a:hover{
-background: #ddd;
+	background: #ddd;
 
-  -moz-box-shadow: 0 1px 0px #888, 0 -1px 0px #ccc, inset 0 1px 0px #fff;
-  -webkit-box-shadow: 0 1px 0px #888, 0 -1px 0px #ccc, inset 0 1px 0px #fff;
-  box-shadow:  0 1px 0px #888, 0 -1px 0px #ccc, inset 0 1px 0px #fff;
+  	-moz-box-shadow: 0 1px 0px #888, 0 -1px 0px #ccc, inset 0 1px 0px #fff;
+  	-webkit-box-shadow: 0 1px 0px #888, 0 -1px 0px #ccc, inset 0 1px 0px #fff;
+  	box-shadow:  0 1px 0px #888, 0 -1px 0px #ccc, inset 0 1px 0px #fff;
   
-  background: #999; /* for non-css3 browsers */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff', endColorstr='#ddd'); /* for IE */
-  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd)); /* for webkit browsers */
-  background: -moz-linear-gradient(top,  #fff,  #ddd); /* for firefox 3.6+ */
+  	background: #999; /* for non-css3 browsers */
+  	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff', endColorstr='#ddd'); /* for IE */
+  	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd)); /* for webkit browsers */
+  	background: -moz-linear-gradient(top,  #fff,  #ddd); /* for firefox 3.6+ */
 }
 
 
@@ -449,23 +427,20 @@ display: block;
 }
 
 
-
-
-
 .top_area{
-background: url(../images/blog_bg.jpg) left bottom no-repeat;
 border-bottom: 1px solid #ccc;
+background: #FFFFFF;
 }
 
 
 .just_for_a_border{
 position: relative;
-background: url(../images/line.gif) 570px bottom repeat-y;
+
 }
 
 
 #blog img.frontpage-blog-image{
-width: 180px !important;
+	width: 180px !important;
 float: right;
 margin: 0 0px 10px 20px;
 border: 1px solid #ccc;
@@ -475,7 +450,7 @@ padding: 3px;
 .blog_list{
 padding-top: 0 !important;
 float: left;
-width: 570px;
+width: 975px;
 position: static;
 padding: 0 0 50px;
 }
@@ -488,7 +463,7 @@ height: 18px;
 
 .blog_list h2{
 float: left;
-width: 510px;
+width: 975px;
 margin: 0 30px;
 height: 47px;
 overflow: hidden;
@@ -510,7 +485,7 @@ float: left !important;
 .blog_list #blog .back{
 padding: 0 20px;
 clear: both;
-width: 518px;
+width: 975px;
 }
 
 blockquote {
@@ -539,6 +514,7 @@ padding-bottom: 5px;
 }
 .blog_list h2{
 border-bottom: 1px solid #ddd;
+width: 975px;
 }
 
 .blog_list h2.icon .feed-button{
@@ -612,11 +588,6 @@ width: 275px;
   margin-top: 20px;
 }
 
-/*
-#ts li a:hover{
-background: #fbfdff url('/images/big_search_icon.png') 15px 15px no-repeat;
-}
-*/
 
 #pr li a, #ps li a{
 background: url('/images/big_people_icon.png') 18px 15px no-repeat;
@@ -624,20 +595,14 @@ background: url('/images/big_people_icon.png') 18px 15px no-repeat;
 
 }
 
-#pr li a:hover, #ps li a:hover, #pis li a:hover{
-
-
-}
-
-
 #blog .feed{
-float: right;
+	float: right;
 }
 
 
 .pop-tabs {
-float: right;
-padding-right: 13px;
+	float: right;
+	padding-right: 13px;
 }
 
 .pop-tabs li{
@@ -812,34 +777,18 @@ clear: both;}
 
 #find{
 clear: both;
-padding: 30px 0px 5px 27px;
-background: url(../images/track_them.jpg) 0px -2px no-repeat;
-float: left;
+padding: 30px 0px 5px 27px;float: center;
+background: #008B8B;
 width: 975px;
-
-height: 91px;
+height: 150px;
 border-bottom: 1px solid #999;
 }
 
 #find form{
-padding: 17px 0px 0 70px;
+padding: 17px 0px 30px 70px;
 height: 50px;
-width: 424px;
-float: left;
-background: url(../images/find_bg.png) 0px 0px no-repeat;
-}
+width: 975px;
 
-.enter_zip{
-background: url(../images/forms.png) left -30px no-repeat;
-   _background: url(../images/forms.gif) left -30px no-repeat;
-width: 123px !important;
-border: none;
-text-align: center;
-padding: 7px 9px;
-}
-
-#find input{
-float: left;
 }
 
 hr{
@@ -854,26 +803,27 @@ width: 430px;
 line-height: 1.5em;
 }
 
-
 #find h2{
-padding-right: 20px;
-float: left;
-font-size: 13px;
-line-height: 1.3em;
-width: 100px;
-}
-
-#find_rep input{
-margin-top: 3px;
+	padding-top: 30px;
+	font-size: 30px;
+	text-align:center;
+	align: center;
+	color: #FFFFFF;
 }
 
 .enter_zip{
-width: 130px;
-margin-right: 20px;
+	width: 400px !important;
+	color: #808080;
+	padding: 10px;
+	border:solid 1px #DEDEDE;
+	text-align: center;
+	border-radius:20px;
+	margin-left: 15em;
 }
 
-
-
+.enter_zip:focus{
+	box-shadow:0 0 15px #036;
+}
 
 .clear{
 clear: both;
@@ -882,18 +832,58 @@ height: 0px;
 
 #pitch{
 float: left;
+background: #00CC99;
 padding-bottom: 0px;
 width: 100%;
 clear: both;
 min-height: 260px;
-background: url(../images/pitch_bg.png) left bottom repeat-x;
-   _background: url(../images/pitch_bg.gif) left bottom repeat-x;
 border-bottom: 1px solid #abd1e2;
 border-top: 1px solid #ddedf5;
 }
 
+#link_app{
+	float: left;
+	background: #008B8B;
+	padding-bottom: 0px;
+	width: 100%;
+	clear: both;
+	min-height: 260px;
+	border-bottom: 1px solid #abd1e2;
+	border-top: 1px solid #ddedf5;
+}
 
 
+#link_app h2{
+	padding-top: 80px;
+	padding-left: 80px;
+	font-size: 20px;
+	color: #FFFFFF;
+}
+
+#texto_app{
+	width: 700px;
+	height: 35px;
+	float: left;
+}
+
+#imagen_app{
+	width: 275;
+	margin-left: 750;
+	ali
+}
+
+#imagen_app img {
+	width: 15%;
+	float: right;
+	margin-right: 100px;
+}
+
+#texto_app p{
+	padding-left: 80px;
+	color: #000000;
+	line-height: 1.7em;
+	text-align : justify;
+}
 
 .featured_members{
 background: #e0f4cf;
@@ -924,16 +914,9 @@ font-size: 11px;
 line-height: 1.5em;
 }
 
-
-
-
 .box01{
 width: 431px;
 border-left: 1px solid #ddd;
-}
-
-
-.box01 .back{
 }
 
 
@@ -950,13 +933,9 @@ float: right;
 margin: 18px 18px 0 0;
 }
 
-
-
-
 .latest_votes{
 padding: 0 !important;
 margin: 0 !important;
-
 }
 
 .latest_votes li {
@@ -979,7 +958,6 @@ background: #f8f3ff url('/images/small_bill.png') 15px 15px no-repeat;
 .latest_votes a:hover{
 background: #f8f3ff url('/images/small_bill.png') 15px 15px no-repeat;
 }
-
 
 .latest_votes a span{
 font-weight: bold;
@@ -1004,21 +982,17 @@ float: left;
 
 }
 
-
-
 .latest_votes .votes{
 float: left;
 font-size: 11px;
 padding-right: 10px;
 }
 
-
 .latest_votes .aye{
 color: #569a31;
 font-weight: bold;
 padding-right: 3px;
 }
-
 
 .latest_votes .nay{
 color: #d05829;
@@ -1050,12 +1024,9 @@ height: 376px;
 
 }
 
-
 .box03 div h4{
 display: inline;
 }
-
-
 
 div.blog_list .back h3.recent{
 margin: 0 !important;
@@ -1073,7 +1044,6 @@ padding: 0 2px;
 .indent li.dark a{
 
 }
-
 
 .indent li a{
 display: block;
@@ -1105,20 +1075,15 @@ display: block;
 float: right;
 }
 
-
-
-
 .login_button{
 margin-right: 10px;
 }
-
 
 #home_pitch{
 float: left;
 margin-right: 0px;
 width: 979px;
 }
-
 
 .number4{
 padding-right: 20px;
@@ -1138,10 +1103,7 @@ float: left;
 padding: 45px 290px 0 40px;
 }
 
-/*#why_carousel li.number4{
-padding-right: 20px !important; 
-}
- */
+
 .inner .jcarousel-skin-bravo .jcarousel-clip-horizontal {
   left:0;
   width:870px;
@@ -1158,16 +1120,16 @@ line-height: 1.7em;
 font-weight: normal;
 }
 
-
-
 #why_carousel h4{
 font-size: 18px; 
-color: #759dc1;
+color: black;
 font-weight: normal;
 }
+
 #why_carousel.jcarousel-list {
   width:8000px !important;
 }
+
 .about_oc p{
 padding-bottom: 10px;
 }
@@ -1180,7 +1142,6 @@ margin-top: 135px;
 min-height: 205px;
 
 }
-
 
 .blog_buttons{
 padding: 5px;
@@ -1224,7 +1185,8 @@ padding-top: 50px !important;
 height: 450px !important;
 background: url('/images/track.png') no-repeat 710px 53px;
    _background: url('/images/track.gif') no-repeat 710px 53px;
-}
+}padding-top: 50px !important;
+height: 450px !important;
 
 .number3{
 padding-top: 50px !important;

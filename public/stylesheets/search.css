@@ -77,7 +77,7 @@ display: block !important;
 
 .regarding{
 font-size: 11px;
-float: right;	
+float: right;
 }
 
 .blog_search ul{
@@ -190,7 +190,7 @@ padding:0;
 ul#people_list li.person img{
 display: block;
 float: left;
-height: 135px;
+max-height: 165px;
 width: 105px;
 margin: 5px 20px 0 10px;
 }
@@ -227,7 +227,7 @@ font-size: 11px;
 
 ul#people_list li.person a.name span{
 display: block;
-font-weight: normal;
+font-weight: 400;
 margin-top: 2px;
 font-size: 12px;
 text-decoration: none;

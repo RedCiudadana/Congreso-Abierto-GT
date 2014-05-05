@@ -1,4 +1,6 @@
 OpenCongress::Application.routes.draw do
+  get "congreso_abierto/congreso_abierto"
+
   # API
   constraints :subdomain => 'api' do
     match '/' => redirect(Settings.base_url + 'api')

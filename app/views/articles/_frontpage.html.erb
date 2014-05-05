@@ -1,10 +1,10 @@
 <div id="blog">
 <h2>
-<a href="/blog" class="text">OpenCongress Blog</a> <a class="feed" href="http://feeds.feedburner.com/OpenCongressCongressGossipBlog">Feed</a>
+<a href="/blog" class="text">Blog de Congreso Abierto</a> <a class="feed" href="http://feeds.feedburner.com/OpenCongressCongressGossipBlog">Feed</a>
 
-<a href="http://twitter.com/opencongress" class="tweet_us">Tweet Us!</a>
+<a href="http://twitter.com/opencongress" class="tweet_us">Agrega nuestro Twitter!</a>
 
-<a href="http://www.facebook.com/OpenCongress" class="add_facebook">Add our Facebook</a>
+<a href="http://www.facebook.com/OpenCongress" class="add_facebook">Agrega Nuestro Facebook</a>
 
 
 
@@ -27,7 +27,7 @@
     <%= link_to('<span>Read Full Article</span>'.html_safe, article_url(most_recent), {:class => "full_article"}) %><% end %>
 
 
-<h3 class="recent clear">More Recent Blog Posts</h3>
+<h3 class="recent clear">Posts más recientes</h3>
 <ul class="indent">
   <% articles.each_with_index do |g, i| -%>
     <li class="<%= (i.modulo(2) == 0) ? 'light' : 'dark' %>">
@@ -42,6 +42,6 @@
 </div>
 
 <div class="blog_buttons">
-	<a href="/blog" class="button silver medium floatright"><span>All Blog Posts</span></a>
-	<a href="/gossip/submit" class="button silver medium floatright push-right"><span>Send Us a Tip or Suggest a Link</span></a>
+	<a href="/blog" class="button silver medium floatright"><span>Todos los Posts del Blog</span></a>
+	<a href="/gossip/submit" class="button silver medium floatright push-right"><span>Mandanos tus comentarios y sugerencias al Link</span></a>
 </div>
