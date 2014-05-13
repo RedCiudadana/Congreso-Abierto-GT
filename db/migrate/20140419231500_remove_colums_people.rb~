@@ -7,7 +7,7 @@ class RemoveColumsPeople < ActiveRecord::Migration
                :title, :district, :name, :fti_names, :user_approval, :biography, :unaccented_name, 
                :metavid_id, :youtube_id, :website, :congress_office, :fax, :contact_webform, :sunlight_nickname, 
                :watchdog_id, :page_views_count, :news_article_count, :blog_article_count, :total_session_votes, 
-               :votes_democratic_position, :votes_republican_position, :lastname, :email
+               :votes_democratic_position, :votes_republican_position, :lastname, :email, :state 
    end
    end    
            

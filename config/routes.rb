@@ -1,6 +1,10 @@
 OpenCongress::Application.routes.draw do
   get "congreso_abierto/congreso_abierto"
 
+  match '/departamento', :to => 'diputado#diputadoDepto'
+  match '/partido', :to => 'diputado#diputadoPartido'
+  match '/listado', :to => 'diputado#diputadoLista'
+  match '/nombre', :to => 'diputado#diputadoNom'
   # API
   constraints :subdomain => 'api' do
     match '/' => redirect(Settings.base_url + 'api')

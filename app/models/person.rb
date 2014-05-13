@@ -28,8 +28,8 @@ class Person < ActiveRecord::Base
   scope :independent, :conditions => ["party != 'Republican' AND party != 'Democrat'"]
   scope :in_state, lambda { |state| {:conditions => {:state => state.upcase}}}
 
-  scope :sen, :joins => :roles, :select => "people.*", :conditions => ["roles.person_id = people.id AND roles.role_type='sen' AND roles.enddate > ?", Date.today]
-  scope :rep, :joins => :roles, :select => "people.*", :conditions => ["roles.person_id = people.id AND roles.role_type='rep' AND roles.enddate > ?", Date.today]
+  scope :sen, :joins => :roles, :select => "diputados.*", :conditions => ["roles.person_id = peoples.id AND roles.role_type='sen' AND roles.enddate > ?", Date.today]
+  scope :rep, :joins => :roles, :select => "diputados.*", :conditions => ["roles.person_id = peoples.id AND roles.role_type='rep' AND roles.enddate > ?", Date.today]
 
 
   has_many :news, :as => :commentariable, :class_name => 'Commentary', :order => 'commentaries.date DESC, commentaries.id DESC', :conditions => proc { "commentaries.is_ok = 't' AND commentaries.is_news='t'" }
@@ -189,21 +189,21 @@ class Person < ActiveRecord::Base
     def_count_days = Settings.default_count_time.to_i / 24 / 60 / 60
     lim = limit.nil? ? "" : "LIMIT #{limit}"
 
-    Person.find_by_sql(["SELECT diputado.*       
-      FROM diputado
-    LEFT OUTER JOIN roles on roles.person_id=diputado.id    
+    Person.find_by_sql(["SELECT diputados.*       
+      FROM diputados
+    LEFT OUTER JOIN roles on roles.person_id=diputados.id    
     LEFT OUTER JOIN (select person_approvals.person_id as person_approval_id, 
                      count(person_approvals.id) as person_approval_count, 
                      avg(person_approvals.rating) as person_approval_avg 
                     FROM person_approvals
                     GROUP BY person_approval_id) person_approvals
-      ON person_approval_id = diputado.id
+      ON person_approval_id = diputados.id
       
     LEFT OUTER JOIN (select sponsor_id, count(id) as sponsored_bills_count
                     FROM bills
                     WHERE bills.session = #{congress}
                     GROUP BY sponsor_id) bills_sponsored
-      ON bills_sponsored.sponsor_id = diputado.id
+      ON bills_sponsored.sponsor_id = diputados.id
      LEFT OUTER JOIN (SELECT object_aggregates.aggregatable_id,
                                     sum(object_aggregates.page_views_count) as view_count, 
                                     sum(object_aggregates.blog_articles_count) as blog_count,
@@ -213,7 +213,7 @@ class Person < ActiveRecord::Base
                                    object_aggregates.aggregatable_type = 'Person'
                              GROUP BY object_aggregates.aggregatable_id
                              ORDER BY view_count DESC) aggregates
-                            ON diputado.id=aggregates.aggregatable_id                                                               			       
+                            ON diputados.id=aggregates.aggregatable_id                                                               			       
     WHERE roles.role_type = ? AND ((roles.startdate <= ? AND roles.enddate >= ?) OR roles.startdate = ?) ORDER BY #{order} #{lim};", chamber, Date.today, Date.today, OpenCongress::Application::CONGRESS_START_DATES[Settings.default_congress]])
     #WHERE roles.role_type = ? AND roles.startdate <= ? AND roles.enddate >= ? ORDER BY #{order} #{lim};", chamber, Date.today, Date.today])
   end
