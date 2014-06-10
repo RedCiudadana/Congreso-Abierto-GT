@@ -1,7 +1,7 @@
 OpenCongress::Application.routes.draw do
   get "congreso_abierto/congreso_abierto"
 
-  match '/departamento', :to => 'diputado#diputadoDepto'
+  match '/distrito', :to => 'diputado#diputadoDistrito'
   match '/partido', :to => 'diputado#diputadoPartido'
   match '/listado', :to => 'diputado#diputadoLista'
   match '/nombre', :to => 'diputado#diputadoNom'

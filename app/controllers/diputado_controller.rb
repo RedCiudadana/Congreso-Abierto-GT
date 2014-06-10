@@ -4,8 +4,8 @@ class DiputadoController < ApplicationController
   
   
   #API para Busqueda por departamento 
-  def diputadoDepto
-    @diputado = Diputado.where("departamento = ?", params[:departamento]).first
+  def diputadoDistrito
+    @diputado = Diputado.where("distrito = ?", params[:distrito]).first
     respond_to do |format|
       format.html # show.html.erb
       format.json {render :json => @diputado}

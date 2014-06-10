@@ -1,72 +1,41 @@
-<div id="content" class="clearfix">       
+<link type="text/css" rel="stylesheet" href="/stylesheets/index.css"/>
+<link type="text/css" rel="stylesheet" href="/stylesheets/clases.css"/>
+<link type="text/css" rel="stylesheet" href="/stylesheets/home.css"/>
 
-  
-  <%= render :partial => 'layouts/user_nav' %>
-
-  <div class="inner">
-    <div class="top_area">          
-      <div class="just_for_a_border">
-      <div class="blog_list">
-        <%= render :partial => 'articles/frontpage', :locals => { :articles => Article.frontpage_gossip(7) } %>
-        <!-- // end of blog entries -->
-      </div>
-
-      <div class="clear">&nbsp;</div>
-    </div><!-- just for a border -->
-  </div><!-- top_area -->	
-
+<div id="content" class="clearfix">
+		
+	
+  	<%= render :partial => 'layouts/user_nav' %>
   	
-  	<div id="second_tier">
+  	
+  	<!-- Comienza codigo de Congreso Abierto -->
+  	<section>
+  		<article id="articulo1">
+  			<div id="video">
+					
+			</div>
+			<div id="app">
+				<div id="textoapp1" class="fuente_color"><strong>Congreso Abierto</strong> es tu oportunidad para ser parte del cambio en nuestro país, Guatemala.</div>
+				<div id="textoapp2" class="fuente_color">Involucrate hoy. Descarga el app ></div>
+				<div id="btnDescargar"><a class="boton1" title="Descargar" href="http://play.google.com/store">DESCARGAR</a></div>
+			</div>
+		</article>	
+	</section>
+	
+	<article id="articulo2">
+		<div class="fuente_color">
+			<h2>¿Quién es mi representante en el Congreso?</h2>
+			<form action="/people/zipcodelookup">
+      			<input type="text" maxlength='100' value="Departamento"  onfocus="this.value='';" name="zip5" />
+      		</form>
+      	</div>
+	</article>
+
+<!-- Comienza codigo de OpenCongress -->
+  		
+   
+
+
  
-    <div id="pitch">
-      <div id="home_pitch">
-        <ul id="why_carousel" class="jcarousel-skin-bravo">						
-          <li class="number1">
-            <h4>Toda la información</h4>
-            <p>Congreso Abierto reúne la mejor información sobre el Congreso de la República en un solo lugar. Cuando se vinculan a las páginas de Congreso Abierto, sus lectores tienen accesso a no sólo los detalles oficiales de los proyectos de ley, sino tambíen el panorama genera. Lee más de <a href="/about/howtouse" target_"blank"> cómo puedes utilizar Congreso Abierto</a>.</p>
-          </li>
-
-          <li class="number2">
-            <h4>Sigue de cerca lo que está sucediento en el Congreso</h4>
-            <p>El Congreso puede ser difícil de seguir. Congreso Abierto ofrece maneras fáciles de rastrear todas las cosas que te importan. Suscribete a nuestro <a href="/about/rss">canal RSS</a> o a las alertas por correo electrónico para recibir automáticamente las actualizaciones de proyectos de ley, actualidades, temas y mas. También, usted puede puede unirse a "Congreso Abierto" para crear un perfil que rastrea todos sus intereses políticos en un solo lugar - <a href="/register">Unirse</a> o <a href="/login">Ingresar</a>, es gratis y solo te tomará unos mintus.</p>
-          </li>
-
-          <li class="number3">
-            <h4>Haz oír tu voz</h4>
-            <p>Congreso Abierto te da herramientas gratuitas para ponerse en contacto con el Congreso y abrir un diáligo con tus representantes electos. Con tu cuenta gratuita, se puede votar "si" o "no" en los proyectos de ley, dar los índices de aprobación personal a los miembros del Congres, publicar comentarios en foros de discusión, y escribir a los miembros del Congreso directamente desde Congreso Abierto - <a href="/register">Unirse</a> o <a href="/login">Ingresar</a>.</p>
-          </li>
-
-          <li class="number4">
-            <h4>Compartir Información Valiosa</h4>
-            <p>El Congreso es Complejo. Congreso Abierto ha incorporado funciones para ayudarte a encontrar la información más útil respecto a tus intereses, y luego compartirlo con tus comunidades en línea. Con un solo clic puedes compartir información atraves de Facebook, Twitter o correo electrónico a un amigo, y más. Las redes sociales con "Congreso Abierto" te permiten hacer amigos con otros usuarios cercanos y lejanos, luego puedes seguir sus comentarios y votos - <a href="/register">Unirse</a> o <a href="/login">Ingresar</a> para empezar.</p>
-          </li>
-
-        </ul> 
-      </div><!-- home pitch -->
-    </div><!-- // end pitch -->
-
-	<div id="find">
-  		<h2>¿Quién es mi representante en el Congreso?</h2>
-    	<form id="find_rep" action="/people/zipcodelookup">
-      		<input id="enter_zip" class="enter_zip" type="text" name="zip5" maxlength='100' value="Departamento" onfocus="this.value='';"/>
-    	</form>
-  	</div>
-
-
-	<div id="link_app">
-		<h2>Descarga la aplicación de Congreso Abierto</h2>
-		
-		<div id="texto_app">
-			<p>Descarga la aplicación para <a href="https://play.google.com/store">Android</a> y <a href="https://itunes.apple.com/us/genre/ios/id36?mt=8">iOS</a> diseñadas para aprender más sobre tus representantes electos, pongase en contacto con ellos y vea lo que están haciendo. Siga los últimos proyectos de ley, sigale la pista a las actividades y explore sus votos en la palma de su mano.</p>
-			
-		</div>
-		
-		<div id="imagen_app">
-			<img id="imagen_format" src="/images/app_congrso.png" />
-		</div>
-
-	</div>    
-    <div class="clear">&nbsp;</div>
-  </div><!-- second tier -->
 </div><!-- inner -->
 </div> <!-- content -->
