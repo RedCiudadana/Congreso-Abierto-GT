@@ -34,8 +34,8 @@
       </li>
       <li><a href="#" class="active">El Congreso</a>
       	<ul>
-            <li><a href="#">Mapa Distrital</a></li>
-            <li><a href="#">Diputados</a></li>
+            <li><%= link_to "<span>Mapa Distrital</span>".html_safe, :controller => 'diputados', :action => 'mapa_distrital'%></li>
+            <li><%= link_to "<span>Diputados</span>".html_safe, :controller => 'diputados', :action => 'lista_diputados'%></li>
             <li><a href="#">Comisiones</a></li>
             <li><a href="#">Junta Directiva</a></li>
             <li><a href="#">Partidos</a></li>

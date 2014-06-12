@@ -1,4 +1,10 @@
 OpenCongress::Application.routes.draw do
+  get "diputados/perfil_diputados"
+
+  get "diputados/mapa_distrital"
+
+  get "diputados/lista_diputados"
+
   get "congreso_abierto/congreso_abierto"
 
   match '/distrito', :to => 'diputado#diputadoDistrito'
