@@ -1,4 +1,10 @@
 OpenCongress::Application.routes.draw do
+  get "listados/lista_dip"
+
+  get "listado_diputados/listado_diputados"
+
+  get "diputados2/listado"
+
   get "diputados/perfil_diputados"
 
   get "diputados/mapa_distrital"

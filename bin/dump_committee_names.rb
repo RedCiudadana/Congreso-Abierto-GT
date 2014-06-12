@@ -11,4 +11,4 @@ class CommitteeNames
 end
 
 listener = CommitteeNamesListener.new
-REXML::
+
