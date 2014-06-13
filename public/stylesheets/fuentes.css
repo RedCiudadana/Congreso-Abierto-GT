@@ -1,0 +1,17 @@
+@font-face
+{
+	font-family: "OpenSans-Regular";
+	src: url(../PlantillasCA/Fuentes/OpenSans-Regular.ttf); 
+}
+
+@font-face
+{
+	font-family: "OpenSans-Bold";
+	src: url(../PlantillasCA/Fuentes/OpenSans-Bold.ttf); 
+}
+
+@font-face
+{
+	font-family: "OpenSans-Light";
+	src: url(../PlantillasCA/Fuentes/OpenSans-Light.ttf); 
+}

@@ -1,0 +1,238 @@
+
+/*CSS*/
+#cabeza 
+{
+	background-color: #5FBCD3;
+	width: 80%;
+	height: 200px;
+	margin: 0 auto;
+}
+
+#logo
+{
+	width: 40%;
+	height: 200px;
+	float: left;
+}
+
+#botones
+{
+	width: 55%;
+	height: 125px;
+	margin-top: 2%;
+	margin-right: 5%;
+	float: right;
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	border-bottom-color: #FFFFFF;
+}
+
+#imglogo
+{
+	width: 75%;
+	height: 60%;
+	margin: 0 auto;
+	margin-top: 8%;
+	margin-left: 10%;
+}
+
+#baner
+{
+	width: 80%;
+	height: 270px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 1;
+}
+
+#imgbaner
+{
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+}
+
+#tituloBaner
+{
+	position: absolute;
+	color: #FFFFFF;
+	width: 75%;
+	height: 50px;
+	right:16%;
+	top:14%;
+	font-family: Arial;
+	font-size: 350%;
+	text-align: center;
+}
+
+#textoIzquierda
+{
+	position: absolute;
+	color: #FFFFFF;
+	width: 70%;
+	height: 50px;
+	left: 15%;
+	bottom:10%;
+	font-family: Arial;
+	font-size: 100%;
+	text-align: left;	
+}
+
+#twitter
+{
+	position: absolute;
+	color: #FFFFFF;
+	width: 100%;
+	height: 50px;
+	right: 15%;
+	bottom:10%;
+	font-family: Arial;
+   	font-weight:bold;
+	font-size: 150%;
+	text-align: right;
+}
+
+#twitter a
+{
+	text-decoration:none;
+	color: #FFFFFF;
+}
+
+#twitter a:hover
+{
+	color: #FFFFFF;
+}
+
+#btnRegistro
+{
+	float: right;
+	margin-top: 15%;
+}
+
+#btnSesion
+{
+	float: right;
+	margin-top: 15%;
+}
+
+#linea_azul
+{
+	background-color: #1E90FF;
+	width: 69%;
+	height: 5px;
+	margin: 0 auto;
+}
+
+.boton 
+{
+	background: #ffffff;
+  	background-image: -webkit-linear-gradient(top, #ffffff, #ffffff);
+  	background-image: -moz-linear-gradient(top, #ffffff, #ffffff);
+  	background-image: -ms-linear-gradient(top, #ffffff, #ffffff);
+  	background-image: -o-linear-gradient(top, #ffffff, #ffffff);
+  	background-image: linear-gradient(to bottom, #ffffff, #ffffff);
+  	font-family: Georgia;
+  	color: #5fbcd3;
+  	font-size: 10px;
+  	padding: 10px 20px 10px 20px;
+  	text-decoration: none;
+}
+
+.boton:hover 
+{
+  	background: #FFB357;
+  	color: #FFFFFF;
+  	text-decoration: none;
+}
+
+/* Menu wrapper */
+#menu_wrapper 
+{
+   
+   margin:0 auto;
+   width:75%;    
+   font-size:100%; 
+   position:relative;
+   font-family:"Helvetica",Arial;
+}
+ 
+/* Menu superior */
+#menu_wrapper ul 
+{
+   margin:0 auto;
+   padding:0;
+   list-style-type:none;
+   float:right;
+   position:relative;
+   right:50%;
+}
+
+#menu_wrapper ul li 
+{
+   padding:0;
+   float:left;
+   position:relative;
+   left:50%;
+}
+
+#menu_wrapper ul li a 
+{
+   display:block;
+   margin:0 auto;
+   padding: 1em 3em 1em;
+   font-size: 100%;
+   background:  #1E90FF;
+   text-decoration:none;
+   color:#FFFFFF;
+   font-weight:bold;
+}
+
+#menu_wrapper ul li:hover a,
+#menu_wrapper ul li.hover a 
+{ /* IE 6 */
+   background: #36F; 
+   color: #FFFFFF;
+}
+ 
+#menu_wrapper ul ul 
+{
+   display:none; 
+   right:auto; 
+   width: 100%;
+}
+
+#menu_wrapper ul ul li 
+{
+   left:auto;  /*reset del li superior */
+   margin:0 auto; /* Reset de margin */
+   clear:left;
+   width:100%;
+}
+
+#menu_wrapper ul ul li a,
+#menu_wrapper ul li.active li a,
+#menu_wrapper ul li:hover ul li a,
+#menu_wrapper ul li.hover ul li a 
+{ /* IE6 */
+   font-size: 70%;
+   font-weight:normal; 
+   background: #1E90FF;
+   color:#FFFFFF;
+   line-height:1.4em; 
+   opacity: 0.6;
+}
+
+#menu_wrapper ul ul li a:hover,
+#menu_wrapper ul li.active ul li a:hover,
+#menu_wrapper ul li:hover ul li a:hover,
+#menu_wrapper ul li.hover ul li a:hover 
+{ 
+   background:#36F; 
+   color:#FFFFFF;
+}
+ 
+#menu_wrapper ul li:hover ul,
+#menu_wrapper ul li.hover ul 
+{ /* IE6 */
+   display:block; 
+}

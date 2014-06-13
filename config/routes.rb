@@ -1,7 +1,19 @@
 OpenCongress::Application.routes.draw do
+  get "listados/lista_dip"
+
+  get "listado_diputados/listado_diputados"
+
+  get "diputados2/listado"
+
+  get "diputados/perfil_diputados"
+
+  get "diputados/mapa_distrital"
+
+  get "diputados/lista_diputados"
+
   get "congreso_abierto/congreso_abierto"
 
-  match '/departamento', :to => 'diputado#diputadoDepto'
+  match '/distrito', :to => 'diputado#diputadoDistrito'
   match '/partido', :to => 'diputado#diputadoPartido'
   match '/listado', :to => 'diputado#diputadoLista'
   match '/nombre', :to => 'diputado#diputadoNom'
