@@ -6,36 +6,42 @@
 		<section class="fuente_color">
 			<article id="articulo1" >
 				<div id="mapa">
-					<ul>
-						
-						<li><a href="#">Alta Verapaz </a></li>
-						<li><a href="#">Baja Verapaz</a></li>
-						<li><a href="#">Chimaltenango</a></li>
-						<li><a href="#">Distrito Central</a></li>
-						<li><a href="#">Distrito Guatemala</a></li>
-						<li><a href="#">El Progreso</a></li>
-						<li><a href="#">Escuintla</a></li>
-						<li><a href="#">Huehuetenango</a></li>
-						<li><a href="#">Izabal</a></li>
-						<li><a href="#">Jalapa</a></li>
-						<li><a href="#">Jutiapa</a></li>
-						<li><a href="#">Petén</a></li>
-						<li><a href="#">Quetzaltenango</a></li>
-						<li><a href="#">Quiché</a></li>
-						<li><a href="#">Retalhuleu</a></li>
-						<li><a href="#">Sacatepéquez</a></li>
-						<li><a href="#">San Marcos</a></li>
-						<li><a href="#">Santa Rosa</a></li>
-						<li><a href="#">Sololá</a></li>
-						<li><a href="#">Totonicapán</a></li>
-						<li><a href="#">Zacapa</a></li>
-						<li><a href="#">Diputados por Listado Nacional</a></li>
-					</ul>
+					
+						<li><%= link_to "Alta Verapaz",:mi_parametro => "Alta Verapaz" %></li>
+						<li><%= link_to "Baja Verapaz",:mi_parametro => "Baja Verapaz" %></li>
+						<li><%= link_to "Chimaltenango",:mi_parametro => "Chimaltenango" %></li>
+						<li><%= link_to "Distrito Central",:mi_parametro => "Distrito Central" %></li>
+						<li><%= link_to "Distrito Guatemala",:mi_parametro => "Distrito Guatemala" %></li>
+						<li><%= link_to "El Progreso",:mi_parametro => "El Progreso" %></li>
+						<li><%= link_to "Escuintla",:mi_parametro => "Escuintla" %></li>
+						<li><%= link_to "Huehuetenango",:mi_parametro => "Huehuetenango" %></li>
+						<li><%= link_to "Izabal",:mi_parametro => "Izabal" %></li>
+						<li><%= link_to "Jalapa",:mi_parametro => "Jalapa" %></li>
+						<li><%= link_to "Jutiapa",:mi_parametro => "Jutiapa" %></li>
+						<li><%= link_to "Petén",:mi_parametro => "Petén" %></li>
+						<li><%= link_to "Quetzaltenango",:mi_parametro => "Quetzaltenango" %></li>
+						<li><%= link_to "Quiché",:mi_parametro => "Quiché" %></li>
+						<li><%= link_to "Retalhuleu",:mi_parametro => "Retalhuleu" %></li>
+						<li><%= link_to "Sacatepéquez",:mi_parametro => "Sacatepéquez" %></li>
+						<li><%= link_to "San Marcos",:mi_parametro => "San Marcos" %></li>
+						<li><%= link_to "Santa Rosa",:mi_parametro => "Santa Rosa" %></li>
+						<li><%= link_to "Sololá",:mi_parametro => "Sololá" %></li>
+						<li><%= link_to "Totonicapán",:mi_parametro => "Totonicapán" %></li>
+						<li><%= link_to "Zacapa",:mi_parametro => "Zacapa" %></li>
+						<li><%= link_to "Diputados por Listado Nacional",:mi_parametro => "Diputado por Listado Nacional" %></li>
+					
 				</div>
 				<div id="informacion">
 					<div id="distrito"><%=@distrito%></div>
-					<div id="numero"> 31 DIPUTADOS </div>
-					<div id="listado_diputados"> </div> 
+					<div id="numero"> <%=@numero_dip%> DIPUTADOS </div>
+					<div id="listado_diputados" class="fuente_color">
+						<ul>
+							<% @diputados.each do |n|%>
+								<li><%= link_to n.nombre,:controller => 'diputados' ,:action => 're_perfil' %></li>
+							<%end%>	
+						</ul>
+						
+					</div> 
 				</div>
 			</article>
 			

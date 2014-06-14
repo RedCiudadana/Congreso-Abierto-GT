@@ -60,3 +60,26 @@ section article
 	border-left-color: #1E90FF;
 	margin-right: 0.5%;
 }
+#listado_diputados 
+{
+	margin-top: 10%;	
+}
+
+#articulo1 ul
+{
+	text-align: center;
+	list-style-type:none;
+}
+
+#articulo1 ul li a
+{
+   	text-decoration:none;
+   	font-weight:bold;
+   	color: #414A4C;
+}
+
+#articulo1 ul li:hover a,
+#articulo1 ul li.hover a 
+{ /* IE 6 */ 
+   color: #5FBCD3;
+}
