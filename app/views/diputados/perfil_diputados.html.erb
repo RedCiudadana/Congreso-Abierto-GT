@@ -1,1 +1,48 @@
-<h1>El diputado es: <%=@nombre_dip%></h1>
+<link type="text/css" rel="stylesheet" href="/stylesheets/perfil_diputado.css"/>
+<link type="text/css" rel="stylesheet" href="/stylesheets/clases.css"/>
+
+<!-- Codigo para copiar -->
+		<section>
+			<article id="articulo1" class="fuente_color">
+				<div id="datos">
+					<div id="foto"> 
+						<img id="foto_diputado" src=<%=@url%>/> 
+					</div>
+					<div id="nombre"><strong><%=@nombre%></strong> </div>
+					<div id="distrito"><%=@dis%></div>
+					<div id="perido">2012-2016</div>
+				</div>
+			</article>
+			
+			<article id="articulo2" class="fuente_color">
+				 <div id="contacto">
+				 	<p><strong>Contacto</strong></p>
+				 	<div>
+				 		<li>Correo:</li>
+				 		<li><%=@correo%></li>
+				 	</div>
+				 	<div>
+				 		<li>Teléfono de oficina:</li>
+				 		<li><%=@telefono%> Ext.<%=@ext%></li>
+				 	</div>
+				 	<div>
+				 		<li>Dirección de oficina:</li>
+				 		<li><%=@direccion%></li>
+				 	</div>
+				 </div>
+				 <div id="historial">
+				 	<div id="btnCurriculum"><a class="boton1" title="Ver Curriculum" href="http://play.google.com/store">CURRICULUM</a></div>
+				 	<div id="enlaces">
+				 		<ul>
+				 			<li><a href="http://www.google.com">Historial Político</a></li>
+				 			<li><a href="http://www.outlook.com">Iniciativas Presentadas</a></li>
+				 			<li><a href="#">Partición en Comisiones</a></li>
+				 			<li><a href="#">Asistencia al pleno</a></li>
+				 			<li><a href="#">Votaciones Nominales</a></li>
+				 		</ul>
+				 	</div>
+				 </div>
+				 <div id="tabla"> </div>
+			</article>
+		</section>
+		<!-- Fin del código para copiar -->

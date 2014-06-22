@@ -33,14 +33,13 @@
 				</div>
 				<div id="informacion">
 					<div id="distrito"><%=@distrito%></div>
-					<div id="numero"> <%=@numero_dip%> DIPUTADOS </div>
+					<div id="numero"> <%=@numero_dip%> Diputados </div>
 					<div id="listado_diputados" class="fuente_color">
 						<ul>
 							<% @diputados.each do |n|%>
-								<li><%= link_to n.nombre,:controller => 'diputados' ,:action => 're_perfil' %></li>
+								<li><%= link_to n.nombre, :controller => 'diputados' ,:action => 're_perfil', :action =>'perfil_diputados', :codigo => n.id%></li>
 							<%end%>	
 						</ul>
-						
 					</div> 
 				</div>
 			</article>

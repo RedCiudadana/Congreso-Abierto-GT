@@ -6,8 +6,7 @@
 		<h1 class="fuente_color">Listado General de Diputados</h1>
 		<ul>
 			<% @dip.each do |n|%>
-			<li><%= link_to n.nombre,:controller => 'diputados' ,:action => 're_perfil' %></li>
-				
+			<li><%= link_to n.nombre,:controller => 'diputados' ,:action => 're_perfil', :action => 'perfil_diputados', :codigo => n.id %></li>
 			<%end%>
 		</ul>
 	</article>

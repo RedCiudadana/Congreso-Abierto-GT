@@ -3,12 +3,12 @@
 <link type="text/css" rel="stylesheet" href="/stylesheets/maestro.css">
 
 #heading
-  %h2 Please Login or Register for a Free Account
+  %h2 Por favor inicia sesión o crea tu cuenta, es gratis
 
 .padding
   #login-left.floatleft.padding.paddingtopnone
     %div
-      %h3 Login with Facebook
+      %h3 Inicia sesión con Facebook
       = fb_connect_async_js
       = fb_login_and_redirect(request.url, :scope => 'email')
 
