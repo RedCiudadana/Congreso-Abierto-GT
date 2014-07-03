@@ -1,50 +1,63 @@
 <%= form_for :user, :url => signup_url do |f| %>
-<div title="Account signup" id="signupform" class="form">
-
-   <%= error_messages_for :user %>
-  
-		<label for="user_login">Nombre de Usuario</label>
-  		<%= f.text_field :login, :class => 'field', :size => 30 %>
-  		<p class="zip_tell">(no spaces or special characters)</p>
-  		
-  		<label for="user_password">Choose a Password</label>
-		<%= f.password_field :password, :class => 'field', :size => 30 %>
-		
-		<label for="user_password_confirmation">Confirm Password</label>
-  		<%= f.password_field :password_confirmation, :class => 'field', :size => 30 %>
- 		
-		<label for="user_email">Email</label>
-  		<%= f.text_field :email, :class => 'field', :size => 30 %>
-		
-  		<label>Zip Code</label>
-  		<%= f.text_field :zipcode, :class => 'field', :size => 5, :maxlength => 5 %>
-  		<p class="zip_tell">(required, to find your Members of Congress)</p>
-  		
-  		<%= f.simple_captcha :label => "Spam check" %>
-  		<p class="zip_tell">(enter the text on the right in the field above)</p>
-  		<script>
-    		$j(document).ready(function() {
-          $j('#user_captcha').addClass("field");
-        });
-      </script>
-  		
-  		<div class="clear margintop floatleft behave">	<br/>
-			<%= f.check_box :mailing, :style => "margin-top:-6px;", :class => "tick" %>
-			<label class="send" for="user_mailling">Send me major updates about OpenCongress <em>(optional, about one email per month)</em></label>
+	
+	<div id="formulario_registro" class="fuente_color">
+		<%= error_messages_for :user %>
+	  	
+  		<div>
+  			<h2>Crea una cuenta en Congreso Abierto</h2>
 		</div>
-
-  		<div class="clear margintop floatleft behave">	<br/>
-			<%= f.check_box :partner_mailing, :class => "tick" %>
-			<label class="send" for="user_mailling">Join the Participatory Politics Foundation and Sunlight Foundation email lists<em>(optional, hear about our new projects)</em></label>
+		
+		<div>
+			<label for="user_login">Nombre de Usuario</label>
+  			<%= f.text_field :login, :class => 'txtbox' %>
+  			<p class="subtexto">(no uses espacios o caracteres especiales)</p>	
 		</div>
-
- 	<div class="clear margintop floatleft behave"><%= f.check_box :accept_tos, :class => "tick" %>
- 		<label class="toss" for "user_accept_tos" %>I agree to the <a href="/about/terms_of_service">Terms of Service</a> and <a href="/about/privacy_policy">Privacy Policy.</a></label>
+		
+		<div>
+			<label for="user_password">Contraseña</label>
+			<%= f.password_field :password, :class => 'txtbox' %>
+		</div>
+		
+		<div>
+			<label for="user_password_confirmation">Confirma tu contraseña</label>
+  			<%= f.password_field :password_confirmation, :class => 'txtbox' %>
+		</div>
+		
+		<div>
+			<label for="user_email">Correo Electrónico</label>
+  			<%= f.text_field :email, :class => 'txtbox' %> 
+		</div>
+		
+		<div>
+			<%= f.simple_captcha :label => "Spam check" %>
+  			<p class="subtexto">(Ingresa el texto de la imagen)</p>
+  			<script>
+    			$j(document).ready(function() {
+          			$j('#user_captcha').addClass("field");
+        		});
+      		</script>
+      	</div>		
 	</div>
-
-	<input type="image" value="Register" class="floatright margintop behave clear" src="<%= image_path 'register.png' %>" />
-
-	<div class="clear"><em>We will not share your email address with anyone for any reason.</em></div>
-
-</div>
+	
+	<div id="opciones" class="fuente_color">
+		<div>
+			<%= f.check_box :mailing, :class => "check" %>
+			<label for="user_mailling">Quiero recibir más información sobre Congreso Abierto <em>(opcional)</em></label>
+		</div>
+		
+		<div>
+			<%= f.check_box :partner_mailing, :class => "check" %>
+			<label for="user_mailling">Join the Participatory Politics Foundation and Sunlight Foundation email lists<em>(optional, hear about our new projects)</em></label>
+		</div>
+		
+		<div>
+			<%= f.check_box :accept_tos, :class => "check" %>
+ 			<label for "user_accept_tos" %>Acepto los <a href="/about/terms_of_service">Terminos de Servicio</a> y las <a href="/about/privacy_policy">Políticas de Privacidad.</a></label>
+		</div>
+		
+		<div>
+			<input type="image" value="Regístrate" class="floatright margintop behave clear" src="<%= image_path 'register.png' %>" />
+		</div>
+		<div id="mensaje_opciones">No compartiremos tu correo electronico con nadie por ningún motivo.</div>
+	</div>
 <% end %>

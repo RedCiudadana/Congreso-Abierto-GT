@@ -4,8 +4,8 @@
 			<a id="cliclogo" href="/" title="Congreso Abierto"><img id="imglogo" src="/images/CA/ca.png"/></a>		
 		</div> <!-- Fin div logo -->
 		<div id="botones">
-			<a id="btnSesion" class="boton" title="Iniciar Sesión" href="#">INICIAR SESIÓN</a>
 			
+			<%= link_to "INICIAR SESIÓN", {:controller => 'account', :action => 'sesion'}, {:class => 'boton', :id => 'btnSesion'} %>
 			<%= link_to "REGISTRARSE", {:controller => 'account', :action => 'login'}, { :class => "boton", :id => "btnRegistro"} %>
 			
 		</div> <!-- Fin div botones -->
@@ -43,7 +43,7 @@
       </li>
       <li><a href="#">Involúcrate</a>
           <ul>
-            <li><a href="#">Noticias</a></li>
+            <li><%= link_to "<span>Noticias</span>".html_safe, :controller => 'noticias', :action => 're_resumen'%></li>
             <li><a href="#">Peticiones</a></li>
             <li><a href="#">Visita</a></li>
          </ul>

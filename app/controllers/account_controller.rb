@@ -1,4 +1,7 @@
 class AccountController < ApplicationController
+  
+  layout "frontpage"
+  
   before_filter :login_from_cookie, :except => [:reset_password]
   before_filter :login_required, :only => [:welcome, :accept_tos]
   after_filter :check_wiki, :only => [:login, :activate]
@@ -33,6 +36,10 @@ class AccountController < ApplicationController
     else
       redirect_to :action => :index
     end
+  end
+  
+  def sesion
+    
   end
 
   def login    

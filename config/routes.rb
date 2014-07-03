@@ -1,4 +1,8 @@
 OpenCongress::Application.routes.draw do
+  get "noticias/resumen"
+
+  get "noticias/despliegue"
+
   get "listados/lista_dip"
 
   get "listado_diputados/listado_diputados"

@@ -24,7 +24,7 @@ class DiputadosController < ApplicationController
      @distrito = params[:mi_parametro] #Aqui hacemos la consulta de los diputados en el distrito seleccionado
      @numero_dip = Diputados.where(:distrito => @distrito).count #Buscamos el contador de diputados en el distrito
      @diputados = Diputados.where(:distrito => @distrito) #Aquí buscamos los datos de los diputados del distrito     
-   end
+  end
   
   def re_perfil
     redirect_to :action => 'perfil_diputados'
