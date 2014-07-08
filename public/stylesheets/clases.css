@@ -1,10 +1,29 @@
-.fuente_color
+*
 {
-	color: #414A4C;
-	font-family: Arial;
+	margin: 0%;
+	padding: 0%;
 }
 
-.boton1 {
+.boton_blanco 
+{ 
+  border-radius: 10px;
+  font-family: OpenSans-Regular;
+  color: #5FBCD3;
+  font-size: 15px;
+  background: #FFFFFF;
+  padding: 2px 25px 2px 25px;
+  text-decoration: none;
+}
+
+.boton_blanco:hover 
+{
+  background: #FFB357;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.boton_celeste
+{
   font-family:"Helvetica",Arial;
   color: #ffffff;
   padding: 10px 20px 10px 20px;
@@ -13,7 +32,8 @@
   font-size: 80%;
 }
 
-.boton1:hover {
+.boton_celeste:hover 
+{
   background: #3cb0fd;
   text-decoration: none;
 }

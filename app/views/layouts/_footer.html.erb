@@ -1,56 +1,60 @@
-<div class="footer-wrapper-old">
+<div id="pie_de_pagina">
+	<div id="div_datos">
+		<div>
+			<div id="titulo_ca">CONGRESO ABIERTO</div>
+			<div id="texto_ca"><img id="imgTextoca" src="/imagenes/Pie_pagina/texto.png"/></div>
+		</div>
+		<div>
+			<div id="titulo_rs">EN OTRAS REDES</div>
+			<div id="intro_rs">Encuentranos tambien en otras redes:</div>
+			<div id="enlaces_rs">
+				<div>
+					<img class="imgRS" src="/imagenes/Pie_pagina/fb.png"/>
+					<a class="linkRS" href="https://facebook.com">Facebook</a>
+				</div>
+				
+				<div>
+					<img class="imgRS" src="/imagenes/Pie_pagina/tw.png"/>
+					<a class="linkRS" href="https://twitter.com">Twitter</a>
+				</div>
+				
+				<div>
+					<img class="imgRS" src="/imagenes/Pie_pagina/yt.png"/>
+					<a class="linkRS" href="https://youtube.com">YouTube</a>
+				</div>
+			</div>
+		</div>
+		
+		<div id="ultimo_div">
+			<div id="titulo_suscribir">SUSCRÍBETE AL BOLETÍN</div>
+			
+			<div id="div_txt">
+				<label for="nombre">Nombre</label>
+				<input type="text" id="nombre" />
+				
+				<label for="apellidos">Apellidos</label>
+				<input type="text" id="apellidos" />
+				
+				<label for="correo">Correo Electrónico</label>
+				<input type="text" id="correo" />
+				
+				<a id="btnSuscribir" class="boton_blanco" href="#" >Enviar</a>
+			</div>
+		</div>
+	</div>
 	
-		<div id="footer_izquierda">
-                   		<h3>
-                            <a id="oc-logo-small" class="hide-text" href="/">OpenCongress</a>
-                        </h3>
-                        <p>OpenCongress allows anyone to follow legislation in Congress, from bill introduction to floor vote. Learn more about issues you care about and connect with others who share similar views.
-                           OpenCongress was founded by the Participatory Politics Foundation in 2007 and operated as a joint project with the Sunlight Foundation until May 2013.
-                        </p>
-                       <div class="container-fluid">
-                            <table id="tabla_info_op">
-                            	<tr>
-                            		<td>
-                            			<%= link_to 'About OpenCongress', { :controller => 'about' },
-                                            { :title => "Find out more about who and what is Open Congress" } %>
-                            		</td>
-                            		<td><a href="/howtouse">User's Guide</a></td>
-                            		<td><a href="/terms">Terms &amp; Privacy</a></td>
-                            	</tr>
-                            	
-                            	<tr>
-                            		<td><a href="/search">Search</a></td>
-                            		<td><%= link_to 'Wiki', "#{Settings.wiki_base_url}/Wiki_Home" %></td>
-                            		<td><a href="/contact/">Contact Us</a></td>
-                            	</tr>
-                            	
-                            	<tr>
-                            		<td><%= link_to 'RSS', '/about/rss' %></td>                            		
-                            		<td><%= link_to 'Developers/API', :controller => 'about', :action => 'code' %></td>                            		
-                            		<td><%= link_to 'Resources', :controller => 'resources' %></td>
-                            	</tr>
-                            	
-                            </table>
-                        </div>
-                        
-                   </div>
-                   
-                   <div id="footer_derecha"><!-- Inicia codigo para informacion derecha -->
-                   		<h3>
-                            <a id="sf-logo-small" class="hide-text" href="http://www.sunlightfoundation.com">Sunlight Foundation</a>
-                        </h3>
-                        <p>Founded in 2006, the Sunlight Foundation is a nonpartisan nonprofit that advocates for open government globally and uses technology to make government more accountable to all. Visit <a href="http://sunlightfoundation.com">SunlightFoundation.com</a> to learn more.</p>
-                        <div class="sign_up">
-                        <h4>Like this project and want to discover others like it?</h4>
-                        <span class="tip">Join the Sunlight Foundation's open government community to learn more.</span>
-                        <form action="/subscribe.json" method="post" id="sfapp-subscribe-form" class="form-inline">
-                            <div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='8LsIjevc2XbY7Grk4KlrYkIlXz72J7nV' /></div>
-                            <input type="hidden" name="response" value="json">
-                            <input class="signUpEmail" type="text" name="email" placeholder="Email Address">
-                            <input class="signUpZip" type="text" name="zipcode" placeholder="Zip Code">
-                            <button type="submit" class="btn btn-sunlight">Sign Up</button>
-                        </form>
-                    </div>	
-                   </div><!-- Termina codigo para informacion derecha -->
-	
+	<div id="div_links">
+		<ul class="list_links">
+			<li><%= link_to "¿Qué es Congreso Abierto?".html_safe, :controller => 'congreso_abierto', :action => 're_informacion'%></li>
+			<li><%= link_to "Nuestro Equipo".html_safe, :controller => 'congreso_abierto', :action => 're_equipo'%></li>
+			<li><a href="#">Proyectos</a></li>
+			<li><a href="#">Quien nos apoya</a></li>
+			<li><%= link_to "Pertenece a Congreso Abierto".html_safe, :controller => 'congreso_abierto', :action => 're_voluntarios'%></li>
+			<li><a href="#">Otras Publicaciones</a></li>
+			<li><%= link_to "Congreso Abierto".html_safe, :controller => 'congreso_abierto', :action => 're_informacion'%></li>
+			<li><%= link_to "El Congreso".html_safe, :controller => 'diputados', :action => 're_mapa_distrital'%></li>
+			<li><a href="#">Involúcrate</a></li>
+			<li><a id="ultimo_link" href="#">Contacto</a></li>
+		</ul>
+	</div>
 </div>

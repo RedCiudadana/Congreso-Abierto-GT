@@ -3,7 +3,7 @@
 
 <!-- Aquí comienza el código que debo copiar al proyecto -->
 
-		<section class="fuente_color">
+		<section>
 			<article id="articulo1" >
 				<div id="mapa">
 					
@@ -32,9 +32,9 @@
 					
 				</div>
 				<div id="informacion">
-					<div id="distrito"><%=@distrito%></div>
-					<div id="numero"> <%=@numero_dip%> Diputados </div>
-					<div id="listado_diputados" class="fuente_color">
+					<div id="distrito" class="fuente_normal"><%=@distrito%></div>
+					<div id="numero" class="fuente_normal"> <%=@numero_dip%> Diputados </div>
+					<div id="listado_diputados" class="fuente_light">
 						<ul>
 							<% @diputados.each do |n|%>
 								<li><%= link_to n.nombre, :controller => 'diputados' ,:action => 're_perfil', :action =>'perfil_diputados', :codigo => n.id%></li>
