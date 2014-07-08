@@ -1,9 +1,0 @@
-class ChangeDiputadoToDiputados < ActiveRecord::Migration
-   def    
-     rename_table :diputado, :diputados
-  end
-
-  def self.down
-    rename_table :diputados, :diputado
-  end
-end
