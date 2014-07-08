@@ -1,0 +1,33 @@
+<div id="formulario_login" class="fuente_color">
+	
+	<%login_action ||= nil%>
+
+	<%= form_for :user, :url => '/account/login' do |f|%>
+	<div>
+		<h2>Inicia Sesión</h2>
+	</div>
+	
+	<div>
+		<label for="user_login">Usuario</label>
+		<%=f.text_field :login, :class => 'txtbox'%>
+	</div>
+	
+	<div>
+		<label for="user_password">Contraseña</label>
+		<%=f.password_field :password, :class => 'txtbox'%>  
+	</div>	
+	
+	<div>
+		<input type="image" value="Iniciar Sesión" class="floatright margintop behave" src="<%= image_path 'login2.png' %>"/>
+	</div>
+	
+	<%if login_action %>
+    <%=hidden_field_tag 'login_action', login_action%> 
+	<%end%>
+	
+	<div>
+		<%= link_to "¿Olvidaste tu contraseña?", :action => 'forgot_password', :class => 'fuente_color'%>
+	</div>
+	
+	<%end%>
+</div>

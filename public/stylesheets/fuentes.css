@@ -1,17 +1,53 @@
+/*Fuentes nuevas*/
 @font-face
 {
-	font-family: "OpenSans-Regular";
-	src: url(../PlantillasCA/Fuentes/OpenSans-Regular.ttf); 
+	font-family: OpenSans-Regular;
+	src: url(../fuentes/OpenSans-Regular.ttf);
 }
 
 @font-face
 {
-	font-family: "OpenSans-Bold";
-	src: url(../PlantillasCA/Fuentes/OpenSans-Bold.ttf); 
+	font-family: OpenSans-Semibold;
+	src: url(../fuentes/OpenSans-Semibold.ttf);
 }
 
 @font-face
 {
-	font-family: "OpenSans-Light";
-	src: url(../PlantillasCA/Fuentes/OpenSans-Light.ttf); 
+	font-family: OpenSans-Light;
+	src: url(../fuentes/OpenSans-Light.ttf);
+}
+
+@font-face
+{
+	font-family: OpenSans-Italic;
+	src: url(../fuentes/OpenSans-Italic.ttf);
+}
+
+/*Clases para html*/
+.fuente_normal
+{
+	font-family: OpenSans-Regular;
+	font-size: 100%;
+	color: #414A4C;
+}
+
+.fuente_light
+{
+	font-family: OpenSans-Light;
+	font-size: 100%;
+	color: #414A4C;
+}
+
+.fuente_semibold
+{
+	font-family: OpenSans-Semibold;
+	font-size: 100%;
+	color: #414A4C;
+}
+
+.fuente_italic
+{
+	font-family: OpenSans-Italic;
+	font-size: 100%;
+	color: #414A4C;
 }

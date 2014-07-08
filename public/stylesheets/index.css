@@ -3,88 +3,60 @@ section article
 	margin: 0 auto;
 	background: #FFFFFF;
 	width: 80%;
-	height: 320px;
+	height: 330px;
 }
 
 #articulo1
 {
-	margin-top: 5%;
+	margin-top: 8%;
 }
 
 #video
 {
 	float: left;
-	background: #000000;
-	width: 43%;
-	height: 320px;
+	width: 45%;
+	height: 100%;
 	margin-left: 7%;
 }
 
 #app
 {
 	float: right;
-	margin-right: 4%;
-	width: 43%;
-	height: 320px;
+	margin-right: 8%;
+	width: 35%;
+	height: 330px;
 }
 
-#textoapp1
+#textoapp
 {
 	width: 90%;
-	font-size: 281%;
-	text-align: center;
-}
-
-#textoapp2
-{
-	width: 38%;
-	height: 10%;
-	font-size: 125%;
-	margin-top: 3%;
-	margin-left: 3%;
-	float: left;
+	height:75%;
+	font-size: 230%;
+	text-align: left;
 }
 
 #btnDescargar
 {
-	float: right;
-	width: 40%;
-	height: 10%;
+	float: left;
+	width: 90%;
+	height: 20%;
 	margin-top: 7%;
 	margin-right: 2%;
 }
 
-#articulo2
+#btnandroid,
+#btnapple
 {
-	width:75%;
-	height: 200px;
-	margin: 0 auto;
-	margin-top: 3%;
-	background: #5FBCD3;
-	
+	width: 45%;
+	height: 78%;
 }
 
-#articulo2 h2
+#btnandroid
 {
-	color: #FFFFFF;
-	text-align: center;
-	padding-top: 4%;
-	font-size: 200%;	
+	float: left;
 }
 
-#articulo2 input
+#btnapple
 {
-	margin-left: 25%;
-	font-family: Arial;
-	width: 50%;
-	color: #808080;
-	padding: 1%;
-	border:solid 1px #FFFFFF;
-	text-align: center;
-	border-radius:20px;
-}
-
-#articulo2 input:focus
-{
-	box-shadow:0 0 15px #036;
+	float: right;
 }

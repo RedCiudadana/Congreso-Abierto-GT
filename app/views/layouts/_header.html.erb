@@ -1,53 +1,57 @@
-<header>
-	<div id="cabeza">
-		<div id="logo">
-			<a id="cliclogo" href="/" title="Congreso Abierto"><img id="imglogo" src="/images/CA/ca.png"/></a>		
-		</div> <!-- Fin div logo -->
-		<div id="botones">
-			<a id="btnSesion" class="boton" title="Iniciar Sesión" href="#">INICIAR SESIÓN</a>
-			
-			<%= link_to "REGISTRARSE", {:controller => 'account', :action => 'login'}, { :class => "boton", :id => "btnRegistro"} %>
-			
-		</div> <!-- Fin div botones -->
-				
-	</div> <!-- Fin div encabezado -->
-			
-	<div id="baner">
-		<img id="imgbaner" src="/images/CA/Congreso.png" />
-		<div id="tituloBaner">Más ciudadanos informados por un congreso responsable</div>
-		<div id="textoIzquierda">Involúcrate hoy. Siguenos en Twitter ></div>
-		<div id="twitter"><a href="http://www.google.com">@CongresoGT</a></div>
-	</div><!-- Fin div banner -->
+<header> <!-- Aquí colocaremos el logo botones de redes sociales y botones para sesión y registro-->
+	<div id="encabezado">
 		
-	<div id="linea_azul">
+		<div id="logo">
+			<a href="/" title="Congreso Abierto"><img id="imglogo" src="/imagenes/Encabezado/logo_ca.png"/></a>		
+		</div> <!-- fin seccion de logo -->
+		
+		<div id="redes_sociales">
+			<a href="https://www.youtube.com" title="Canal Congreso Abierto"><img id="btnYT" src="/imagenes/Encabezado/yt_normal.png"/></a>
+			<a href="https://www.twitter.com" title="@congresogt"><img id="btnTW" src="/imagenes/Encabezado/tw_normal.png"/></a>
+			<a href="https://www.facebook.com" title="Página Congreso Abierto"><img id="btnFB" src="/imagenes/Encabezado/fb_normal.png"/></a>
+		</div> <!-- fin seccion botones para redes sociales -->
+		
+		<div id="div_sesion">
+			<%= link_to "INICIAR SESIÓN", {:controller => 'account', :action => 'sesion'}, {:class => 'boton_blanco', :id => 'btnSesion'} %>
+			<%= link_to "REGISTRARSE", {:controller => 'account', :action => 'login'}, { :class => 'boton_blanco', :id => 'btnRegistro'} %>
+		</div> <!-- fin seccion botoens para sesion/registro -->
+		
+		<div id="franja"><img id="imglinea" src="/imagenes/Encabezado/franja_blanca.png" /></div> <!-- Franja blanca -->
 	</div>
+	
+	<div id="baner" class="fuente_normal">
+		
+		<img id="imgbaner" src="/imagenes/Cuerpo/Menú/baner.png" />
+		<div id="texto">Involúcrate hoy. Siguenos en Twitter ></div>
+		<div id="twitter"><a href="http://www.twitter.com">@CongresoGT</a></div>
+	
+	</div>
+	
 </header>
 
-<nav id="menu_wrapper">
-   <ul>
-      <li><a href="#">Congreso Abierto</a>
+<nav>
+	<ul class="nav fuente_normal">
+      <li><a href="">Congreso Abierto</a>
       	<ul>
             <li><%= link_to "<span>Acerca de Nosotros</span>".html_safe, :controller => 'congreso_abierto', :action => 're_informacion'%></li>
             <li><%= link_to "<span>Equipo</span>".html_safe, :controller => 'congreso_abierto', :action => 're_equipo' %></li>
             <li><%= link_to "<span>Voluntarios</span>".html_safe, :controller => 'congreso_abierto', :action => 're_voluntarios' %></li>
          </ul>
       </li>
-      <li><a href="#" class="active">El Congreso</a>
+      <li><a href="" class="active">El Congreso</a>
       	<ul>
             <li><%= link_to "<span>Mapa Distrital</span>".html_safe, :controller => 'diputados', :action => 're_mapa_distrital'%></li>
             <li><%= link_to "<span>Diputados</span>".html_safe, :controller => 'diputados', :action => 're_lista_diputados'%></li>
             <li><a href="#">Comisiones</a></li>
-            <li><a href="#">Junta Directiva</a></li>
-            <li><a href="#">Partidos</a></li>
          </ul>
       </li>
-      <li><a href="#">Involúcrate</a>
+      <li><a href="">Involúcrate</a>
           <ul>
-            <li><a href="#">Noticias</a></li>
+            <li><%= link_to "<span>Noticias</span>".html_safe, :controller => 'noticias', :action => 're_resumen'%></li>
             <li><a href="#">Peticiones</a></li>
             <li><a href="#">Visita</a></li>
          </ul>
       </li>
-      <li><a href="#">Contacto</a></li>
+      <li><a href="">Contacto</a></li>
    </ul>
 </nav>
