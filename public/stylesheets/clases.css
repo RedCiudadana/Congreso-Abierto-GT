@@ -6,34 +6,46 @@
 
 .boton_blanco 
 { 
-  border-radius: 10px;
-  font-family: OpenSans-Regular;
-  color: #5FBCD3;
-  font-size: 15px;
-  background: #FFFFFF;
-  padding: 2px 25px 2px 25px;
-  text-decoration: none;
+	border-radius: 10px;
+	font-family: OpenSans-Regular;
+	color: #5FBCD3;
+	font-size: 15px;
+	background: #FFFFFF;
+	padding: 2px 25px 2px 25px;
+	text-decoration: none;
 }
 
 .boton_blanco:hover 
 {
-  background: #FFB357;
-  color: #FFFFFF;
-  text-decoration: none;
+	background: #FFB357;
+	color: #FFFFFF;
+	text-decoration: none;
 }
 
 .boton_celeste
 {
-  font-family:"Helvetica",Arial;
-  color: #ffffff;
-  padding: 10px 20px 10px 20px;
-  background: #1E90FF;
-  text-decoration: none;
-  font-size: 80%;
+	border-radius: 10px;
+  	font-family:OpenSans-Regular;
+  	color: #ffffff;
+  	padding: 10px 20px 10px 20px;
+  	background: #1E90FF;
+  	text-decoration: none;
+  	font-size: 100%;
+  	text-align: center;
 }
 
 .boton_celeste:hover 
 {
-  background: #3cb0fd;
-  text-decoration: none;
+	background: #36F;
+	text-decoration: none;
+}
+
+.enlaces 
+{
+	text-decoration: none;
+}
+
+.enlaces:hover
+{
+	color: #36F;
 }

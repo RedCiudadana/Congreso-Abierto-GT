@@ -40,9 +40,10 @@
       </li>
       <li><a href="" class="active">El Congreso</a>
       	<ul>
-            <li><%= link_to "<span>Mapa Distrital</span>".html_safe, :controller => 'diputados', :action => 're_mapa_distrital'%></li>
-            <li><%= link_to "<span>Diputados</span>".html_safe, :controller => 'diputados', :action => 're_lista_diputados'%></li>
+            <li><%= link_to "<span>Mapa Distrital</span>".html_safe, :controller => 'congreso', :action => 're_mapa_distrital'%></li>
+            <li><%= link_to "<span>Diputados</span>".html_safe, :controller => 'congreso', :action => 're_lista_diputados'%></li>
             <li><a href="#">Comisiones</a></li>
+            <li><%= link_to "<span>Edición</span>".html_safe, :controller => 'diputados', :action => 'index'%></li>
          </ul>
       </li>
       <li><a href="">Involúcrate</a>

@@ -1,33 +1,31 @@
-<div id="formulario_login" class="fuente_color">
-	
-	<%login_action ||= nil%>
+<link type="text/css" rel="stylesheet" href="/stylesheets/metodo_login.css"/>
 
-	<%= form_for :user, :url => '/account/login' do |f|%>
-	<div>
-		<h2>Inicia Sesión</h2>
-	</div>
+<div id="div_wraper">
+    
+    <form name="login-form" class="login-form" action="" method="post">
+    	<!--HEADER-->
+    <div class="header">
+    <!--TITLE--><h1>Iniciar Sesión</h1><!--END TITLE-->
+    </div>
+    <!--END HEADER-->
 	
-	<div>
-		<label for="user_login">Usuario</label>
-		<%=f.text_field :login, :class => 'txtbox'%>
-	</div>
-	
-	<div>
-		<label for="user_password">Contraseña</label>
-		<%=f.password_field :password, :class => 'txtbox'%>  
-	</div>	
-	
-	<div>
-		<input type="image" value="Iniciar Sesión" class="floatright margintop behave" src="<%= image_path 'login2.png' %>"/>
-	</div>
-	
-	<%if login_action %>
-    <%=hidden_field_tag 'login_action', login_action%> 
-	<%end%>
-	
-	<div>
-		<%= link_to "¿Olvidaste tu contraseña?", :action => 'forgot_password', :class => 'fuente_color'%>
-	</div>
-	
-	<%end%>
+	<!--CONTENT-->
+    <div class="content"><!--END LUSERNAME-->
+    <!--LUSERNAME--><label class="fuente_normal" for="username">Usuario</label>
+	<!--USERNAME--><input name="username" type="text" class="input username" value="Usuario" onfocus="this.value=''" /><!--END USERNAME-->
+	<!--LCONTRASEÑA--><label class="fuente_normal" for="password">Contraseña</label><!--END LCONTRASEÑA-->
+    <!--PASSWORD--><input name="password" type="password" class="input password" value="Password" onfocus="this.value=''" /><!--END PASSWORD-->
+    </div>
+    <!--END CONTENT-->
+    
+    <!--FOOTER-->
+    <div class="footer">
+    <!--LOGIN BUTTON--><input type="submit" name="submit" value="Ingresar" class="boton_celeste" /><!--END LOGIN BUTTON-->
+    <%= link_to "¿Olvidaste tu contraseña?", {:action => 'forgot_password'}, {:class => 'enlaces fuente_normal', :id => 'lnk_olvidar'}%>
+    
+    </div>
+    <!--END FOOTER-->
+    </form>
+    <!--END LOGIN FORM-->
 </div>
+<!--END WRAPPER-->

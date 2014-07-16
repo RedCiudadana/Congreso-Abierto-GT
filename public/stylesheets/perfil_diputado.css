@@ -1,7 +1,7 @@
 #articulo1
 {
 	margin: 0 auto;
-	margin-top: 5%;
+	margin-top: 6%;
 	width: 70%;
 	height: 150px;
 	background: #FFFFFF;
@@ -28,7 +28,7 @@
 	height: 100%;
 }
 
-#nombre
+#d_nombre
 {
 	float: left;
 	width: 73%;
@@ -69,76 +69,42 @@
 
 #articulo2
 {
+	width: 65%;
+	height: 200px;
+	margin-left: 5%;
 	margin: 0 auto;
-	margin-top: 1%;
-	width: 70%;
-	height: 200px;
-}
-
-#contacto
-{
-	float: left;
-	width: 40%;
-	height: 200px;
-}
-
-#historial
-{
-	float: left;
-	width: 26%;
-	height: 200px;
-	margin-left: 1%;	
-}
-
-#tabla
-{
-	float: left;
-	width: 30%;
-	height: 200px;
-	margin-left: 1%;	
-}
-
-/*Textos*/
-#contacto div
-{
-	width: 100%;
 	margin-top: 2%;
 }
 
-#contacto div li
+#a2_cabeza
 {
-	list-style-type:none;
-}
-
-#btnCurriculum
-{
-	margin: 0 auto;
+	float: left;
 	width: 100%;
-	margin-top: 5%;
-	margin-left: 25%;
 }
 
-#enlaces
+#a2_cabeza p
 {
-	margin: 0 auto;
+	color: #1E90FF;
+	font-size: 130%;
+}
+
+
+
+#a2_datos
+{
+	float: left;
 	width: 100%;
-	margin-top: 20%;
 }
 
-#enlaces ul li
+#a2_datos div
 {
-	list-style-type:none;
+	float: left;
+	width: 32%;
+	height: 100%;
+	margin-left: 1%;
 }
 
-#enlaces ul li a
+#a2_datos div li
 {
-	text-decoration:none;
-   	color: #414A4C;
+	list-style: none;
 }
-
-#enlaces ul li:hover a,
-#enlaces ul li.hover a 
-{ /* IE 6 */ 
-   color: #5FBCD3;
-}
-

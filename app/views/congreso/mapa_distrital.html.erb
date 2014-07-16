@@ -1,0 +1,58 @@
+<link type="text/css" rel="stylesheet" href="/stylesheets/mapa_distrital.css"/>
+<link type="text/css" rel="stylesheet" href="/stylesheets/clases.css"/>
+
+<!-- Aquí comienza el código que debo copiar al proyecto -->
+
+		<section>
+			<article id="articulo1" >
+				<div id="mapa"> 
+						<li><%= link_to "Alta Verapaz",:mi_parametro => "Alta Verapaz" %></li>
+						<li><%= link_to "Baja Verapaz",:mi_parametro => "Baja Verapaz" %></li>
+						<li><%= link_to "Chimaltenango",:mi_parametro => "Chimaltenango" %></li>
+						<li><%= link_to "Distrito Central",:mi_parametro => "Distrito Central" %></li>
+						<li><%= link_to "Distrito Guatemala",:mi_parametro => "Distrito Guatemala" %></li>
+						<li><%= link_to "El Progreso",:mi_parametro => "El Progreso" %></li>
+						<li><%= link_to "Escuintla",:mi_parametro => "Escuintla" %></li>
+						<li><%= link_to "Huehuetenango",:mi_parametro => "Huehuetenango" %></li>
+						<li><%= link_to "Izabal",:mi_parametro => "Izabal" %></li>
+						<li><%= link_to "Jalapa",:mi_parametro => "Jalapa" %></li>
+						<li><%= link_to "Jutiapa",:mi_parametro => "Jutiapa" %></li>
+						<li><%= link_to "Petén",:mi_parametro => "Petén" %></li>
+						<li><%= link_to "Quetzaltenango",:mi_parametro => "Quetzaltenango" %></li>
+						<li><%= link_to "Quiché",:mi_parametro => "Quiché" %></li>
+						<li><%= link_to "Retalhuleu",:mi_parametro => "Retalhuleu" %></li>
+						<li><%= link_to "Sacatepéquez",:mi_parametro => "Sacatepéquez" %></li>
+						<li><%= link_to "San Marcos",:mi_parametro => "San Marcos" %></li>
+						<li><%= link_to "Santa Rosa",:mi_parametro => "Santa Rosa" %></li>
+						<li><%= link_to "Sololá",:mi_parametro => "Sololá" %></li>
+						<li><%= link_to "Totonicapán",:mi_parametro => "Totonicapán" %></li>
+						<li><%= link_to "Zacapa",:mi_parametro => "Zacapa" %></li>
+						<li><%= link_to "Diputados por Listado Nacional",:mi_parametro => "Diputado por Listado Nacional" %></li>
+					
+				</div>
+				<div id="informacion">
+					<div id="distrito" class="fuente_normal"><%=@distrito%></div>
+					<div id="numero" class="fuente_normal"> <%=@numero_dip%> Diputados</div>
+					<div id="listado_diputados" class="fuente_light">
+						<div id="col_dip1">
+							<% @di1.each do |n|%>
+								<ul class="lst_dip">
+									<li><%= link_to n.nombre, :controller => 'congreso' ,:action => 're_perfil', :action =>'perfil_diputados', :codigo => n.id%></li>
+								</ul>								
+							<%end%>
+						</div>
+							
+						<div id="col_dip2">
+							<% @di2.each do |m|%>
+								<ul class="lst_dip">
+									<li><%= link_to m.nombre, :controller => 'congreso' ,:action => 're_perfil', :action =>'perfil_diputados', :codigo => m.id%></li>
+								</ul>								
+							<%end%>
+						</div>
+							
+					</div> 
+				</div>
+			</article>
+			
+		</section>
+		<!-- Aquí termina el código que debo copiar al proyecto -->

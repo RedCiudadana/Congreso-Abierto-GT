@@ -1,0 +1,30 @@
+<h1>Listado de diputados</h1> 
+
+<table>
+	<tr>
+		<th>Nombre</th>
+		<th>Partido postulante</th>
+		<th>Partido actual</th>
+		<th>Distrito</th>
+	    <th></th>
+	    <th></th>
+	    <th></th>
+	</tr>
+	
+
+    <%@diputados.each do |diputado|%>
+    <tr>
+    	<td><%= diputado.nombre%></td>
+	    <td><%= diputado.partido_postulante%></td>
+	    <td><%= diputado.partido_actual%></td>
+	    <td><%= diputado.distrito%></td>
+	    <td><%= link_to 'Ver', diputado%></td>
+	    <td><%= link_to 'Editar', edit_diputado_path(diputado)%></td>
+	    <td><%= link_to 'Eliminar', diputado, :confirm => '¿Está seguro de elimiar?', :method => :delete%></td>
+	</tr>
+	<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nuevo Diputado', new_diputado_path%>

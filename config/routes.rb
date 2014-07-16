@@ -1,10 +1,21 @@
 OpenCongress::Application.routes.draw do
 
 
-  match '/distrito', :to => 'diputado#diputadoDistrito'
-  match '/partido', :to => 'diputado#diputadoPartido'
-  match '/listado', :to => 'diputado#diputadoLista'
-  match '/nombre', :to => 'diputado#diputadoNom'
+  get "congreso/mapa_distrital"
+
+  get "congreso/lista_diputados"
+
+  get "congreso/perfil_diputados"
+
+  resources :diputados
+
+  match '/distrito', :to => 'congreso#diputadoDistrito'
+  match '/listado', :to => 'congreso#diputadoLista'
+  match '/nombre', :to => 'congreso#diputadoNom'
+  match '/id', :to => 'congreso#diputadoID'
+  match '/partidoactual', :to => 'congreso#diputadoPartidoActual'
+  match '/partidopostulante', :to => 'congreso#diputadoPartidoPostulanate'
+  
   # API
   constraints :subdomain => 'api' do
     match '/' => redirect(Settings.base_url + 'api')
