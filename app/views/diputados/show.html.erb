@@ -1,59 +1,65 @@
-<p id="notice"><%= notice %></p>
+<link type="text/css" rel="stylesheet" href="/stylesheets/clases.css"/>
+<link type="text/css" rel="stylesheet" href="/stylesheets/scaffold.css"/>
+<section>
+	<article id="articulo1" class="fuente_normal">
+		<p id="notice"><%= notice %></p>
 
-<p>
-	<b>Nombre:</b>
-	<%= @diputado.nombre%>
-</p>
-
-<p>
-	<b>Correo:</b>
-	<%= @diputado.correo%>
-</p>
-
-<p>
-	<b>Telefono:</b>
-	<%= @diputado.telefono%>
-</p>
-  
-<p>
-	<b>Partido Postulante:</b>
-	<%= @diputado.partido_postulante%>
-</p>
-
-<p>
-	<b>Partido Actual:</b>
-	<%= @diputado.partido_actual%>
-</p>
-
-<p>
-	<b>Dirección:</b>
-	<%= @diputado.direccion%>
-</p>
-
-<p>
-	<b>EXT:</b>
-	<%= @diputado.ext%>
-</p>  
-
-<p>
-	<b>URL Foto:</b>
-	<%= @diputado.url_foto%>
-</p>
-
-<p>
-	<b>Distrito:</b>
-	<%= @diputado.distrito%>
-</p>
-
-<p>
-	<b>Facebook:</b>
-	<%= @diputado.facebook%>
-</p>
-
-<p>
-	<b>Twitter:</b>
-	<%= @diputado.twitter%>
-</p>
-
-<%= link_to 'Editar', edit_diputado_path(@diputado)%> |
-<%= link_to 'Regresar', diputados_path%>
+		<p>
+			<b>Nombre:</b>
+			<%= @diputado.nombre%>
+		</p>
+		
+		<p>
+			<b>Correo:</b>
+			<%= @diputado.correo%>
+		</p>
+		
+		<p>
+			<b>Telefono:</b>
+			<%= @diputado.telefono%>
+		</p>
+		  
+		<p>
+			<b>Partido Postulante:</b>
+			<%= @diputado.partido_postulante%>
+		</p>
+		
+		<p>
+			<b>Partido Actual:</b>
+			<%= @diputado.partido_actual%>
+		</p>
+		
+		<p>
+			<b>Dirección:</b>
+			<%= @diputado.direccion%>
+		</p>
+		
+		<p>
+			<b>EXT:</b>
+			<%= @diputado.ext%>
+		</p>  
+		
+		<p>
+			<b>URL Foto:</b>
+			<%= @diputado.url_foto%>
+		</p>
+		
+		<p>
+			<b>Distrito:</b>
+			<%= @diputado.distrito%>
+		</p>
+		
+		<p>
+			<b>Facebook:</b>
+			<%= @diputado.facebook%>
+		</p>
+		
+		<p>
+			<b>Twitter:</b>
+			<%= @diputado.twitter%>
+		</p>
+		
+		<%= link_to 'Editar', edit_diputado_path(@diputado)%> |
+		<%= link_to 'Regresar', diputados_path%>
+	</article>
+</section>

@@ -1,11 +1,20 @@
 OpenCongress::Application.routes.draw do
 
 
+  resources :asig_comissions
+
+  get "comisiones/lista_comisiones"
+
+  get "comisiones/show_comision"
+
+  resources :comissions
+
   get "congreso/mapa_distrital"
 
   get "congreso/lista_diputados"
 
   get "congreso/perfil_diputados"
+  
 
   resources :diputados
 

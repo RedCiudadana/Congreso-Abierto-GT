@@ -6,9 +6,9 @@
 		</div> <!-- fin seccion de logo -->
 		
 		<div id="redes_sociales">
-			<a href="https://www.youtube.com" title="Canal Congreso Abierto"><img id="btnYT" src="/imagenes/Encabezado/yt_normal.png"/></a>
-			<a href="https://www.twitter.com" title="@congresogt"><img id="btnTW" src="/imagenes/Encabezado/tw_normal.png"/></a>
-			<a href="https://www.facebook.com" title="Página Congreso Abierto"><img id="btnFB" src="/imagenes/Encabezado/fb_normal.png"/></a>
+			<a href="https://www.youtube.com/channel/UCZr5jgPCN9CPnESiwnW0H9Q" title="Canal Congreso Abierto"><img id="btnYT" src="/imagenes/Encabezado/yt_normal.png"/></a>
+			<a href="https://twitter.com/CongresoGT" title="@congresogt"><img id="btnTW" src="/imagenes/Encabezado/tw_normal.png"/></a>
+			<a href="https://www.facebook.com/congresoabiertogt" title="Página Congreso Abierto"><img id="btnFB" src="/imagenes/Encabezado/fb_normal.png"/></a>
 		</div> <!-- fin seccion botones para redes sociales -->
 		
 		<div id="div_sesion">
@@ -42,8 +42,8 @@
       	<ul>
             <li><%= link_to "<span>Mapa Distrital</span>".html_safe, :controller => 'congreso', :action => 're_mapa_distrital'%></li>
             <li><%= link_to "<span>Diputados</span>".html_safe, :controller => 'congreso', :action => 're_lista_diputados'%></li>
-            <li><a href="#">Comisiones</a></li>
-            <li><%= link_to "<span>Edición</span>".html_safe, :controller => 'diputados', :action => 'index'%></li>
+            <li><%= link_to "<span>Comisiones</span>".html_safe, :controller => 'comisiones', :action => 'lista_comisiones'%></li>
+           
          </ul>
       </li>
       <li><a href="">Involúcrate</a>
@@ -53,6 +53,14 @@
             <li><a href="#">Visita</a></li>
          </ul>
       </li>
-      <li><a href="">Contacto</a></li>
+      <li><a href="">Contacto</a>
+      </li>
+      <li><a href="">Edición</a>
+      	<ul>
+      		<li><%= link_to "<span>Diputados</span>".html_safe, :controller => 'diputados', :action => 'index'%></li>
+      		<li><%= link_to "<span>Comisiones</span>".html_safe, :controller => 'comissions', :action => 'index'%></li>
+      		<li><%= link_to "<span>Asignacion de Comisiones</span>".html_safe, :controller => 'asig_comissions', :action => 'index'%></li>
+      	</ul>
+      </li>
    </ul>
 </nav>

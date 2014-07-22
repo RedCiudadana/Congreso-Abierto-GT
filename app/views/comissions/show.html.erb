@@ -1,0 +1,42 @@
+<link type="text/css" rel="stylesheet" href="/stylesheets/clases.css"/>
+<link type="text/css" rel="stylesheet" href="/stylesheets/scaffold.css"/>
+<section>
+	<article id="articulo1" class="fuente_normal">
+		
+		<p id="notice"><%= notice %></p>
+		
+		<p>
+			<b>Nombre:</b>
+			<%= @comission.nombre%>
+		</p>
+		
+		<p>
+			<b>Descripción:</b>
+			<%= @comission.descripcion%>
+		</p>
+		
+		<p>
+			<b>Dirección</b>
+			<%= @comission.direccion%>
+		</p>
+		
+		<p>
+			<b>Teléfono:</b>
+			<%= @comission.telefono%>
+		</p>
+		
+		<p>
+			<b>EXT</b>
+			<%= @comission.ext%>
+		</p>
+		
+		<p>
+			<b>Comisión Activa:</b>
+			<%= @comission.activa%>
+		</p>
+		
+		<%= link_to 'Editar', edit_comission_path(@comission)%> |
+		<%= link_to 'Regresar', comissions_path%>
+		
+	</article>
+</section>

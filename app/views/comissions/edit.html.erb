@@ -3,12 +3,13 @@
 
 <section>
 	<article id="articulo1" class="fuente_normal">
-		<h1>Nuevo diputado</h1> 
-
+		
+		<h1>Edita la Comisión</h1> 
+		
 		<%= render 'form'%>
 		
-		<%= link_to 'Regresar', diputados_path%>
-
+		<%= link_to 'Ver', @comission%> |
+		<%= link_to 'Regresar', comissions_path%>
+		
 	</article>
 </section>
-

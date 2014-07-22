@@ -1,74 +1,76 @@
-<%= form_for @diputado do |f|%> 
-  <%if @diputado.errors.any?%>
-  
-<div id="error_explanation">
-  	<h2><%= pluralize(@diputado.errors.count, "error") %> Prohibidos los cambios en este post:</h2>
-  	
-  	<ul>
-  		<%@diputado.errors.full_messages.each do |msg|%>
-  		<li><%= msg%></li>
-  		<% end %>
-  	</ul>  	
-</div>
-  <% end %>    
-    
-<div class="field">
-    <%= f.label :nombre %><br />
-    <%= f.text_field :nombre %>
-</div>
+		<%= form_for @diputado do |f|%> 
+		  <%if @diputado.errors.any?%>
+		  
+		<div id="error_explanation">
+		  	<h2><%= pluralize(@diputado.errors.count, "error") %> Prohibidos los cambios en este post:</h2>
+		  	
+		  	<ul>
+		  		<%@diputado.errors.full_messages.each do |msg|%>
+		  		<li><%= msg%></li>
+		  		<% end %>
+		  	</ul>  	
+		</div>
+		<% end %>    
+		    
+		<div class="field">
+		    <%= f.label :nombre %><br />
+		    <%= f.text_field :nombre %>
+		</div>
+		
+		<div class="field">
+		    <%= f.label :correo %><br />
+		    <%= f.text_field :correo %>
+		</div>
+		
+		<div class="field">
+		    <%= f.label :telefono %><br />
+		    <%= f.text_field :telefono %>
+		</div>
+		
+		<div class="field">
+		    <%= f.label :partido_postulante %><br />
+		    <%= f.text_field :partido_postulante %>
+		</div>
+		
+		<div class="field">
+		    <%= f.label :partido_actual %><br />
+		    <%= f.text_field :partido_actual %>
+		</div>
+		
+		<div class="field">
+		    <%= f.label :direccion %><br />
+		    <%= f.text_field :direccion %>
+		</div>
+		
+		<div class="field">
+		    <%= f.label :ext %><br />
+		    <%= f.text_field :ext %>
+		</div>
+		
+		<div class="field">
+		    <%= f.label :url_foto %><br />
+		    <%= f.text_field :url_foto %>
+		</div>
+		
+		<div class="field">
+		    <%= f.label :distrito %><br />
+		    <%= f.text_field :distrito %>
+		</div>
+		 
+		<div class="field">
+		    <%= f.label :facebook %><br />
+		    <%= f.text_field :facebook %>
+		</div>
+		
+		<div class="field">
+		    <%= f.label :twitter %><br />
+		    <%= f.text_field :twitter %>
+		</div>
+		
+		<div class="boton_form">
+			<%= f.submit 'Guardar' , :class => 'boton_celeste'%>
+		</div>
+		
+		<% end %>
 
-<div class="field">
-    <%= f.label :correo %><br />
-    <%= f.text_field :correo %>
-</div>
 
-<div class="field">
-    <%= f.label :telefono %><br />
-    <%= f.text_field :telefono %>
-</div>
-
-<div class="field">
-    <%= f.label :partido_postulante %><br />
-    <%= f.text_field :partido_postulante %>
-</div>
-
-<div class="field">
-    <%= f.label :partido_actual %><br />
-    <%= f.text_field :partido_actual %>
-</div>
-
-<div class="field">
-    <%= f.label :direccion %><br />
-    <%= f.text_field :direccion %>
-</div>
-
-<div class="field">
-    <%= f.label :ext %><br />
-    <%= f.text_field :ext %>
-</div>
-
-<div class="field">
-    <%= f.label :url_foto %><br />
-    <%= f.text_field :url_foto %>
-</div>
-
-<div class="field">
-    <%= f.label :distrito %><br />
-    <%= f.text_field :distrito %>
-</div>
- 
-<div class="field">
-    <%= f.label :facebook %><br />
-    <%= f.text_field :facebook %>
-</div>
-
-<div class="field">
-    <%= f.label :twitter %><br />
-    <%= f.text_field :twitter %>
-</div>
-
-<div class="actions">
-	<%= f.submit 'Guardar'%>
-</div>
-
-<% end %>

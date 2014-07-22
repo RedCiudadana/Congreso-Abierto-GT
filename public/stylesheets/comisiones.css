@@ -1,0 +1,49 @@
+section article
+{
+	margin: 0 auto;
+	background: #FFFFFF;
+	width: 50%;
+	height: 100%;
+}
+
+#articulo1
+{
+	margin-top: 5%;
+	
+}
+
+#articulo1 h1
+{
+	text-align: center;
+	font-size: 250%;
+}
+
+#articulo1 ul
+{
+	text-align: center;
+	list-style-type:none;
+}
+
+#articulo1 ul li
+{
+	width: 100%;
+   	background-image: url('../imagenes/Pie_pagina/fondo.png');
+   	margin-bottom: 5px;
+   	padding: 3px;
+}
+
+#articulo1 ul li a
+{
+   	text-decoration:none;
+   	font-weight:bold;
+   	color: #fff;
+   	
+   	
+   
+}
+
+#articulo1 ul li:hover a,
+#articulo1 ul li.hover a 
+{ /* IE 6 */ 
+   color: #36F;
+}

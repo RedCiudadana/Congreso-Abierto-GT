@@ -1,0 +1,33 @@
+<link type="text/css" rel="stylesheet" href="/stylesheets/clases.css"/>
+<link type="text/css" rel="stylesheet" href="/stylesheets/scaffold.css"/>
+
+<section>
+	<article id="articulo1">
+		<h1 class="fuente_semibold">Listado de Comisiones</h1>
+		
+		<table>
+			<tr class="fuente_normal">
+				<th>Id</th>
+				<th>Nombre</th>
+				<th>Activa</th>
+			    <th></th>
+				<th></th>
+				<th></th>
+			</tr>
+			<%@comissions.each do |comission|%>
+			<tr class="fuente_light">
+				<td><%= comission.id%></td>
+				<td><%= comission.nombre%></td>
+				<td><%= comission.activa%></td>
+				<td><%= link_to 'Ver', comission%></td>
+				<td><%= link_to 'Editar', edit_comission_path(comission)%></td>
+				<td><%= link_to 'Eliminar', comission, :confirm => '¿Está seguro de elimiar?', :method => :delete%></td>
+			</tr>
+			<% end %>
+		</table>
+		
+		<br />
+		
+		<%= link_to 'Nueva Comisión', new_comission_path%>
+	</article>
+</section>

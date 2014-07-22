@@ -5,7 +5,7 @@ class DiputadosController < ApplicationController
   # GET /diputados
   # GET /diputados.xml
   def index
-    @diputados = Diputado.all
+    @diputados = Diputado.order('distrito')
 
     respond_to do |format|
       format.html # index.html.erb

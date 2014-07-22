@@ -1,0 +1,13 @@
+<link type="text/css" rel="stylesheet" href="/stylesheets/comisiones.css"/>
+<link type="text/css" rel="stylesheet" href="/stylesheets/clases.css"/>
+
+<section>
+	<article id="articulo1" class="fuente_color">
+		<h1 class="fuente_semibold">Listado General de Comisiones</h1>
+		<ul>
+			<% @listado.each do |n|%>
+			<li class="fuente_light"><%= link_to n.nombre,:controller => 'comisiones' ,:action =>'show_comision', :codigo => n.id %></li>
+			<%end%>
+		</ul>
+	</article>
+</section>

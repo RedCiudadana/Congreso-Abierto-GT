@@ -1,0 +1,46 @@
+<link type="text/css" rel="stylesheet" href="/stylesheets/show_comision.css"/>
+<link type="text/css" rel="stylesheet" href="/stylesheets/clases.css"/>
+<section>
+	<article id="articulo1">
+		<% @comision.each do |c|%>
+			<h1 class="fuente_semibold"><%= c.nombre%></h1>
+				
+			<div id="descripcion">		
+				<h2 class="fuente_normal">Descripción</h2>
+				<p class="fuente_light"><%= c.descripcion%></p>	
+			</div>
+			
+			<div id="contacto">
+				<h2 class="fuente_normal">Contácto</h2>
+				<h3 class="fuente_normal">Dirección:</h3>
+				<p class="fuente_light"><%= c.direccion%></p>
+				
+				<h3 class="fuente_normal">Teléfono:</h3>
+				<p class="fuente_light"><%= c.telefono%> Ext. <%= c.ext%></p>
+			</div>
+		<%end%>
+	</article>
+	
+	<article id="articulo2">
+		<div>
+			<h3 class="fuente_normal">Miembros</h3>
+			<div id="listado_comisiones" class="fuente_light">
+				<div id="col_m1">
+					<% @miembros1.each do |n|%>
+						<ul class="lst_dip">
+							<li><%= link_to n.nombre, :controller => 'congreso' ,:action => 're_perfil', :action =>'perfil_diputados', :codigo => n.id%></li>
+						</ul>								
+					<%end%>
+				</div>
+							
+				<div id="col_m2">
+					<% @miembros2.each do |m|%>
+						<ul class="lst_dip">
+							<li><%= link_to m.nombre, :controller => 'congreso' ,:action => 're_perfil', :action =>'perfil_diputados', :codigo => m.id%></li>
+						</ul>								
+					<%end%>
+				</div>
+			</div>
+		</div>
+	</article>
+</section>
