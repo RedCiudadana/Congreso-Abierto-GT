@@ -48,6 +48,7 @@ class CongresoController < ApplicationController
       @registro = i.registro
       @fecha = i.fecha_ingreso
       @contenido = i.contenido
+      @postulante_externo = i.postulante_externo
     end
     
     #Buscamos los id postulantes de esta comisión

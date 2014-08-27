@@ -1,7 +1,7 @@
-<%= form_for @bill do |f|%>
-	<%if @bill.errors.any?%>
+<%= form_for @bills do |f|%>
+	<%if @bills.errors.any?%>
 	<div id="error_explanation">
-		<h2><%= pluralize(@bill.errors.count, "error") %> Prohibidos los cambios en este post:</h2>
+		<h2><%= pluralize(@bills.errors.count, "error") %> Prohibidos los cambios en este post:</h2>
 		  	
 		<ul>
 			<%@bill.errors.full_messages.each do |msg|%>
@@ -26,6 +26,10 @@
 		<%= f.date_select :fecha_ingreso, :start_year => 2000, :end_year => 2016  %>
 	</div> 
 	
+	<div class="field">
+		<%= f.label :postulante_externo%><br />
+		<%= f.text_field :postulante_externo%>
+	</div>
 	<div class="boton_form">
 			<%= f.submit 'Guardar' , :class => 'boton_celeste'%>
 	</div> 

@@ -19,8 +19,13 @@
 	<div class="col-md-12">
 		<h5 class=" fuente_semibold">Comisión(s) que conoce: </h5>
 		<ul id="lista-comision">
+			<li class="fuente_light"><%= @postulante_externo%></li>
 			<% @comisiones.each do |n|%>
+			<% if n.id == 52%>
+			<li class="fuente_light"><p><%= n.nombre%></p></li>
+			<%else%>
 			<li class="fuente_light"><%= link_to n.nombre, {:controller => 'comisiones' ,:action =>'show_comision', :codigo => n.id}, {:class => 'gris'} %></li>
+			<%end%>
 			<%end%>
 		</ul>
 	</div>
