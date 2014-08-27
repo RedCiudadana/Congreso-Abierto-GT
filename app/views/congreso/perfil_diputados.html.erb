@@ -1,35 +1,45 @@
-<link type="text/css" rel="stylesheet" href="/stylesheets/perfil_diputado.css"/>
+<link type="text/css" rel="stylesheet" href="/stylesheets/bootstrap.css"/>
 <link type="text/css" rel="stylesheet" href="/stylesheets/clases.css"/>
 
-<!-- Codigo para copiar -->
-		<section>
-			<article id="articulo1">
-				<div id="datos" class="fuente_normal">
-					<div id="foto"> 
-						<img id="foto_diputado" src=<%=@url%>/> 
-					</div>
-					<div id="d_nombre"><strong><%=@nombre%></strong> </div>
-					<div id="distrito"><%=@dis%></div>
-					<div id="perido">2012-2016</div>
-				</div>
-			</article>
-			
-			<article id="articulo2">
-				<div id="a2_cabeza"><p class="fuente_semibold"><strong>CONTÁCTO</strong></p></div>
-				<div id="a2_datos">
-					<div>
-						<li class="fuente_semibold">Correo:</li>
-				 		<li class="fuente_light"><%=@correo%></li>
-					</div>
-					<div>
-						<li class="fuente_semibold">Teléfono de oficina:</li>
-				 		<li class="fuente_light"><%=@telefono%> Ext.<%=@ext%></li>
-					</div>
-					<div>
-						<li class="fuente_semibold">Dirección de oficina:</li>
-				 		<li class="fuente_light"><%=@direccion%></li>
-					</div>
-				</div>
-			</article>
-		</section>
-		<!-- Fin del código para copiar -->
+<div id="datos-diputado" class="row">
+	<div class="col-xs-12 col-md-8">
+  		<div id="img-perfil" class="col-md-3 col-md-pull-9"><img class="img-responsive" src=<%=@url%> /></div>
+  		<div class="col-md-9 col-md-push-3">
+  			<h2 class="fuente_semibold gris"><%=@nombre%></h2>
+	  		
+	  		<div class="col-md-6 fuente_normal celeste-1"><%=@dis%></div>
+	  		
+	  		<div id="div-pediodo" class="col-md-6 fuente_normal celeste-1">2012-2016</div>
+  		
+  		</div>
+  	</div>
+  
+  	<div class="col-xs-6 col-md-4"> </div> <!-- Aquí va la tabla-->
+</div>
+
+<div id="contacto-diputado" class="row">
+	<div class="col-md-12 fuente_semibold celeste-1"><h4>CONTÁCTO</h4></div>
+	
+	<div class="col-ms-6 col-md-4">
+		<div class="col-md-12 fuente_semibold gris">Correo:</div>
+		<div class="col-md-12 fuente_light gris"><%=@correo%></div>
+	</div>
+	
+	<div class="col-ms-6 col-md-4">
+		<div class="col-md-12 fuente_semibold gris">Teléfono de oficina:</div>
+		<div class="col-md-12 fuente_light gris"><%=@telefono%> Ext.<%=@ext%></div>
+	</div>
+	<div class="col-ms-6 col-md-4">
+		<div class="col-md-12 fuente_semibold gris">Dirección de oficina:</div>
+		<div class="col-md-12 fuente_light gris"><%=@direccion%></div>
+	</div>
+	
+</div>
+
+<div id="info-diputado" class="row">
+	<ul class="nav nav-tabs" role="tablist">
+  <li class="active"><a href="#">Home</a></li>
+  <li><a href="#">Profile</a></li>
+  <li><a href="#">Messages</a></li>
+</ul>
+</div>

@@ -1,0 +1,37 @@
+<link type="text/css" rel="stylesheet" href="/stylesheets/bootstrap.css"/>
+<link type="text/css" rel="stylesheet" href="/stylesheets/clases.css"/>
+
+<div id="show-iniciativa" class="row">
+	<h2>Detalle de la Iniciativa de Ley</h2>
+	<div class="col-md-12 fuente_normal gris"><h5 class="fuente_semibold gris">Registro: </h5> <%= @registro%> </div>
+	
+	<div class="col-md-12 gris"><h5 class=" fuente_semibold">Conoció Pleno: </h5><%= @fecha%></div>
+	
+	<div class="col-md-12 gris">
+		<h5 class=" fuente_semibold">Postulante(s): </h5>
+		<ul id="lista-postulantes">
+			<% @postulantes.each do |n|%>
+			<li class="fuente_light"><%= link_to n.nombre, {:controller => 'congreso' ,:action =>'perfil_diputados', :codigo => n.id}, {:class => 'gris'} %></li>
+			<%end%>
+		</ul>
+	</div>
+	
+	<div class="col-md-12">
+		<h5 class=" fuente_semibold">Comisión(s) que conoce: </h5>
+		<ul id="lista-comision">
+			<% @comisiones.each do |n|%>
+			<li class="fuente_light"><%= link_to n.nombre, {:controller => 'comisiones' ,:action =>'show_comision', :codigo => n.id}, {:class => 'gris'} %></li>
+			<%end%>
+		</ul>
+	</div>
+	<div class="col-md-12 fuente_light"><h5 class=" fuente_semibold">Contenido: </h5><%= @contenido%></div>
+	
+	<div id="votacion" class="col-md-12">
+		<div class="col-md-5">
+			<h3 class="fuente_semibold gris text-center">Diputados a favor</h3>
+		</div>
+		<div class="col-md-5">
+			<h3 class="fuente_semibold gris text-center">Diputados en contra</h3>
+		</div>
+	</div>
+</div>

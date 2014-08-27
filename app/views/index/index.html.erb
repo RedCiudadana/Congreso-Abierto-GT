@@ -1,22 +1,75 @@
-<link type="text/css" rel="stylesheet" href="/stylesheets/index.css"/>
+<link type="text/css" rel="stylesheet" href="/stylesheets/bootstrap.css"/>
 <link type="text/css" rel="stylesheet" href="/stylesheets/clases.css"/>
-<link type="text/css" rel="stylesheet" href="/stylesheets/fuentes.css" />
- 	
-  	<!-- Comienza codigo de Congreso Abierto -->
-  	<section>
-  		<article id="articulo1">
-  			<div id="video">
-  				<iframe width="100%" height="100%"
-				src="http://www.youtube.com/embed/35T5yFerp-c">
-				</iframe>
-			</div>
-			<div id="app">
-				<div id="textoapp" class="fuente_light"><strong>Congreso Abierto</strong> es tu oportunidad para ser parte del cambio en nuestro país, Guatemala.</div>
-				<div id="btnDescargar">
-					<a href="http://play.google.com/store"><img id="btnandroid" title="google play" src="/imagenes/Cuerpo/Botones/boton-android.png" /></a>
-					<a href="http://www.apple.com/es/retail"><img id="btnapple" title="tienda apple" src="/imagenes/Cuerpo/Botones/boton-apple.png" /></a>
-				</div>
-			</div>
-		</article>
+
+<div id="media" class="row">
+	<div class="col-md-6">
+  		<!-- 16:9 aspect ratio -->
+		<div class="embed-responsive embed-responsive-16by9">			
+			<iframe id="video" class="embed-responsive-item" src="http://www.youtube.com/embed/35T5yFerp-c"></iframe>
+		</div>
+  	</div>
+	
+	<div class="col-md-6">
+		<div id="div-descarga" class="col-md-12"><img src="/imagenes/Descarga/titulo-descarga.png" class="img-responsive" alt=""></div>
+		<div class="col-md-6">
+			<p id="txt-descarga">Descarga la aplicación para sistemas <a href="" class="enlace">Android</a> y <a href="/" class="enlace">iOS</a> para aprender más sobre los representantes electos, contáctalos y mantente informado de lo que están haciendo.</p>
+			<div class="col-md-6"><a title="google play" href="http://play.google.com/store"><img src="/imagenes/Descarga/boton-android.png" class="img-responsive"></a></div>
+			<div class="col-md-6"><a title="tienda apple" href="http://www.apple.com/es/retail"><img src="/imagenes/Descarga/boton-apple.png" class="img-responsive"></a></div>
+		</div>
+		<div class="col-md-6">
+			<img id="img-descarga" src="/imagenes/Descarga/imagen-app.png" class="img-responsive" alt="Congreso Abierto, Congreso Abierto app">
+		</div>
+	</div>
+</div>
+
+<div id="informacion" class="row">
+	
+	<div class="col-md-4">
+		<div class="col-md-12"><h1 class="fuente_bold celeste-1 text-center">TOP 5</h1></div>
+		<div class="col-md-12"><p class="fuente_normal gris">Los diputados que más se comprometen con su país.</p></div>
 		
-	</section>
+		<div class="col-md-12">
+			<img src="/imagenes/Top-5/1.png" class="img-responsive col-md-3" />
+			<div class="col-md-9 img-top">
+				<h5 class="fuente_bold gris text-uppercase"><%=@puesto1_nombre%></h5>
+				<div class="col-md-6"><%= link_to image_tag('/imagenes/Top-5/ver-perfil.png', :class => 'img-responsive', :title=> 'Ver perfil'), :controller => 'congreso', :action =>'perfil_diputados', :codigo => @puesto1_id %></div>				
+			</div>	
+		</div>
+		
+		<div class="col-md-12">
+			<img src="/imagenes/Top-5/2.png" class="img-responsive col-md-3" />
+			<div class="col-md-9 img-top">
+				<h5 class="fuente_bold gris text-uppercase"><%=@puesto2_nombre%></h5>
+				<div class="col-md-6"><%= link_to image_tag('/imagenes/Top-5/ver-perfil.png', :class => 'img-responsive', :title=> 'Ver perfil'), :controller => 'congreso', :action =>'perfil_diputados', :codigo => @puesto2_id %></div>
+			</div>	
+		</div>
+		
+		<div class="col-md-12">
+			<img src="/imagenes/Top-5/3.png" class="img-responsive col-md-3" />
+			<div class="col-md-9 img-top">
+				<h5 class="fuente_bold gris text-uppercase"><%=@puesto3_nombre%></h5>
+				<div class="col-md-6"><%= link_to image_tag('/imagenes/Top-5/ver-perfil.png', :class => 'img-responsive', :title=> 'Ver perfil'), :controller => 'congreso', :action =>'perfil_diputados', :codigo => @puesto3_id %></div>
+			</div>	
+		</div>
+		
+		<div class="col-md-12">
+			<img src="/imagenes/Top-5/4.png" class="img-responsive col-md-3" />
+			<div class="col-md-9 img-top">
+				<h5 class="fuente_bold gris text-uppercase"><%=@puesto4_nombre%></h5>
+				<div class="col-md-6"><%= link_to image_tag('/imagenes/Top-5/ver-perfil.png', :class => 'img-responsive', :title=> 'Ver perfil'), :controller => 'congreso', :action =>'perfil_diputados', :codigo => @puesto4_id %></div>
+			</div>	
+		</div>
+		
+		<div class="col-md-12">
+			<img src="/imagenes/Top-5/5.png" class="img-responsive col-md-3" />
+			<div class="col-md-9 img-top">
+				<h5 class="fuente_bold gris text-uppercase"><%=@puesto5_nombre%></h5>
+				<div class="col-md-6"><%= link_to image_tag('/imagenes/Top-5/ver-perfil.png', :class => 'img-responsive', :title=> 'Ver perfil'), :controller => 'congreso', :action =>'perfil_diputados', :codigo => @puesto5_id %></div>
+			</div>	
+		</div>
+
+	</div>
+	
+  	<div class="col-md-4"></div>
+  	<div class="col-md-4"></div>
+</div>

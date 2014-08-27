@@ -1,0 +1,32 @@
+<link type="text/css" rel="stylesheet" href="/stylesheets/clases.css"/>
+<link type="text/css" rel="stylesheet" href="/stylesheets/scaffold.css"/>
+
+<section>
+	<article id="articulo1">
+		<h1 class="fuente_semibold">Asignación de comisiones a iniciativas de ley</h1>
+		
+		<table>
+			<tr class="fuente_normal">
+				<th>Iniciativa de Ley</th>
+				<th>Comisión</th>
+			    <th></th>
+				<th></th>
+				<th></th>
+			</tr>
+			<%@asig_bill_comissions.each do |asig_bill_comission|%>
+			<tr class="fuente_light">
+				<td><%= asig_bill_comission.bill_id%></td>
+				<td><%= asig_bill_comission.comission_id%></td>
+				<td><%= link_to 'Ver', asig_bill_comission%></td>
+				<td><%= link_to 'Editar', edit_asig_bill_comission_path(asig_bill_comission)%></td>
+				<td><%= link_to 'Eliminar',asig_bill_comission, :confirm => '¿Está seguro de elimiar?', :method => :delete%></td>
+			</tr>
+			<% end %>
+		</table>
+		
+		<br />
+		
+		<%= link_to 'Nueva Asignación de Comisión', new_asig_bill_comission_path%>
+		
+	</article>
+</section>

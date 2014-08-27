@@ -28,6 +28,11 @@
 		</div>
 		
 		<div class="field">
+		    <%= f.label :ext %><br />
+		    <%= f.text_field :ext %>
+		</div>
+		
+		<div class="field">
 		    <%= f.label :partido_postulante %><br />
 		    <%= f.text_field :partido_postulante %>
 		</div>
@@ -43,8 +48,8 @@
 		</div>
 		
 		<div class="field">
-		    <%= f.label :ext %><br />
-		    <%= f.text_field :ext %>
+		    <%= f.label :asistencia %><br />
+		    <%= f.select :asistencia, ((0..10000).map {|i| [i,i] } << ["No limit",nil]) %>
 		</div>
 		
 		<div class="field">

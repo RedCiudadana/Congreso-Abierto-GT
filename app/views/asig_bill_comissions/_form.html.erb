@@ -1,0 +1,26 @@
+<%= form_for @asig_bill_comission do |f|%>
+	<%if @asig_bill_comission.errors.any?%>
+	<div id="error_explanation">
+		<h2><%= pluralize(@asig_bill_comission.errors.count, "error")%> Prohida la asignacion a estos datos: </h2>
+		<ul>
+			<%@asig_bill_comission.errors.full_messages.each do |msg|%>
+				<li><%= msg%></li>
+			<%end%>
+		</ul>
+    </div>
+	<%end%>
+
+	<div class="field">
+		<%= f.label :bill_id%>
+		<%= f.select :bill_id, @l_bill%>
+	</div>
+	
+	<div class="field">
+		<%= f.label :comission_id%>
+		<%= f.select :comission_id, @l_com%>
+	</div>
+	
+	<div class="boton_form">
+		<%= f.submit 'Guardar' , :class => 'boton_celeste'%>
+	</div>
+<% end %>

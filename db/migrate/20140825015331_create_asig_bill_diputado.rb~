@@ -1,0 +1,13 @@
+class CreateAsigBillDiputado < ActiveRecord::Migration
+  def self.up
+      create_table :asig_bill_diputados do |t|
+      t.integer :diputado_id
+      t.integer :bill_id
+
+      t.timestamps
+    end
+  end
+
+  def self.down
+  end
+end

@@ -1,5 +1,6 @@
 class ComisionesController < ApplicationController
   layout "frontpage"
+  
   def lista_comisiones
     @listado = Comission.order(:nombre).where(:activa => 'true')
   end
@@ -30,5 +31,54 @@ class ComisionesController < ApplicationController
     @comision = Comission.where(:id => @codigo)
     
   end
+  
+  #API para conocer las comisiones de un diputado
+  def comisionesDiputado
+    @id_comisiones = AsigComission.select(:comission_id).where("diputado_id = ?", params[:id])
+    @comissiones = []
+    @id_comisiones.each do |n|
+      @comissiones += Comission.where(:id => n.comission_id)
+    end
+    
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json {render :json => @comissiones}
+    end
+    
+  end
+  
+  #API para miembros de una comision
+  def miembrosComision
+   
+    @id_miembros = AsigComission.select(:diputado_id).where("comission_id = ?", params[:id])
+    @miembros = [] #Declaramos el Array donde guardaremos los nombres de de los diputados para mostrar.
+    @id_miembros.each do |n| #Lllenamos el segundo Array
+      @miembros += Diputado.where(:id => n.diputado_id)
+    end
+    
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json {render :json => @miembros}
+    end
+  end
+  
+  #API para listado de comisiones
+  def comisionesLista
+    @comisiones = Comission.order(:nombre).where(:activa => 'true')
+    
+    respond_to do |format|
+      format.html
+      format.json {render :json => @comisiones}
+    end
+  end
+  
+  #API para Busqueda por ID
+  def comisionID
+    @comission = Comission.where("id = ?", params[:id])
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json {render :json => @comission}
+    end
+  end 
 
 end

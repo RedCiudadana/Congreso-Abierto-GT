@@ -1,49 +1,43 @@
-section article
+#comisiones
 {
-	margin: 0 auto;
-	background: #FFFFFF;
 	width: 50%;
-	height: 100%;
+	margin: 0 auto;
+	margin-top: -1%;
 }
 
-#articulo1
+#lista-comisiones, .miembro-link
 {
-	margin-top: 5%;
-	
-}
-
-#articulo1 h1
-{
-	text-align: center;
-	font-size: 250%;
-}
-
-#articulo1 ul
-{
-	text-align: center;
 	list-style-type:none;
 }
 
-#articulo1 ul li
+#lista-comisiones li
 {
-	width: 100%;
    	background-image: url('../imagenes/Pie_pagina/fondo.png');
    	margin-bottom: 5px;
    	padding: 3px;
 }
 
-#articulo1 ul li a
+#lista-comisiones li a, .miembro-link li a
 {
-   	text-decoration:none;
-   	font-weight:bold;
-   	color: #fff;
-   	
-   	
-   
+	text-decoration: none;
 }
 
-#articulo1 ul li:hover a,
-#articulo1 ul li.hover a 
-{ /* IE 6 */ 
-   color: #36F;
+/*Comienza el espacio para show_comision*/
+#show-comision, #show-miembros
+{
+	width: 70%;
+	margin: 0 auto;
+	margin-top: -1%;
+}
+
+#show-comision div
+{
+	margin-top: 1%;
+}
+
+#show-miembros
+{
+	width: 50%;
+	margin: 0 auto;
+	margin-top: -1%;
 }

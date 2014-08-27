@@ -1,0 +1,29 @@
+<link type="text/css" rel="stylesheet" href="/stylesheets/clases.css"/>
+<link type="text/css" rel="stylesheet" href="/stylesheets/scaffold.css"/>
+<section>
+	<article id="articulo1" class="fuente_normal">
+		
+		<p id="notice"><%= notice %></p>
+		
+		<p>
+			<b>Registro:</b>
+			<%= @bill.nombre%>
+		</p>
+		
+		<p>
+			<b>Contenido:</b>
+			<%= @bill.descripcion%>
+		</p>
+		
+		<p>
+			<b>Conoció Pleno:</b>
+			<%= @bill.fecha_ingreso%>
+		</p>
+		
+		
+		
+		<%= link_to 'Editar', edit_bill_path(@bill)%> |
+		<%= link_to 'Regresar', bills_path%>
+		
+	</article>
+</section>

@@ -49,6 +49,21 @@ class AsigComissionsController < ApplicationController
   # GET /asig_comissions/1/edit
   def edit
     @asig_comission = AsigComission.find(params[:id])
+    
+    @dip = Diputado.all #Hacemos la consulta de todos los diputados para la lista del select
+    @com = Comission.all #Hacemos la consulta de todas las comisiones para la lista del select
+    
+    @l_dip = {}
+    @l_com = {}
+    
+    @dip.each do |d|
+      @l_dip[d.nombre] = d.id
+    end
+    
+    @com.each do |c|
+      @l_com[c.nombre] = c.id
+    end
+    
   end
 
   # POST /asig_comissions

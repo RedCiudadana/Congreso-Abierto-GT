@@ -1,0 +1,33 @@
+<link type="text/css" rel="stylesheet" href="/stylesheets/clases.css"/>
+<link type="text/css" rel="stylesheet" href="/stylesheets/scaffold.css"/>
+
+<section>
+	<article id="articulo1">
+		<h1 class="fuente_semibold">Asignaciones de diputados a iniciativa de ley</h1>
+		
+		<%= link_to 'Nueva Asignación de diputado', new_asig_bill_diputado_path%>
+		
+		<table>
+			<tr class="fuente_normal">
+				<th>Iniciativa de Ley</th>
+				<th>Diputado</th>
+			    <th></th>
+				<th></th>
+				<th></th>
+			</tr>
+			<%@asig_bill_diputados.each do |asig_bill_diputado|%>
+			<tr class="fuente_light">
+				<td><%= asig_bill_diputado.bill_id%></td>
+				<td><%= asig_bill_diputado.diputado_id%></td>
+				<td><%= link_to 'Ver', asig_bill_diputado%></td>
+				<td><%= link_to 'Editar', edit_asig_bill_diputado_path(asig_bill_diputado)%></td>
+				<td><%= link_to 'Eliminar', asig_bill_diputado, :confirm => '¿Está seguro de elimiar?', :method => :delete%></td>
+			</tr>
+			<% end %>
+		</table>
+		
+		<br />
+		
+		<%= link_to 'Nueva Asignación de diputado', new_asig_bill_diputado_path%>
+	</article>
+</section>

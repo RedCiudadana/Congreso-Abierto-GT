@@ -23,31 +23,34 @@
 	src: url(../fuentes/OpenSans-Italic.ttf);
 }
 
+@font-face
+{
+	font-family: OpenSans-Bold;
+	src: url(../fuentes/OpenSans-Bold.ttf);
+}
+
 /*Clases para html*/
 .fuente_normal
 {
 	font-family: OpenSans-Regular;
-	font-size: 100%;
-	color: #414A4C;
 }
 
 .fuente_light
 {
 	font-family: OpenSans-Light;
-	font-size: 100%;
-	color: #414A4C;
 }
 
 .fuente_semibold
 {
 	font-family: OpenSans-Semibold;
-	font-size: 100%;
-	color: #414A4C;
 }
 
 .fuente_italic
 {
 	font-family: OpenSans-Italic;
-	font-size: 100%;
-	color: #414A4C;
+}
+
+.fuente_bold
+{
+	font-family: OpenSans-Bold;
 }

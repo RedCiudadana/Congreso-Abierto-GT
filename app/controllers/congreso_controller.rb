@@ -35,18 +35,39 @@ class CongresoController < ApplicationController
     end
   end
   
-  def re_perfil
-    redirect_to :action => 'perfil_diputados'
+  def bills
+    @iniciativas = Bill.all
   end
   
-  def re_mapa_distrital
-    redirect_to :action => 'mapa_distrital'
+  def detalle_bill
+    @codigo = params[:codigo]
+    @iniciativa = Bill.where(:id => @codigo)
+    
+    #Buscamos los datos de la comision
+    @iniciativa.each do |i|
+      @registro = i.registro
+      @fecha = i.fecha_ingreso
+      @contenido = i.contenido
+    end
+    
+    #Buscamos los id postulantes de esta comisión
+    @postulantes_id = AsigBillDiputado.select(:diputado_id).where(:bill_id => @codigo)
+    #Buscamos los id de las comisiones que conoce
+    @comisiones_id = AsigBillComission.select(:comission_id).where(:bill_id => @codigo)
+    
+    #Buscamos los nombres correspondites de los ID
+    @postulantes = [] #Declaramos el Array donde guardaremos los nombres de de los diputados para mostrar.
+    @comisiones = []
+    
+    @postulantes_id.each do |n| #Lllenamos el primer Array
+      @postulantes += Diputado.where(:id => n.diputado_id)
+    end
+    
+    @comisiones_id.each do |n| #Lllenamos el segundo Array
+      @comisiones += Comission.where(:id => n.comission_id)
+    end
   end
   
-  def re_lista_diputados
-    redirect_to :action => 'lista_diputados'
-  end 
-
   #API'S
   #API para Busqueda por distrito
   def diputadoDistrito
@@ -85,6 +106,7 @@ class CongresoController < ApplicationController
     end
   end
 
+  #API para busqueda de partido actual
   def diputadoPartidoActual
     @diputado = Diputado.where("partido_actual = ?", params[:partido_actual])
     respond_to do |format|
@@ -93,6 +115,7 @@ class CongresoController < ApplicationController
     end
   end
   
+  #API para busqueda de partido postulante
   def diputadoPartidoPostulanate
     @diputado = Diputado.where("partido_postulante = ?", params[:partido_postulante])
     respond_to do |format|

@@ -1,0 +1,13 @@
+<div id="div-iniciativa" class="row">
+	<h2 class="fuente_semibold gris text-center">Iniativas de Ley</h2>
+	<div class="col-md-12">
+		<ul id="lista-iniciativas">
+			<% @iniciativas.each do |n|%>
+			<li class="fuente_semibold text-center">
+				<%= link_to n.registro, {:controller => 'congreso' ,:action =>'detalle_bill', :codigo => n.id}, {:class => 'gris text-center'} %>
+				<p class="fuente_light text-center"><%= n.contenido%></p>
+			</li>
+			<%end%>
+		</ul>
+	</div>
+</div>

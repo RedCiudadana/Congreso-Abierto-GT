@@ -1,13 +1,13 @@
-<link type="text/css" rel="stylesheet" href="/stylesheets/comisiones.css"/>
+<link type="text/css" rel="stylesheet" href="/stylesheets/bootstrap.css"/>
 <link type="text/css" rel="stylesheet" href="/stylesheets/clases.css"/>
 
-<section>
-	<article id="articulo1" class="fuente_color">
-		<h1 class="fuente_semibold">Listado General de Comisiones</h1>
-		<ul>
+<div id="comisiones" class="row">
+	<div class="col-md-12">
+		<h2 class="fuente_bold gris text-center">Listado General de Comisiones</h2>
+		<ul id="lista-comisiones">
 			<% @listado.each do |n|%>
-			<li class="fuente_light"><%= link_to n.nombre,:controller => 'comisiones' ,:action =>'show_comision', :codigo => n.id %></li>
+			<li class="fuente_semibold text-center"><%= link_to n.nombre, {:controller => 'comisiones' ,:action =>'show_comision', :codigo => n.id}, {:class => 'blanco'} %></li>
 			<%end%>
 		</ul>
-	</article>
-</section>
+	</div>
+</div>

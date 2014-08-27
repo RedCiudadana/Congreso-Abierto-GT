@@ -1,62 +1,47 @@
-section article
+#media
 {
+	width: 70%;
 	margin: 0 auto;
-	background: #FFFFFF;
-	width: 80%;
-	height: 330px;
+	background-image: url("../imagenes/Descarga/fondo-descarga.png");
+	margin-top: -1.5%;
 }
 
-#articulo1
+#infodescarga /*Div que contiene el texto de las apps*/
 {
-	margin-top: 8%;
+	float: left;
+	width: 40%;
+}
+
+#div-descarga /*Div que contiene la imagen de las aplicaciones*/
+{
+	margin-top: 5%;
+}
+
+#txt-descarga /*Texto que habla la descarga */
+{
+	margin-top: 5%;
+}
+
+#img-descarga
+{
+	margin-top: 10%;
 }
 
 #video
 {
-	float: left;
-	width: 45%;
-	height: 100%;
-	margin-left: 7%;
+	padding-top: 10%;
+	padding-left: 5%;
 }
 
-#app
+#informacion
 {
-	float: right;
-	margin-right: 8%;
-	width: 35%;
-	height: 330px;
+	width: 70%;
+	margin: 0 auto;
+	margin-top: -1%;
 }
 
-#textoapp
+/*Opciones para top*/
+.img-top
 {
-	width: 90%;
-	height:75%;
-	font-size: 230%;
-	text-align: left;
-}
-
-#btnDescargar
-{
-	float: left;
-	width: 90%;
-	height: 20%;
-	margin-top: 7%;
-	margin-right: 2%;
-}
-
-#btnandroid,
-#btnapple
-{
-	width: 45%;
-	height: 78%;
-}
-
-#btnandroid
-{
-	float: left;
-}
-
-#btnapple
-{
-	float: right;
+	margin-top: -2%;
 }

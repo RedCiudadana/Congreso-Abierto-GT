@@ -1,6 +1,12 @@
 OpenCongress::Application.routes.draw do
 
 
+  resources :bills
+
+  resources :asig_bill_diputados
+
+  resources :asig_bill_comissions
+
   resources :asig_comissions
 
   get "comisiones/lista_comisiones"
@@ -24,6 +30,11 @@ OpenCongress::Application.routes.draw do
   match '/id', :to => 'congreso#diputadoID'
   match '/partidoactual', :to => 'congreso#diputadoPartidoActual'
   match '/partidopostulante', :to => 'congreso#diputadoPartidoPostulanate'
+  match '/listado_comisiones', :to => 'comisiones#comisionesLista'
+  match '/comision_id', :to => 'comisiones#comisionID'
+  match '/miembros_comision', :to => 'comisiones#miembrosComision'
+  match '/comisiones_diputado', :to => 'comisiones#comisionesDiputado'
+  
   
   # API
   constraints :subdomain => 'api' do
