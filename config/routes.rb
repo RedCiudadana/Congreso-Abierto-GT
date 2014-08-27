@@ -1,6 +1,8 @@
 OpenCongress::Application.routes.draw do
 
 
+  resources :voto_diputados
+
   resources :bills
 
   resources :asig_bill_diputados
