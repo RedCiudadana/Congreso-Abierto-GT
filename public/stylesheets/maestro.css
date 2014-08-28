@@ -78,3 +78,50 @@
 {
 	margin-top: 1%;
 }
+
+/*Opciones para el pie de página*/
+#pie-pagina-1
+{
+	background-image: url('../imagenes/Encabezado/fondo.png');
+	margin-top: 2%;
+}
+
+#txt-pie
+{
+	padding-left: -1%;
+}
+
+.input-boletin
+{
+	width: 200px;
+	height: 25px;	
+}
+
+.div-boletin
+{
+	margin-top: 10px;
+}
+
+#btn-enviar
+{
+	float: left;
+	margin-top: 10px;
+	margin-left: 120px;
+	margin-bottom: 15px;
+}
+
+.enlace-pie 
+{
+	margin-top: 5%;
+}
+
+.img-redes
+{
+	width: 10%;
+	height: 10%;
+}
+
+.div-redes
+{
+	margin-top: 2%;
+}

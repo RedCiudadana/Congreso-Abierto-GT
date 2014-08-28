@@ -55,10 +55,15 @@ class CongresoController < ApplicationController
     @postulantes_id = AsigBillDiputado.select(:diputado_id).where(:bill_id => @codigo)
     #Buscamos los id de las comisiones que conoce
     @comisiones_id = AsigBillComission.select(:comission_id).where(:bill_id => @codigo)
+    #Buscamos los id de los diputados que han votado por una iniciativa 
+    @votos_a_favor_id = VotoDiputado.select(:diputado_id).where(:bill_id => @codigo, :voto => true)
+    @votos_en_contra_id = VotoDiputado.select(:diputado_id).where(:bill_id => @codigo, :voto => false)
     
     #Buscamos los nombres correspondites de los ID
-    @postulantes = [] #Declaramos el Array donde guardaremos los nombres de de los diputados para mostrar.
-    @comisiones = []
+    @postulantes = [] #Declaramos el Array donde guardaremos los nombres de de los diputados postulantes
+    @comisiones = [] #Declaramos el Array donde guardaremos los nombres de las comisiones que conoces las bills
+    @votos_a_favor = [] #Declaramos el Array donde guardaremos los nombres de de los diputados que votaron a favor
+    @votos_en_contra = [] #Declaramos el Array donde guardaremos los nombres de de los diputados que votaron en contra
     
     @postulantes_id.each do |n| #Lllenamos el primer Array
       @postulantes += Diputado.where(:id => n.diputado_id)
@@ -67,6 +72,20 @@ class CongresoController < ApplicationController
     @comisiones_id.each do |n| #Lllenamos el segundo Array
       @comisiones += Comission.where(:id => n.comission_id)
     end
+    
+    @votos_a_favor_id.each do |n|
+      @votos_a_favor += Diputado.where(:id => n.diputado_id)
+    end
+    
+    @votos_en_contra_id.each do |n|
+      @votos_en_contra += Diputado.where(:id => n.diputado_id)
+    end
+    
+  end
+  
+  #Opciones para las pentañas del perfil de usuario
+  def curriculum
+    
   end
   
   #API'S

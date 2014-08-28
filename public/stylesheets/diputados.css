@@ -1,4 +1,4 @@
-#datos-diputado, #contacto-diputado
+#datos-diputado, #contacto-diputado, #menu-diputados
 {
 	width: 70%;
 	margin: 0 auto;
@@ -15,4 +15,28 @@
 	border-left-style: solid;
 	 border-left-width: 2px;
 	 border-left-color: #1E90FF;
+}
+
+/*Opciones para el menú tab del perfil*/
+#menu-diputados /*Div principal donde se almacena todo*/
+{
+	margin-top: 2%;
+	background-image: url('../imagenes/Encabezado/fondo.png');
+	padding: 1%;
+	border-radius: 15px;
+}
+
+#panel-1
+{
+	border-radius: 15px;
+}
+
+#fondo1:hover
+{
+	background: #FFFFFF;
+}
+
+.selector:hover
+{
+	color: #5bc0de;
 }

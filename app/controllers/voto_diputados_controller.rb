@@ -1,6 +1,7 @@
 class VotoDiputadosController < ApplicationController
   # GET /voto_diputados
   # GET /voto_diputados.xml
+  layout "frontpage"
   def index
     @voto_diputados = VotoDiputado.all
 
@@ -25,7 +26,21 @@ class VotoDiputadosController < ApplicationController
   # GET /voto_diputados/new.xml
   def new
     @voto_diputado = VotoDiputado.new
-
+    
+    @dip = Diputado.all #Hacemos la consulta de todos los diputados para la lista del select
+    @bill = Bill.all #Hacemos la consulta de todas las comisiones para la lista del select
+    
+    @l_dip = {}
+    @l_bill = {}
+    
+    @dip.each do |d|
+      @l_dip[d.nombre] = d.id
+    end
+    
+    @bill.each do |c|
+      @l_bill[c.registro] = c.id
+    end 
+    
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @voto_diputado }
@@ -35,6 +50,20 @@ class VotoDiputadosController < ApplicationController
   # GET /voto_diputados/1/edit
   def edit
     @voto_diputado = VotoDiputado.find(params[:id])
+    
+    @dip = Diputado.all #Hacemos la consulta de todos los diputados para la lista del select
+    @bill = Bill.all #Hacemos la consulta de todas las comisiones para la lista del select
+    
+    @l_dip = {}
+    @l_bill = {}
+    
+    @dip.each do |d|
+      @l_dip[d.nombre] = d.id
+    end
+    
+    @bill.each do |c|
+      @l_bill[c.registro] = c.id
+    end 
   end
 
   # POST /voto_diputados

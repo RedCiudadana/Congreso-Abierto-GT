@@ -34,9 +34,19 @@
 	<div id="votacion" class="col-md-12">
 		<div class="col-md-5">
 			<h3 class="fuente_semibold gris text-center">Diputados a favor</h3>
+			<% @votos_a_favor.each do |n|%>
+			<ul class="fuente_light miembro-link">
+				<li><%= link_to n.nombre, {:controller => 'congreso' ,:action => 're_perfil', :action =>'perfil_diputados', :codigo => n.id}, {:class => 'gris'}%></li>
+			</ul>								
+		<%end%>
 		</div>
 		<div class="col-md-5">
 			<h3 class="fuente_semibold gris text-center">Diputados en contra</h3>
+			<% @votos_en_contra.each do |n|%>
+			<ul class="fuente_light miembro-link">
+				<li><%= link_to n.nombre, {:controller => 'congreso' ,:action => 're_perfil', :action =>'perfil_diputados', :codigo => n.id}, {:class => 'gris'}%></li>
+			</ul>								
+		<%end%>
 		</div>
 	</div>
 </div>

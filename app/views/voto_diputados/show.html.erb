@@ -1,0 +1,30 @@
+<link type="text/css" rel="stylesheet" href="/stylesheets/clases.css"/>
+<link type="text/css" rel="stylesheet" href="/stylesheets/scaffold.css"/>
+<section>
+	<article id="articulo1" class="fuente_normal">
+		<p id="notice"><%= notice %></p>
+		
+		<p>
+			<b>Iniciativa de Ley:</b>
+			<%= @voto_diputado.bill_id%>
+		</p>
+		
+		<p>
+			<b>Diputado:</b>
+			<%= @voto_diputado.diputado_id%>
+		</p>
+		
+		<p>
+			<b>Voto:</b>
+			<%if @voto_diputado.voto%>
+				A favor
+			<%else%>
+				En Contra
+			<%end%>
+		</p>
+		
+		<%= link_to 'Editar', edit_voto_diputado_path(@voto_diputado)%> |
+		<%= link_to 'Regresar', voto_diputados_path%>
+		
+	</article>
+</section>
