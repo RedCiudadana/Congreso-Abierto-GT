@@ -35,21 +35,3 @@
 	</div>
 	
 </div>
-
-<div id="menu-diputados" class="row">
-	<ul class="nav nav-tabs" role="tablist" style="width: 90%; margin: 0 auto; border-bottom: 0px;">
-		<li>
-			<li><%= link_to "Currículum<br />Vitae".html_safe,{:controller => 'congreso', :action => 'curriculum'}, {:class => 'fuente_semibold blanco text-uppercase text-center selector', :id => 'fondo1'} %></li>
-			
-		</li>
-		<li><a id="fondo1" class="fuente_semibold blanco text-uppercase text-center selector" href="#">Iniciativas<br />Presentadas</a></li>
-		<li><a id="fondo1" class="fuente_semibold blanco text-uppercase text-center selector" href="#">Participación en<br />Comisiones</a></li>
-		<li><a id="fondo1" class="fuente_semibold blanco text-uppercase text-center selector" href="#">Asistencia al<br />Pleno</a></li>
-		<li><a id="fondo1" class="fuente_semibold blanco text-uppercase text-center selector" href="#"><br />Votaciones</a></li>
-	</ul>
-	<div id="panel-1" class="panel panel-default">
-		<div class="panel-body">
-    		<%= yield %>
-  		</div>
-	</div>
-</div>

@@ -1,37 +1,34 @@
 <link type="text/css" rel="stylesheet" href="/stylesheets/metodo_login.css"/>
 
-
 <div id="div_registro">
     
     <form name="login-form" class="login-form extra" action="" method="post">
-    <%= error_messages_for :user %>
-    <!--HEADER-->
-    <div class="header">
-    <!--TITLE--><h1>Crea tu cuenta, es gratis</h1><!--END TITLE-->
-    </div>
-    <!--END HEADER-->
+    	<%= error_messages_for :user %>    
+    	<h3 class="fuente_semibold blanco text-center">Crea tu cuenta, es gratis</h3>
 	
-	<!--CONTENT-->
-    <div class="content"><!--END LUSERNAME-->
-    <!--LUSERNAME--><label class="fuente_normal" for="username">Usuario</label>
-	<!--USERNAME--><input name="username" type="text" class="input username" value="Usuario" onfocus="this.value=''" /><!--END USERNAME-->
-	<!--LCONTRASEÑA--><label class="fuente_normal" for="password">Contraseña</label><!--END LCONTRASEÑA-->
-    <!--PASSWORD--><input name="password" type="password" class="input password" value="Password" onfocus="this.value=''" /><!--END PASSWORD-->
-    <!--LCCONTRASEÑA--><label class="fuente_normal" for="confirm_password">Confirma tu contraseña</label><!--END LCCONTRASEÑA-->
-    <!--CPASSWORD--><input name="confirm_password" type="password" class="input password" value="Password" onfocus="this.value=''" /><!--END CPASSWORD-->
-    <!--LEMAIL--><label class="fuente_normal" for="email">Correo Electrónico</label>
-	<!--EMAIL--><input name="email" type="text" class="input username" value="Correo" onfocus="this.value=''" /><!--END EMAIL-->
-    </div>
-    <!--END CONTENT-->
+	<div class="form-grou div-boletin">
+		<label class="fuente_normal blanco">Usuario</label>
+		<input id="input-sesion1" type="text" name="username" class="form-control fuente_light gris" value="Usuario" onfocus="this.value=''" />
+	</div>
+	
+	<div class="form-grou div-boletin">
+		<label class="fuente_normal blanco">Contraseña</label>
+		<input id="input-sesion2" type="password" name="password" class="form-control fuente_light gris" value="Password" onfocus="this.value=''" />
+	</div>
+	
+	<div class="form-grou div-boletin">
+		<label class="fuente_normal blanco">Confirma tu contraseña</label>
+		<input id="input-sesion2" type="password" name="password" class="form-control fuente_light gris" value="Password" onfocus="this.value=''" />
+	</div>
+	
+	<div class="form-grou div-boletin">
+		<label class="fuente_normal blanco">Correo electrónico</label>
+		<input id="input-sesion1" type="text" name="username" class="form-control fuente_light gris" value="Correo Electrónico" onfocus="this.value=''" />
+	</div>
     
-    <!--FOOTER-->
-    <div class="footer">
-    <!--LOGIN BUTTON--><input type="submit" name="submit" value="Registrarse" class="boton_celeste" /><!--END LOGIN BUTTON-->
-    
-    </div>
-    <!--END FOOTER-->
+    <div class="form-group div-boletin">
+		<input  id="btn-login" type="submit" name="submit" value="Registrate" class="boton_blanco text-center" /> <br />
+  	</div>
     </form>
-    <!--END LOGIN FORM-->
-</div>
 
-<!--END WRAPPER-->
+</div>

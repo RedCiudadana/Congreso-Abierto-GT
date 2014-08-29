@@ -1,31 +1,23 @@
-<link type="text/css" rel="stylesheet" href="/stylesheets/metodo_login.css"/>
-
-<div id="div_wraper">
-    
-    <form name="login-form" class="login-form" action="" method="post">
-    	<!--HEADER-->
-    <div class="header">
-    <!--TITLE--><h1>Iniciar Sesión</h1><!--END TITLE-->
-    </div>
-    <!--END HEADER-->
+<link type="text/css" rel="stylesheet" href="/stylesheets/account.css" />
+<div id="div-contenedor-logi">
+	<form role="form">
+	<h3 class="fuente_semibold blanco text-center">Iniciar Sesión</h1>
 	
-	<!--CONTENT-->
-    <div class="content"><!--END LUSERNAME-->
-    <!--LUSERNAME--><label class="fuente_normal" for="username">Usuario</label>
-	<!--USERNAME--><input name="username" type="text" class="input username" value="Usuario" onfocus="this.value=''" /><!--END USERNAME-->
-	<!--LCONTRASEÑA--><label class="fuente_normal" for="password">Contraseña</label><!--END LCONTRASEÑA-->
-    <!--PASSWORD--><input name="password" type="password" class="input password" value="Password" onfocus="this.value=''" /><!--END PASSWORD-->
-    </div>
-    <!--END CONTENT-->
-    
-    <!--FOOTER-->
-    <div class="footer">
-    <!--LOGIN BUTTON--><input type="submit" name="submit" value="Ingresar" class="boton_celeste" /><!--END LOGIN BUTTON-->
-    <%= link_to "¿Olvidaste tu contraseña?", {:action => 'forgot_password'}, {:class => 'enlaces fuente_normal', :id => 'lnk_olvidar'}%>
-    
-    </div>
-    <!--END FOOTER-->
-    </form>
-    <!--END LOGIN FORM-->
+	<div class="form-grou div-boletin">
+		<label class="fuente_normal blanco">Usuario</label>
+		<input id="input-sesion1" type="text" name="username" class="form-control fuente_light gris" value="Usuario" onfocus="this.value=''" />
+	</div>
+				
+	<div class="form-grou div-boletin">
+		<label class="fuente_normal blanco">Contraseña</label>
+		<input id="input-sesion2" type="password" name="password" class="form-control fuente_light gris" value="Password" onfocus="this.value=''" />
+	</div>
+				
+  	<div class="form-group div-boletin">
+		<input  id="btn-login" type="submit" name="submit" value="Ingresar" class="boton_blanco text-center" /> <br />
+		<%= link_to "¿Olvidaste tu contraseña?", {:action => 'forgot_password'}, 
+		{:class => 'enlaces fuente_normal blanco link-lost-password', :id => 'lnk_olvidar'}%>
+  	</div>	
+</form>
 </div>
-<!--END WRAPPER-->
+

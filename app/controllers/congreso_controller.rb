@@ -80,12 +80,6 @@ class CongresoController < ApplicationController
     @votos_en_contra_id.each do |n|
       @votos_en_contra += Diputado.where(:id => n.diputado_id)
     end
-    
-  end
-  
-  #Opciones para las pentañas del perfil de usuario
-  def curriculum
-    
   end
   
   #API'S
