@@ -1,0 +1,37 @@
+<%= form_for @bills do |f|%>
+	<%if @bills.errors.any?%>
+	<div id="error_explanation">
+		<h2><%= pluralize(@bills.errors.count, "error") %> Prohibidos los cambios en este post:</h2>
+		  	
+		<ul>
+			<%@bill.errors.full_messages.each do |msg|%>
+		  		<li><%= msg%></li>
+		  	<% end %>
+		</ul>  	
+	</div>
+	<% end %>
+	
+	<div class="field">
+		<%= f.label :registro %><br />
+		 <%= f.text_field :registro %>
+	</div>
+	
+	<div class="field">
+		<%= f.label :contenido %><br />
+		<%= f.text_field :contenido %>
+	</div> 
+	
+	<div class="field">
+		<%= f.label :fecha_ingreso %><br />
+		<%= f.date_select :fecha_ingreso, :start_year => 2000, :end_year => 2016  %>
+	</div> 
+	
+	<div class="field">
+		<%= f.label :postulante_externo%><br />
+		<%= f.text_field :postulante_externo%>
+	</div>
+	<div class="boton_form">
+			<%= f.submit 'Guardar' , :class => 'boton_celeste'%>
+	</div> 
+
+<%end%>

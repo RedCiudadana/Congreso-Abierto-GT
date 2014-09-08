@@ -1,0 +1,90 @@
+/*Esta es la sección del index*/
+section article
+{
+	margin: 0 auto;
+	background: #FFFFFF;
+	width: 80%;
+	height: 100%;
+}
+
+#articulo1
+{
+	margin-top: 5%;
+	
+}
+
+#articulo1 h1
+{
+	text-align: center;
+	font-size: 250%;
+}
+
+/*opciones para form*/
+form div label
+{
+	color: #414A4C;
+}
+
+form div input
+{
+	font-family: OpenSans-Regular;
+	width: 40%;
+	color: #414A4C;
+	padding: 1%;
+	border:solid 1px #2A2929;
+	text-align: left;
+	border-radius:8px;
+}
+
+form div input:focus
+{
+	box-shadow:0 0 15px #222222;
+}
+
+.boton_form
+{
+	margin-top: 10px;
+	width: 100%;
+	border:solid 1px #FFF;
+	
+}
+
+#check
+{
+	width: 20px;
+}
+/*opciones para edicion*/
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}

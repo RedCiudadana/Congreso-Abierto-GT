@@ -1,23 +1,13 @@
-<div id="representante">
-	<img class="imgopciones_baner" src="/imagenes/Cuerpo/Banners/banner-01.png" />
-	<div id="div_boton1">
-		<%= link_to "MAPA", {:controller => 'diputados', :action => 'mapa_distrital'}, { :class => "boton_blanco", :id => "btnMapa"} %>
-	</div>
+<link type="text/css" rel="stylesheet" href="/stylesheets/mapa_distrital.css"/>
+<link type="text/css" rel="stylesheet" href="/stylesheets/maestro.css"/>
+
+<div id="opciones-1" class="row">
+	<div class="col-md-6"><%= link_to image_tag('/imagenes/Cuerpo/Banners/banner-01_anterior.png', :class =>'img-responsive img-opcion' , :title => 'Mapa Distrital'), 
+	:controller => 'congreso', :action => 'mapa_distrital' %></div>
+	<div class="col-md-6"><img src="/imagenes/Cuerpo/Banners/banner-02.png" class="img-responsive img-opcion"></div>
 </div>
 
-<div id="visita">
-	<img class="imgopciones_baner" src="/imagenes/Cuerpo/Banners/banner-02.png" />
-	<div id="div_boton2">
-		<a id="btnVisita" class="boton_blanco" href="#" >IR</a>
-	</div>
-</div>
-
-<div id="escribe_representante">
-	<a href="#"><img class="imgopciones_baner" src="/imagenes/Cuerpo/Banners/banner-03.png" /></a>
-	
-</div>
-
-<div id="faqs">
-	<a href="#"><img class="imgopciones_baner" src="/imagenes/Cuerpo/Banners/banner-04.png" /></a>
-	
+<div id="opciones-2" class="row">
+	<div class="col-md-6"><img src="/imagenes/Cuerpo/Banners/banner-03.png" class="img-responsive img-opcion"></div>
+	<div class="col-md-6"><img src="/imagenes/Cuerpo/Banners/banner-04.png" class="img-responsive img-opcion"></div>
 </div>

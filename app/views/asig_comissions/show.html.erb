@@ -1,0 +1,21 @@
+<link type="text/css" rel="stylesheet" href="/stylesheets/clases.css"/>
+<link type="text/css" rel="stylesheet" href="/stylesheets/scaffold.css"/>
+<section>
+	<article id="articulo1" class="fuente_normal">
+		<p id="notice"><%= notice %></p>
+		
+		<p>
+			<b>Diputado:</b>
+			<%= @asig_comission.diputado_id%>
+		</p>
+		
+		<p>
+			<b>Comisión:</b>
+			<%= @asig_comission.comission_id%>
+		</p>
+		
+		<%= link_to 'Editar', edit_asig_comission_path(@asig_comission)%> |
+		<%= link_to 'Regresar', asig_comissions_path%>
+		
+	</article>
+</section>

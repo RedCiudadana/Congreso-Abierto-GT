@@ -1,0 +1,32 @@
+<link type="text/css" rel="stylesheet" href="/stylesheets/clases.css"/>
+<link type="text/css" rel="stylesheet" href="/stylesheets/scaffold.css"/>
+
+<section>
+	<article id="articulo1">
+		<h1 class="fuente_semibold">Listado de Iniciativas de Ley</h1>
+		<%= link_to 'Nueva Iniciativa', new_bill_path%>
+		
+		<table>
+			<tr class="fuente_normal">
+				<th>Registro</th>
+				<th>Conoció Pleno</th>
+			    <th></th>
+				<th></th>
+				<th></th>
+			</tr>
+			<%@bills.each do |bill|%>
+			<tr class="fuente_light">
+				<td><%= bill.registro%></td>
+				<td><%= bill.fecha_ingreso%></td>
+				<td><%= link_to 'Ver', bill%></td>
+				<td><%= link_to 'Editar', edit_bill_path(bill)%></td>
+				<td><%= link_to 'Eliminar', bill, :confirm => '¿Está seguro de elimiar?', :method => :destroy%></td>
+			</tr>
+			<% end %>
+		</table>
+		
+		<br />
+		
+		<%= link_to 'Nueva Iniciativa', new_bill_path%>
+	</article>
+</section>

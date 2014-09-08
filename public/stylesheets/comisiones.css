@@ -1,0 +1,43 @@
+#comisiones
+{
+	width: 50%;
+	margin: 0 auto;
+	margin-top: -1%;
+}
+
+#lista-comisiones, .miembro-link
+{
+	list-style-type:none;
+}
+
+#lista-comisiones li
+{
+   	background-image: url('../imagenes/Pie_pagina/fondo.png');
+   	margin-bottom: 5px;
+   	padding: 3px;
+}
+
+#lista-comisiones li a, .miembro-link li a
+{
+	text-decoration: none;
+}
+
+/*Comienza el espacio para show_comision*/
+#show-comision, #show-miembros
+{
+	width: 70%;
+	margin: 0 auto;
+	margin-top: -1%;
+}
+
+#show-comision div
+{
+	margin-top: 1%;
+}
+
+#show-miembros
+{
+	width: 50%;
+	margin: 0 auto;
+	margin-top: -1%;
+}

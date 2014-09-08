@@ -1,57 +1,106 @@
-<header> <!-- Aquí colocaremos el logo botones de redes sociales y botones para sesión y registro-->
-	<div id="encabezado">
+<script src="/javascripts/jquery-1.11.1.min.js"> </script>	
+<script src="/javascripts/bootstrap.js"> </script>
+<link type="text/css" rel="stylesheet" href="/stylesheets/bootstrap.css"/>
+<link type="text/css" rel="stylesheet" href="/stylesheets/clases.css" />
+
+<header>
+	<div id="encabezado">		
+		<div id="redes">
+			<a title="Facebook" href="https://www.facebook.com/congresoabiertogt"><img class="img-red" src="/imagenes/Encabezado/facebook.png"/></a>
+			<a title="Twitter" href="https://twitter.com/CongresoGT"><img class="img-red" src="/imagenes/Encabezado/twitter.png"/></a>
+			<a title="YouTube" href="https://www.youtube.com/channel/UCZr5jgPCN9CPnESiwnW0H9Q"><img class="img-red" src="/imagenes/Encabezado/youtube.png"/></a>
+		</div>
 		
-		<div id="logo">
-			<a href="/" title="Congreso Abierto"><img id="imglogo" src="/imagenes/Encabezado/logo_ca.png"/></a>		
-		</div> <!-- fin seccion de logo -->
-		
-		<div id="redes_sociales">
-			<a href="https://www.youtube.com" title="Canal Congreso Abierto"><img id="btnYT" src="/imagenes/Encabezado/yt_normal.png"/></a>
-			<a href="https://www.twitter.com" title="@congresogt"><img id="btnTW" src="/imagenes/Encabezado/tw_normal.png"/></a>
-			<a href="https://www.facebook.com" title="Página Congreso Abierto"><img id="btnFB" src="/imagenes/Encabezado/fb_normal.png"/></a>
-		</div> <!-- fin seccion botones para redes sociales -->
-		
-		<div id="div_sesion">
+		<div id="btn-sesion" class="btn-group btn-group-sm">
 			<%= link_to "INICIAR SESIÓN", {:controller => 'account', :action => 'sesion'}, {:class => 'boton_blanco', :id => 'btnSesion'} %>
 			<%= link_to "REGISTRARSE", {:controller => 'account', :action => 'login'}, { :class => 'boton_blanco', :id => 'btnRegistro'} %>
-		</div> <!-- fin seccion botoens para sesion/registro -->
+		</div>
 		
-		<div id="franja"><img id="imglinea" src="/imagenes/Encabezado/franja_blanca.png" /></div> <!-- Franja blanca -->
+		<div id="conteiner">
+			<a title="Congreso Abierto" href="/">
+				<img id="imglogo" src="/imagenes/Encabezado/logo_ca.png" />
+			</a>
+		</div>
 	</div>
 	
-	<div id="baner" class="fuente_normal">
-		
-		<img id="imgbaner" src="/imagenes/Cuerpo/Menú/baner.png" />
-		<div id="texto">Involúcrate hoy. Siguenos en Twitter ></div>
-		<div id="twitter"><a href="http://www.twitter.com">@CongresoGT</a></div>
+	<nav class="navbar navbar-inverse" role="navigation">
+		<div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		    	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+		      	</button>
+		      	<a class="navbar-brand" href="/"></a>
+		    </div>
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		    	<ul class="nav navbar-nav">
+		    		<li><li><a href="/">INICIO</a></li></li>
+			        <li class="dropdown">
+			        	<a href="" class="dropdown-toggle" data-toggle="dropdown">CONGRESO</a>
+			          	<ul class="dropdown-menu" role="menu">
+			          		<li><%= link_to "<span>Mapa Distrital</span>".html_safe, :controller => 'congreso', :action => 'mapa_distrital'%></li>
+            				<li class="divider"></li>
+            				<li><%= link_to "<span>Comisiones</span>".html_safe, :controller => 'comisiones', :action => 'lista_comisiones'%></li>            				
+            				<li class="divider"></li>
+            				<li><%= link_to "<span>Iniciativas de Ley</span>".html_safe, :controller => 'congreso', :action => 'bills'%></li>				            
+			          	</ul>
+			        </li>
+			        
+			        <li class="dropdown">
+			        	<a href="" class="dropdown-toggle" data-toggle="dropdown">INVOLÚCRATE</a>
+			          	<ul class="dropdown-menu" role="menu">
+			          		<li><%= link_to "<span>Noticias</span>".html_safe, :controller => 'noticias', :action => 're_resumen'%></li>
+			          		<li class="divider"></li>
+				            <li><a href="#">Peticiones</a></li>
+				            <li class="divider"></li>
+				            <li><a href="#">Visita</a></li>			          						            
+			          	</ul>
+			        </li>
+			        
+			        <li><a href="#">CONTÁCTANOS</a></li>
+			        
+			        <li class="dropdown">
+			        	<a href="" class="dropdown-toggle" data-toggle="dropdown">EDICIÓN</span></a>
+			          	<ul class="dropdown-menu" role="menu">
+			          		<li><%= link_to "<span>Diputados</span>".html_safe, :controller => 'diputados', :action => 'index'%></li>
+			          		<li class="divider"></li>      						
+      						
+      						<li class="dropdown-submenu">
+      							<a href="">Comisiones</a>
+      							<ul class="dropdown-menu">
+      								<li><%= link_to "<span>Comisión</span>".html_safe, :controller => 'comissions', :action => 'index'%></li>
+      								<li class="divider"></li>
+      								<li><%= link_to "<span>Asignación-Diputado</span>".html_safe, :controller => 'asig_comissions', :action => 'index'%></li>
+      							</ul>
+      						</li>
+      						<li class="divider"></li>
+      						
+      						<li class="dropdown-submenu">
+      							<a href="">Iniciativas de Ley</a>
+      							<ul class="dropdown-menu">
+      								<li><%= link_to "<span>Iniciativas de Ley</span>".html_safe, :controller => 'bills', :action => 'index'%></li>
+      								<li><%= link_to "<span>Asignacion-Postulante".html_safe, :controller => 'asig_bill_diputados', :action =>'index'%></li>
+      								<li><%= link_to "<span>Asignacion-Comisión".html_safe, :controller => 'asig_bill_comissions', :action =>'index'%></li>
+      								<li><%= link_to "<span>Votación-Diputado".html_safe, :controller => 'voto_diputados', :action =>'index'%></li>
+      							</ul>
+      						</li>    						
+      													          						            
+			          	</ul>
+			        </li>
+			        
+		      	</ul>
+		    </div><!-- /.navbar-collapse -->
+  		</div><!-- /.container-fluid -->
+	</nav>
 	
+	<div id="banner" class="row">
+  		<div>
+    		<a href="" class="thumbnail"><img src="/imagenes/Cuerpo/Menú/baner.jpg"></a>
+  		</div>
 	</div>
 	
 </header>
-
-<nav>
-	<ul class="nav fuente_normal">
-      <li><a href="">Congreso Abierto</a>
-      	<ul>
-            <li><%= link_to "<span>Acerca de Nosotros</span>".html_safe, :controller => 'congreso_abierto', :action => 're_informacion'%></li>
-            <li><%= link_to "<span>Equipo</span>".html_safe, :controller => 'congreso_abierto', :action => 're_equipo' %></li>
-            <li><%= link_to "<span>Voluntarios</span>".html_safe, :controller => 'congreso_abierto', :action => 're_voluntarios' %></li>
-         </ul>
-      </li>
-      <li><a href="" class="active">El Congreso</a>
-      	<ul>
-            <li><%= link_to "<span>Mapa Distrital</span>".html_safe, :controller => 'diputados', :action => 're_mapa_distrital'%></li>
-            <li><%= link_to "<span>Diputados</span>".html_safe, :controller => 'diputados', :action => 're_lista_diputados'%></li>
-            <li><a href="#">Comisiones</a></li>
-         </ul>
-      </li>
-      <li><a href="">Involúcrate</a>
-          <ul>
-            <li><%= link_to "<span>Noticias</span>".html_safe, :controller => 'noticias', :action => 're_resumen'%></li>
-            <li><a href="#">Peticiones</a></li>
-            <li><a href="#">Visita</a></li>
-         </ul>
-      </li>
-      <li><a href="">Contacto</a></li>
-   </ul>
-</nav>

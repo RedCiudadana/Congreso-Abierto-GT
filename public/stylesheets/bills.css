@@ -1,0 +1,25 @@
+#div-iniciativa, #show-iniciativa
+{
+	width: 60%;
+	margin: 0 auto;
+}
+
+#lista-iniciativas
+{
+	list-style-type:none;
+}
+
+#lista-iniciativas li a
+{
+	text-decoration: none;
+}
+
+#lista-postulantes, #lista-comision
+{
+	list-style-type: none;
+}
+
+#lista-postulantes li a, #lista-comision li a
+{
+	text-decoration: none;
+}

@@ -3,11 +3,12 @@
 	<head>
 		<%= render :partial => 'shared/analytics_head' %>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="content-script-type" content="text/javascript" />
 		
-		<link type="text/css" rel="stylesheet" href="/stylesheets/maestro.css"/>
-		<link type="text/css" rel="stylesheet" href="/stylesheets/clases.css"/>
-		<link type="text/css" rel="stylesheet" href="/stylesheets/fuentes.css"/>
+		<%= stylesheet_link_tag :all %>
+  		<%= javascript_include_tag :all %>
+		
 		
 		<% if @meta_keywords %>
 		<meta name="keywords" content="<%= @meta_keywords %>" />

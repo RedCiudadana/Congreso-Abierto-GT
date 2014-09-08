@@ -5,6 +5,44 @@ class IndexController < ApplicationController
   caches_page :pipa
   
   def index
+    
+    #Inicia funcion para encontrar el top de asistencia 
+    
+    @top = Diputado.order("asistencia DESC").limit(5)
+    @contador = 1
+    
+    @top.each do |n|
+      if (@contador == 1)
+        @puesto1_nombre = n.nombre
+        @puesto1_id = n.id
+      end
+      
+      if (@contador == 2)
+        @puesto2_nombre = n.nombre
+        @puesto2_id = n.id
+      end
+      
+      if (@contador == 3)
+        @puesto3_nombre = n.nombre
+        @puesto3_id = n.id
+      end
+      
+      if (@contador == 4)
+        @puesto4_nombre = n.nombre
+        @puesto4_id = n.id
+      end
+      
+      if (@contador == 5)
+        @puesto5_nombre = n.nombre
+        @puesto5_id = n.id
+      end
+      
+      @contador +=1 
+    end
+    
+    
+    #Finaliza funcion para encontrar el top de asistencia
+    
     unless read_fragment("frontpage_rightside")
       @index_tabs = [            
               {:title => 'Most-Viewed Bills',

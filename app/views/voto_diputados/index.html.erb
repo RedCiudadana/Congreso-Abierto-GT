@@ -1,0 +1,34 @@
+<link type="text/css" rel="stylesheet" href="/stylesheets/clases.css"/>
+<link type="text/css" rel="stylesheet" href="/stylesheets/scaffold.css"/>
+
+<section>
+	<article id="articulo1">
+		<h1 class="fuente_semibold">Votación de diputados a iniciativa de ley</h1>
+		
+		<%= link_to 'Nueva Votacion', new_voto_diputado_path%>
+		
+		<table>
+			<tr class="fuente_normal">
+				<th>Diputado</th>
+				<th>Iniciativa</th>
+				<th>Voto</th>
+			    <th></th>
+				<th></th>
+				<th></th>
+			</tr>
+			<%@voto_diputados.each do |voto_diputado|%>
+			<tr class="fuente_light">
+				<td><%= voto_diputado.diputado_id%></td>
+				<td><%= voto_diputado.bill_id%></td>
+				<td><%= link_to 'Ver', voto_diputado%></td>
+				<td><%= link_to 'Editar', edit_voto_diputado_path(voto_diputado)%></td>
+				<td><%= link_to 'Eliminar', voto_diputado, :confirm => '¿Está seguro de elimiar?', :method => :delete%></td>
+			</tr>
+			<% end %>
+		</table>
+		
+		<br />
+		
+		<%= link_to 'Nueva Votacion', new_voto_diputado_path%>
+	</article>
+</section>

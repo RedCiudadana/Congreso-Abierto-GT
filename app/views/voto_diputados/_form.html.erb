@@ -1,0 +1,42 @@
+<%= form_for @voto_diputado do |f|%>
+	<%if @voto_diputado.errors.any?%>
+	<div id="error_explanation">
+		<h2><%= pluralize(@voto_diputado.errors.count, "error")%> Prohibida la asignacion a estos datos:</h2>
+		<ul>
+			<%@voto_diputado.errors.full_messages.each do |msg|%>
+			<li><%= msg%></li>
+			<% end %>
+		</ul>
+	</div>
+	<%end%>
+	
+	<div class="field">
+		<%= f.label :bill_id%><br />
+		<%= f.select :bill_id, @l_bill%>
+	</div>
+	
+	<div class="field">
+		<%= f.label :diputado_id%><br />
+		<%= f.select :diputado_id, @l_dip%>
+	</div>
+	
+	<div class="field">
+		<%= f.label :voto%><br />
+		<fieldset>
+			<label>A favor</label>
+			<%= f.radio_button :voto, 'true', :checked => true %>
+			<label>En contra</label>
+			<%= f.radio_button :voto, 'false'%>
+		</fieldset>
+	</div>
+	
+	<div class="field">
+		<%= f.label :fecha%><br />
+		<%= f.date_select :fecha, :start_year => 2000, :end_year => 2020  %>	
+	</div>
+	
+	<div class="boton_form">
+		<%= f.submit 'Guardar' , :class => 'boton_celeste'%>
+	</div>
+	
+<%end%>

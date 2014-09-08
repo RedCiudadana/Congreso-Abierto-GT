@@ -1,60 +1,60 @@
-<div id="pie_de_pagina">
-	<div id="div_datos">
-		<div>
-			<div id="titulo_ca">CONGRESO ABIERTO</div>
-			<div id="texto_ca"><img id="imgTextoca" src="/imagenes/Pie_pagina/texto.png"/></div>
-		</div>
-		<div>
-			<div id="titulo_rs">EN OTRAS REDES</div>
-			<div id="intro_rs">Encuentranos tambien en otras redes:</div>
-			<div id="enlaces_rs">
-				<div>
-					<img class="imgRS" src="/imagenes/Pie_pagina/fb.png"/>
-					<a class="linkRS" href="https://facebook.com">Facebook</a>
-				</div>
-				
-				<div>
-					<img class="imgRS" src="/imagenes/Pie_pagina/tw.png"/>
-					<a class="linkRS" href="https://twitter.com">Twitter</a>
-				</div>
-				
-				<div>
-					<img class="imgRS" src="/imagenes/Pie_pagina/yt.png"/>
-					<a class="linkRS" href="https://youtube.com">YouTube</a>
-				</div>
-			</div>
+<link type="text/css" rel="stylesheet" href="/stylesheets/bootstrap.css"/>
+<link type="text/css" rel="stylesheet" href="/stylesheets/maestro.css" />
+<script src="/javascripts/mensaje_emergente.js"> </script>
+
+<div id="pie-pagina-1" class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<div class="col-sm-4">
+			<h5 class="col-md-12 fuente_semibold blanco text-uppercase">CONGRESO ABIERTO</h5>
+			<h6 class="col-md-11 fuente_normal blanco text-justify"><i>
+				La información por si sola no es trascendenta. Lo que marca la diferencia es cómo interactuamos con ella y cuál es el efecto de esta interacción.
+				El objetivo de Congreso Abierto es compartir la información a la cual tenemos derecho para revitalizar la ciudadania y que a partir de la colaboración entre los ciudadanos y la institución,
+				se genere un nuevo vínculo con un Congreso más moderno.
+				</i>
+			</h6>
+			
 		</div>
 		
-		<div id="ultimo_div">
-			<div id="titulo_suscribir">SUSCRÍBETE AL BOLETÍN</div>
-			
-			<div id="div_txt">
-				<label for="nombre">Nombre</label>
-				<input type="text" id="nombre" />
-				
-				<label for="apellidos">Apellidos</label>
-				<input type="text" id="apellidos" />
-				
-				<label for="correo">Correo Electrónico</label>
-				<input type="text" id="correo" />
-				
-				<a id="btnSuscribir" class="boton_blanco" href="#" >Enviar</a>
+		<div class="col-sm-4">
+			<h5 class="col-md-12 fuente_semibold blanco text-uppercase">EN OTRAS REDES</h5>
+			<h6 class="col-md-12 fuente_normal blanco"><i>Encuentranos también en otras redes:</i></h6>
+			<div class="col-md-12">
+				<img class="img-redes" src="/imagenes/Pie_pagina/fb.png" />
+				<a href="https://www.facebook.com/congresoabiertogt" class="fuente_normal blanco enlace-pie">Facebook</a>
 			</div>
+			
+			<div class="col-md-12 div-redes" >
+				<img class="img-redes" src="/imagenes/Pie_pagina/tw.png" />
+				<a href="https://twitter.com/CongresoGT" class="fuente_normal blanco enlace-pie">Twitter</a>
+			</div>
+			
+			<div class="col-md-12 div-redes">
+				<img class="img-redes" src="/imagenes/Pie_pagina/yt.png" />
+				<a href="https://www.youtube.com/channel/UCZr5jgPCN9CPnESiwnW0H9Q" class="fuente_normal blanco enla">Youtube</a>
+			</div>
+						
 		</div>
-	</div>
-	
-	<div id="div_links">
-		<ul class="list_links">
-			<li><%= link_to "¿Qué es Congreso Abierto?".html_safe, :controller => 'congreso_abierto', :action => 're_informacion'%></li>
-			<li><%= link_to "Nuestro Equipo".html_safe, :controller => 'congreso_abierto', :action => 're_equipo'%></li>
-			<li><a href="#">Proyectos</a></li>
-			<li><a href="#">Quien nos apoya</a></li>
-			<li><%= link_to "Pertenece a Congreso Abierto".html_safe, :controller => 'congreso_abierto', :action => 're_voluntarios'%></li>
-			<li><a href="#">Otras Publicaciones</a></li>
-			<li><%= link_to "Congreso Abierto".html_safe, :controller => 'congreso_abierto', :action => 're_informacion'%></li>
-			<li><%= link_to "El Congreso".html_safe, :controller => 'diputados', :action => 're_mapa_distrital'%></li>
-			<li><a href="#">Involúcrate</a></li>
-			<li><a id="ultimo_link" href="#">Contacto</a></li>
-		</ul>
+		
+		<div class="col-sm-4">
+			<h5 class="col-md-12 fuente_semibold blanco text-uppercase">SUSCRÍBETE AL BOLETÍN</h5>
+			
+			<form role="form">
+				<div class="form-grou div-boletin">
+			  		<label class="fuente_normal blanco">Nombre</label>
+				    <input type="text" class="form-control input-boletin fuente_light gris">
+				</div>
+				
+			  	<div class="form-grou div-boletin">
+			  		<label class="fuente_normal blanco">Apellido</label>
+				    <input type="text" class="form-control input-boletin fuente_light gris">
+				</div>
+				
+  				<div class="form-group div-boletin">
+    				<label class="fuente_normal blanco">Correo</label>
+				    <input type="text" class="form-control input-boletin fuente_light gris">
+				    <a id="btn-enviar" href="/" class="boton_blanco text-right">Enviar</a>
+  				</div>	
+			</form>			
+		</div>	
 	</div>
 </div>

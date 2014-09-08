@@ -1,0 +1,43 @@
+<link type="text/css" rel="stylesheet" href="/stylesheets/bootstrap.css"/>
+<link type="text/css" rel="stylesheet" href="/stylesheets/clases.css"/>
+
+<div id="show-comision" class="row">
+	<% @comision.each do |c|%>
+		<h2 class="fuente_semibold gris text-center"><%= c.nombre%></h2>
+		<div class="col-md-12">
+			<div class="col-md-6">
+				<h3 class="fuente_normal gris">Descripción</h3>
+			</div>
+			
+  			<div class="col-md-6">
+  				<h3 class="fuente_normal gris">Contácto</h3>
+  				<div class="col-md-12">
+  					<h4 class="fuente_normal gris">Dirección:</h4>
+					<p class="fuente_light gris"><%= c.direccion%></p>
+  				</div>
+  				<div class="col-md-12">
+  					<h4 class="fuente_normal gris">Teléfono:</h4>
+					<p class="fuente_light gris"><%= c.telefono%> Ext. <%= c.ext%></p>
+  				</div>
+			</div>
+		</div>
+	<%end%>
+</div>
+
+<div id="show-miembros" class="row">
+	<h3 class="fuente_normal gris">Miembros</h3>
+	<div class="col-md-6">
+		<% @miembros1.each do |n|%>
+			<ul class="fuente_light miembro-link">
+				<li><%= link_to n.nombre, {:controller => 'congreso' ,:action => 're_perfil', :action =>'perfil_diputados', :codigo => n.id}, {:class => 'gris'}%></li>
+			</ul>								
+		<%end%>
+	</div>
+	<div class="col-md-6">
+		<% @miembros2.each do |m|%>
+			<ul class="fuente_light miembro-link">
+				<li><%= link_to m.nombre, {:controller => 'congreso' ,:action => 're_perfil', :action =>'perfil_diputados', :codigo => m.id}, {:class => 'gris'} %></li>
+			</ul>								
+		<%end%>
+	</div>
+</div>

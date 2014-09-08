@@ -1,15 +1,6 @@
-<link type="text/css" rel="stylesheet" href="/stylesheets/cuenta.css"/>
 <link type="text/css" rel="stylesheet" href="/stylesheets/clases.css"/>
+<link type="text/css" rel="stylesheet" href="/stylesheets/account.css"/>
 
-<section>
-	<article id="articulo1">
-		<div id="titulo" class="fuente_color"><em><strong>Por favor inicia sesión o crea tu cuenta, es gratis</strong></em></div>
-		<div id="sesion">
-			<%= render :partial => 'login_form' %>
-		</div>
-		
-		<div id="registro">
-			<%= render :partial => "signup_form" %>
-		</div>
-	</article>	
-</section>
+<div id="div-registro">
+	<%= render :partial => "signup_form" %>
+</div>

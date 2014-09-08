@@ -1,0 +1,26 @@
+<%= form_for @asig_bill_diputado do |f|%>
+	<%if @asig_bill_diputado.errors.any?%>
+	<div id="error_explanation">
+		<h2><%= pluralize(@asig_bill_diputado.errors.count, "error")%> Prohibida la asignacion a estos datos:</h2>
+		<ul>
+			<%@asig_bill_diputado.errors.full_messages.each do |msg|%>
+			<li><%= msg%></li>
+			<% end %>
+		</ul>
+	</div>
+	<%end%>
+	
+	<div class="field">
+		<%= f.label :bill_id%><br />
+		<%= f.select :bill_id, @l_bill%>
+	</div>
+	
+	<div class="field">
+		<%= f.label :diputado_id%><br />
+		<%= f.select :diputado_id, @l_dip%>
+	</div>
+	
+	<div class="boton_form">
+		<%= f.submit 'Guardar' , :class => 'boton_celeste'%>
+	</div>
+<%end%>
