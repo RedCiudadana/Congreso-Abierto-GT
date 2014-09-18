@@ -3,32 +3,41 @@
 <div id="div_registro">
     
     <form name="login-form" class="login-form extra" action="" method="post">
-    	<%= error_messages_for :user %>    
+    	<%= error_messages_for :user %>
     	<h3 class="fuente_semibold blanco text-center">Crea tu cuenta, es gratis</h3>
 	
-	<div class="form-grou div-boletin">
-		<label class="fuente_normal blanco">Usuario</label>
-		<input id="input-sesion1" type="text" name="username" class="form-control fuente_light gris" value="Usuario" onfocus="this.value=''" />
-	</div>
+	<%= form_for(:user, :url => {:controller => 'account', :action => 'create'}) do |f|%>
 	
 	<div class="form-grou div-boletin">
-		<label class="fuente_normal blanco">Contraseña</label>
-		<input id="input-sesion2" type="password" name="password" class="form-control fuente_light gris" value="Password" onfocus="this.value=''" />
-	</div>
-	
-	<div class="form-grou div-boletin">
-		<label class="fuente_normal blanco">Confirma tu contraseña</label>
-		<input id="input-sesion2" type="password" name="password" class="form-control fuente_light gris" value="Password" onfocus="this.value=''" />
+		<label class="fuente_normal blanco">Nombre Completo</label>
+		<%= f.text_field :full_name, :id => 'input-sesion1', :class => 'form-control fuente_light gris'%>
 	</div>
 	
 	<div class="form-grou div-boletin">
 		<label class="fuente_normal blanco">Correo electrónico</label>
-		<input id="input-sesion1" type="text" name="username" class="form-control fuente_light gris" value="Correo Electrónico" onfocus="this.value=''" />
+		<%= f.text_field :email, :id => 'input-sesion1', :class => 'form-control fuente_light gris'%>
 	</div>
-    
-    <div class="form-group div-boletin">
-		<input  id="btn-login" type="submit" name="submit" value="Registrate" class="boton_blanco text-center" /> <br />
+	
+	<div class="form-grou div-boletin">
+		<label class="fuente_normal blanco">Usuario</label>
+		<%= f.text_field :login, :id => 'input-sesion1', :class => 'form-control fuente_light gris'%>
+	</div>
+	
+	<div class="form-grou div-boletin">
+		<label class="fuente_normal blanco">Contraseña</label>
+		<%= f.password_field :password, :id => 'input-sesion2', :class => 'form-control fuente_light gris'%>
+	</div>
+	
+	<div class="form-grou div-boletin">
+		<label class="fuente_normal blanco">Confirma tu contraseña</label>
+		<%= f.password_field :password_confirmation, :id => 'input-sesion2', :class => 'form-control fuente_light gris'%>
+	</div>
+	
+	<div class="form-group div-boletin">
+		
+		<%= f.submit :Signup, :id => 'btn-login', :class => 'boton_blanco text-center', :value =>'Registrate' %>
   	</div>
-    </form>
-
+	
+	<%end%>
+    </form>  	
 </div>

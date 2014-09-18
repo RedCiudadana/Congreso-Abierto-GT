@@ -21,18 +21,10 @@ class CongresoController < ApplicationController
   end
 
   def perfil_diputados
-    @codigo = params[:codigo]
-    @diputado = Diputado.where(:id => @codigo)
+   
+    @diputado = Diputado.find(params[:codigo])
     
-    @diputado.each do |n|
-      @nombre = n.nombre
-      @dis = n.distrito
-      @correo = n.correo
-      @telefono = n.telefono
-      @ext = n.ext
-      @direccion = n.direccion
-      @url = n.url_foto
-    end
+   
   end
   
   def bills
