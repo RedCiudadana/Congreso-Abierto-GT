@@ -3,11 +3,11 @@
 
 <div id="datos-diputado" class="row">
 	<div class="col-xs-12 col-md-8">
-  		<div id="img-perfil" class="col-md-3 col-md-pull-9"><img class="img-responsive" src=<%=@url%> /></div>
-  		<div class="col-md-9 col-md-push-3">
-  			<h2 class="fuente_semibold gris"><%=@nombre%></h2>
+  		<div class="col-md-3"><%= image_tag @diputado.photo_path%></div>
+  		<div class="col-md-9">
+  			<h2 class="fuente_semibold gris"><%=@diputado.nombre%></h2>
 	  		
-	  		<div class="col-md-6 fuente_normal celeste-1"><%=@dis%></div>
+	  		<div class="col-md-6 fuente_normal celeste-1"><%=@diputado.distrito%></div>
 	  		
 	  		<div id="div-pediodo" class="col-md-6 fuente_normal celeste-1">2012-2016</div>
   		
@@ -22,16 +22,16 @@
 	
 	<div class="col-ms-6 col-md-4">
 		<div class="col-md-12 fuente_semibold gris">Correo:</div>
-		<div class="col-md-12 fuente_light gris"><%=@correo%></div>
+		<div class="col-md-12 fuente_light gris"><%=@diputado.correo%></div>
 	</div>
 	
 	<div class="col-ms-6 col-md-4">
 		<div class="col-md-12 fuente_semibold gris">Teléfono de oficina:</div>
-		<div class="col-md-12 fuente_light gris"><%=@telefono%> Ext.<%=@ext%></div>
+		<div class="col-md-12 fuente_light gris"><%=@diputado.telefono%> Ext.<%=@diputado.ext%></div>
 	</div>
 	<div class="col-ms-6 col-md-4">
 		<div class="col-md-12 fuente_semibold gris">Dirección de oficina:</div>
-		<div class="col-md-12 fuente_light gris"><%=@direccion%></div>
+		<div class="col-md-12 fuente_light gris"><%=@diputado.direccion%></div>
 	</div>
 	
 </div>
